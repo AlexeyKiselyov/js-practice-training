@@ -94,7 +94,18 @@
 
 // with sort
 
-const findShorterWord = (sentence) =>
-  sentence.split(" ").sort((a, b) => a.length - b.length)[0];
+// const findShorterWord = (sentence) =>
+//   sentence.split(" ").sort((a, b) => a.length - b.length)[0];
 
-console.log(findShorterWord("мама мыла и раму не только ил"));
+// console.log(findShorterWord("мама мыла и раму не только ил"));
+
+// 4. -----Создание инициалов имени из первых букв имени и фамилии------
+
+// const createInitials = (nameSirnameString) =>
+//   nameSirnameString
+//     .split(" ")
+//     .map((word) => word[0])
+//     .join(".")
+//     .toUpperCase();
+
+// console.log(createInitials("Иван Иванович"));
