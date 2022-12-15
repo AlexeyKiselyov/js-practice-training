@@ -109,3 +109,31 @@
 //     .toUpperCase();
 
 // console.log(createInitials("Иван Иванович"));
+
+// 5. ------Сумма частей вводимого числ без учета "-"-------
+
+// basic
+
+// const summDigits = (number) => {
+//   let sum = 0;
+//   const result = number
+//     .toString()
+//     .split("")
+//     .map((el) => {
+//       if (el === "-") return;
+//       sum += Number(el);
+//     });
+//   return sum;
+// };
+
+// console.log(summDigits(-886));
+
+// advance
+
+const summDigits = (number) =>
+  Math.abs(number)
+    .toString()
+    .split("")
+    .reduce((acc, el) => +acc + +el, 0);
+    
+console.log(summDigits(-833));
