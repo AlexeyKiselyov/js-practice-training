@@ -30,8 +30,22 @@
 //3
 // Напиши скрипт, який виводить у консоль рядок "Це позитивне число", якщо в prompt користувач ввів число більше нуля. Якщо було введено нуль, виводь у консоль рядок "Це нуль". Якщо передали від'ємне число, у консолі має бути рядок "Це від'ємне число".
 
+// function numberSearch() {
+//   const userInput = prompt("Введіть число");
+//   const toNumber = +userInput;
+//   if (toNumber > 0) {
+//     alert("Це позитивне число");
+//   } else if (toNumber === 0 && userInput) {
+//     console.log(userInput);
+//     alert("Це нуль");
+//   } else if(toNumber<0){
+//     alert("Це від'ємне число");
+//   }else {alert("Значення введено не вірно")}
+// }
+
+// numberSearch();
+
 // const userInput = prompt('Введіть число');
-// const toNumber = Number(userInput)
 // console.log(Boolean(userInput)); '0'
 // console.log('userInput', userInput);
 // console.log('userInput to boolean', !!userInput);
@@ -53,6 +67,17 @@
 //4 (endsWith)
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/endsWith
 // Напиши скрипт який перевіряє чи закінчується значення змінної link символом /. Якщо ні, додай до кінця значення link цей символ. Використовуй конструкцію if...else.
+
+// let link = "https://my-site.com/about/";
+// function inspectLinkEnd(link) {
+//   const haveRightEnd = link.endsWith("/");
+//   if (!haveRightEnd) {
+//     return `${link}/`;
+//   } else {
+//     return "End of the link is right";
+//   }
+// }
+// console.log(inspectLinkEnd(link));
 
 // let link = 'https://my-site.com/about';
 
@@ -101,8 +126,16 @@
 // менше 17, виводи строку "Очікує"
 // більше або дорівнює 17 і меньше або дорівнює 24, виводить рядок "Закінчується"
 // більше 24 , виводить рядок "Прострочено"
+
 // const hours = 17;
 // let message;
+// if (hours < 17) {
+//   console.log("Очікує");
+// } else if (hours >= 17 && hours <= 24) {
+//   console.log("Закінчується");
+// } else {
+//   console.log("Прострочено");
+// }
 
 // 8
 // Напиши скрипт для відображення часу дедлайну здачі проекту. Використовуй конструкцію if...else.
@@ -111,6 +144,17 @@
 // Якщо до дедлайну 2 дні - виведи рядок "Післязавтра"
 // Якщо до дедлайну 3+ днів - виведи рядок "Дата в майбутньому"
 // const daysUntilDeadline = 5;
+// if (daysUntilDeadline === 0) {
+//   console.log("Сьогодні");
+// } else if (daysUntilDeadline === 1) {
+//   console.log("Завтра");
+// } else if (daysUntilDeadline === 2) {
+//   console.log("Післязавтра");
+// } else if (daysUntilDeadline >= 3) {
+//   console.log("Дата в майбутньому");
+// } else {
+//   console.log("Дата в обробці");
+// }
 
 // 9
 // Виконай рефакторинг коду попередньої задачі, використовуючи switch.
@@ -133,9 +177,19 @@
 
 // 10
 // Напиши цикл for який виводить у консоль браузера числа за зростанням від min до max, але якщо число кратне 5.
+// const min = 10;
+// const max = 100;
+
+// for (let i = min; i <= max; i += 1) {
+//   if (min % 5) {
+//     console.log("Число min повинно бути кратне 5ти");
+//     break;
+//   }
+//   console.log(i);
+// }
+
 // const max = 100;
 // const min = 19;
-
 // for (let i = min; i <= max; i += 1) {
 //     if (!(i % 5)){//i % 5 === 0 //!(i % 5)
 //         console.log(i);
@@ -153,4 +207,16 @@
 // Якщо введено пароль "qwerty123", то вивести рядок "Доброго дня!"
 // Інакше виводити рядок "Невірний пароль"
 
-
+// const login = prompt("Уведіть логін");
+// if (login === "Адмін") {
+//   const password = prompt("Введіть пароль");
+//   if (password === "qwerty123") {
+//     alert("Доброго дня!");
+//   } else {
+//     alert("Невірний пароль");
+//   }
+// } else if (login) {
+//   alert("Я вас не знаю");
+// } else {
+//   console.log("Скасовано");
+// }

@@ -130,10 +130,10 @@
 
 // advance
 
-const summDigits = (number) =>
-  Math.abs(number)
-    .toString()
-    .split("")
-    .reduce((acc, el) => +acc + +el, 0);
+// const summDigits = (number) =>
+//   Math.abs(number)
+//     .toString()
+//     .split("")
+//     .reduce((acc, el) => +acc + +el, 0);
     
-console.log(summDigits(-833));
+// console.log(summDigits(-833));
