@@ -135,5 +135,22 @@
 //     .toString()
 //     .split("")
 //     .reduce((acc, el) => +acc + +el, 0);
-    
+
 // console.log(summDigits(-833));
+
+// 6 ----Search the smallest and largest number in array----
+
+// const array = [1,1];
+
+// first option
+
+// const minMaxNumber = (arr) => {
+//   const result = [...arr].sort((a, b) => a - b);
+//   return [result[0], result[result.length - 1]];
+// };
+
+// second option
+
+// const minMaxNumber = (arr) => [Math.min(...arr), Math.max(...arr)];
+
+// console.log(minMaxNumber(array));

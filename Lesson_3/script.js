@@ -136,6 +136,41 @@
 
 // Example 7 - Пошук елемента
 // Напиши скрипт пошуку найменшого числа у масиві. Код має працювати для будь-якого масиву чисел. Використовуй цикл для розв'язання задачі.
+const numbers = [45, 6, 10, 76, 22, 42, 8];
+
+// first option
+// const findMinNumberInArr = (arr) => {
+//   let minNumb = arr[0];
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] < minNumb) {
+//       minNumb = arr[i];
+//     }
+//   }
+//   return minNumb;
+// };
+
+// second option
+// const findMinNumberInArr = (arr) => {
+//   let minNumb = arr[0];
+//   for (const number of arr) {
+//     if (number < minNumb) {
+//       minNumb = number;
+//     }
+//   }
+//   return minNumb;
+// };
+
+// third option
+// const findMinNumberInArr = (arr) => {
+//   const result = [...arr].sort((a, b) => a - b);
+//   return result[0];
+// };
+
+// fours option
+// const findMinNumberInArr = (arr) => [Math.min(...arr)][0];
+
+// console.log(findMinNumberInArr(numbers));
+
 // const numbers = [101, 78, 12, 76, 5, 11, 9];
 // let min = numbers[0]; //101
 // for (const number of numbers) {
