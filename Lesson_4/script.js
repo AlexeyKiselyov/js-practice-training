@@ -8,7 +8,6 @@
 // }
 // console.log('in global',a);
 
-
 // ------------------------------//
 // let a = 10;
 
@@ -53,7 +52,6 @@
 // foo(x, y)
 // console.log('x', x);
 
-
 // Створення та види функцій
 
 // function expression
@@ -63,7 +61,6 @@
 // }
 // console.log(foo(3, 4));
 
-
 // function declaretion
 
 // function boo(a, b) {
@@ -72,13 +69,13 @@
 // console.log(boo(5,6));
 // console.log(boo(4,2));
 
-
 /// arguments
 //  Порахувати суму всіх чисел
 
 // function getSum (){
 // console.log(arguments);
 // const arr = Array.from(arguments);
+// // const arr = [...arguments];
 // console.log(arr);
 // let sum = 0;
 // for(const number of arr){
@@ -92,34 +89,60 @@
 // // getSum(1, 2, 3, 4, 5, 6, 7, 8)
 // getSum(44, 5, 14, 3)
 
-
 // Стек викликів
 
-function foo(){
-    console.log('foo before');
-    boo()
-    console.log('foo after');
-}
+// function foo(){
+//     console.log('foo before');
+//     boo()
+//     console.log('foo after');
+// }
 
+// function boo(){
+//     foo()
+//     console.log('boo');
+// }
 
-function boo(){
-    foo()
-    console.log('boo');
-}
-
-foo()
-
-
+// foo()  //зациклення
 
 // Напишіть функції для роботи з колекцією навчальних курсів courses:
 // 1 addCourse(name) - додає курс в кінець колекції
 // 2 removeCourse(name) - видаляє курс з колекції
 // 3 updateCourse(oldName, newName) - замінює назву на нову
-// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'Node'];
+// const courses = ["HTML", "CSS", "JavaScript", "React", "Node"];
 
+// add
+// function addCourse(name){
+//   if (courses.includes(name)){
+//     return console.log(`Ви вже маєте данний курс: ${name}`);;
+//   }
+//   courses.push(name);
+//   return console.log(courses);
+// }
+// addCourse('Type Script')
 
+// remove
+// function removeCourse(name) {
+//   const removeCourseIndex = courses.indexOf(name);
+//   if(removeCourseIndex===-1){
+//     return console.log(`Курс з такою назвою (${name}) не знайдено`);
+//   }
+//   courses.splice(removeCourseIndex, 1);
+//   return console.log(courses);
+// }
+// removeCourse("React");
 
+// update
+// function updateCourse(oldName, newName){
+//   const updateCourseIndex = courses.indexOf(oldName);
+//   if(updateCourseIndex===-1){
+//     return console.log(`Курс з такою назвою (${oldName}) не знайдено`);
+//   }
+//   courses.splice(updateCourseIndex,1,newName);
+//   return console.log(courses);
+// }
+// updateCourse("qweqwe","GitHub");
 
+// Test
 // addCourse('Express');
 // console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
 // addCourse('CSS'); // 'Ви вже маєте данний курс'

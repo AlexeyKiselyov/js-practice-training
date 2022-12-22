@@ -154,3 +154,23 @@
 // const minMaxNumber = (arr) => [Math.min(...arr), Math.max(...arr)];
 
 // console.log(minMaxNumber(array));
+
+// 7 ------Find inner array min sum---
+
+const arr = [
+  [1],
+  [15,5,33],
+  [5, 5, 6, 8],
+  [65, 45, 456],
+];
+
+function minArrSum(arr) {
+  const arrModify = arr.map((numbers) =>
+    numbers.reduce((acc, number) => acc + number, 0)
+  );
+  const minArr = Math.min(...arrModify);
+  const indexOfMinArr = arrModify.indexOf(minArr);
+  return `Inner array with min sum has ${indexOfMinArr}th index and amount: ${minArr} `;
+}
+
+console.log(minArrSum(arr));

@@ -5,13 +5,34 @@
 // замінює значення hobby на 'skydiving'
 // замінює значення premium на false
 // виводить вміст об'єкта user у форматі ключ: виведи значення використовуючи Object.keys() і for...of
+// const user = {
+//   name: "Mango",
+//   age: 20,
+//   hobby: "html",
+//   premium: true,
+// };
 
-const user = {
-    name: 'Mango',
-    age: 20,
-    hobby: 'html',
-    premium: true,
-};
+// user.mood = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+// const userKeys = Object.keys(user);
+// first option
+// for (let i = 0; i < userKeys.length; i += 1) {
+//   console.log(`${userKeys[i]}: ${user[userKeys[i]]}`);
+// }
+// second option
+// for(key of userKeys){
+//     console.log(`${key}: ${user[key]}`);
+// }
+// third option
+// userKeys.map((key) => console.log(`${key}: ${user[key]}`));
+
+// const user = {
+//     name: 'Mango',
+//     age: 20,
+//     hobby: 'html',
+//     premium: true,
+// };
 //----------------------------------------//
 // console.log(Object.keys(user));
 //   console.log(user);
@@ -48,11 +69,21 @@ const user = {
 //     console.log(key , user[key]);
 // }
 
-
-
-
 // Example 2 - метод Object.values()
 // Є об'єкт, де зберігаються зарплати нашої команди. Напишіть код для підсумовування всіх зарплат та збережіть результат у змінній sum. Повинно вийти 390. Якщо об'єкт salaries порожній, результат має бути 0.
+
+// const salaries = {
+//   John: 100,
+//   Ann: 160,
+//   Pete: 130,
+// };
+
+// console.log(
+//   `Sallaries amount: ${Object.values(salaries).reduce(
+//     (acc, numb) => acc + numb,
+//     0
+//   )}`
+// );
 
 // const salaries = {
 //     John: 100,
@@ -68,6 +99,8 @@ const user = {
 // }
 // console.log(total);
 
+
+//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!! 
 
 // Example 3 - Масив об'єктів
 // Напишіть ф-цію calcTotalPrice(stones, stoneName), яка приймає масив об'єктів та рядок з назвою каменю. Ф-ція рахує і повертає загальну вартість каміння з таким ім'ям, ціною та кількістю з об'єкта
@@ -111,16 +144,14 @@ const user = {
 // Example 4 - Комплексні завдання
 // Напиши скрипт управління особистим кабінетом інтернет-банку. Є об'єкт account, в якому необхідно реалізувати методи для роботи з балансом та історією транзакцій.
 
-
 /*
  * Типів транзакцій лише два.
  * Можна покласти чи зняти гроші з рахунку.
  */
 const Transaction = {
-    DEPOSIT: 'deposit',
-    WITHDRAW: 'withdraw',
+  DEPOSIT: "deposit",
+  WITHDRAW: "withdraw",
 };
-
 
 /*
  * Кожна транзакція це об'єкт із властивостями: id, type та amount
@@ -128,68 +159,66 @@ const Transaction = {
 //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Date
 
 const account = {
-    // Поточний баланс рахунку
-    balance: 0,
+  // Поточний баланс рахунку
+  balance: 0,
 
-    // Історія транзакцій
-    transactions: [],
+  // Історія транзакцій
+  transactions: [],
 
-    /*
-     * Метод створює та повертає об'єкт транзакції.
-     * Приймає суму та тип транзакції.
-     */
-    createTransaction(amount, type) {
-        return {
-            id: this.transactions.length,
-            amount,
-            type
-        }
-    },
+  /*
+   * Метод створює та повертає об'єкт транзакції.
+   * Приймає суму та тип транзакції.
+   */
+  createTransaction(amount, type) {
+    return {
+      id: this.transactions.length,
+      amount,
+      type,
+    };
+  },
 
-    /*
-     * Метод, що відповідає за додавання суми до балансу.
-     * Приймає суму транзакції.
-     * Викликає createTransaction для створення об'єкта транзакції
-     * після чого додає його в історію транзакцій
-     */
-    deposit(amount) {
-        this.balance += amount;
-        const result = this.createTransaction(amount, Transaction.DEPOSIT);
-        this.transactions.push(result)
+  /*
+   * Метод, що відповідає за додавання суми до балансу.
+   * Приймає суму транзакції.
+   * Викликає createTransaction для створення об'єкта транзакції
+   * після чого додає його в історію транзакцій
+   */
+  deposit(amount) {
+    this.balance += amount;
+    const result = this.createTransaction(amount, Transaction.DEPOSIT);
+    this.transactions.push(result);
+  },
 
-    },
+  /*
+   * Метод, що відповідає за зняття суми з балансу.
+   * Приймає суму транзакції.
+   * Викликає createTransaction для створення об'єкта транзакції
+   * Після чого додає його в історію транзакцій.
+   *
+   * Якщо amount більше ніж поточний баланс, виводь повідомлення
+   * про те, що зняття такої суми не можливе, недостатньо коштів.
+   */
+  withdraw(amount) {
+    this.balance -= amount;
+  },
 
-    /*
-     * Метод, що відповідає за зняття суми з балансу.
-     * Приймає суму транзакції.
-     * Викликає createTransaction для створення об'єкта транзакції
-     * Після чого додає його в історію транзакцій.
-     *
-     * Якщо amount більше ніж поточний баланс, виводь повідомлення
-     * про те, що зняття такої суми не можливе, недостатньо коштів.
-     */
-    withdraw(amount) {
-        this.balance -= amount;
-    },
+  /*
+   * Метод повертає поточний баланс
+   */
+  getBalance() {},
 
-    /*
-     * Метод повертає поточний баланс
-     */
-    getBalance() {},
+  /*
+   * Метод шукає та повертає об'єкт транзації по id
+   */
+  getTransactionDetails(id) {},
 
-    /*
-     * Метод шукає та повертає об'єкт транзації по id
-     */
-    getTransactionDetails(id) {},
-
-    /*
-     * Метод повертає кількість коштів
-     * певного типу транзакції з усієї історії транзакцій
-     */
-    getTransactionTotal(type) {},
+  /*
+   * Метод повертає кількість коштів
+   * певного типу транзакції з усієї історії транзакцій
+   */
+  getTransactionTotal(type) {},
 };
 
-
 // console.log(account.createTransaction(1000, Transaction.DEPOSIT));
-account.deposit(1000)
+account.deposit(1000);
 console.log(account.balance);
