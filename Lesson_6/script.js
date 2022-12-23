@@ -1,5 +1,6 @@
 // Розглянути rest в якості параметру замість псевдомасиву arguments
 
+//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 // function foo(...qwerty) {
 //     console.log(qwerty);
 // }
