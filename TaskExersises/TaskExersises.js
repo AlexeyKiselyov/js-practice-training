@@ -157,20 +157,31 @@
 
 // 7 ------Find inner array min sum---
 
-const arr = [
-  [1],
-  [15,5,33],
-  [5, 5, 6, 8],
-  [65, 45, 456],
-];
+// const arr = [
+//   [1],
+//   [15,5,33],
+//   [5, 5, 6, 8],
+//   [65, 45, 456],
+// ];
 
-function minArrSum(arr) {
-  const arrModify = arr.map((numbers) =>
-    numbers.reduce((acc, number) => acc + number, 0)
-  );
-  const minArr = Math.min(...arrModify);
-  const indexOfMinArr = arrModify.indexOf(minArr);
-  return `Inner array with min sum has ${indexOfMinArr}th index and amount: ${minArr} `;
-}
+// function minArrSum(arr) {
+//   const arrModify = arr.map((numbers) =>
+//     numbers.reduce((acc, number) => acc + number, 0)
+//   );
+//   const minArr = Math.min(...arrModify);
+//   const indexOfMinArr = arrModify.indexOf(minArr);
+//   return `Inner array with min sum has ${indexOfMinArr}th index and amount: ${minArr} `;
+// }
 
-console.log(minArrSum(arr));
+// console.log(minArrSum(arr));
+
+// 8------Create dublicate function----
+
+// function dublicate(string) {
+//   const result = string
+//     .split("")
+//     .map((el, ind) => `${el.toUpperCase() + el.repeat(ind).toLowerCase()}`)
+//     .join("-");
+//   return result;
+// }
+// console.log(dublicate("sdfWV"));
