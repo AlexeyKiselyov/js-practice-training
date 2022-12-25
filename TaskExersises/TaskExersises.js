@@ -185,3 +185,18 @@
 //   return result;
 // }
 // console.log(dublicate("sdfWV"));
+
+// 9 ------Responce arr with LowerCaseWords indexes------
+
+function lowerCaseWords(string) {
+  let result = [];
+
+  string.split("").forEach((el, idx) => {
+    if (el === el.toUpperCase()) {
+      result.push(idx);
+    }
+  });
+  return result;
+}
+
+console.log(lowerCaseWords("nkLKnLn"));;
