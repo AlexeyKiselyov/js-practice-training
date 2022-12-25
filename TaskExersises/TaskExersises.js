@@ -188,15 +188,25 @@
 
 // 9 ------Responce arr with LowerCaseWords indexes------
 
-function lowerCaseWords(string) {
-  let result = [];
+// first option
+// function lowerCaseWords(string) {
+//   let result = [];
 
-  string.split("").forEach((el, idx) => {
-    if (el === el.toUpperCase()) {
-      result.push(idx);
-    }
-  });
-  return result;
-}
+//   string.split("").forEach((el, idx) => {
+//     if (el === el.toUpperCase()) {
+//       result.push(idx);
+//     }
+//   });
+//   return result;
+// }
 
-console.log(lowerCaseWords("nkLKnLn"));;
+// second option
+// const lowerCaseWords = (string) =>
+//   string.split("").reduce((result, el, idx) => {
+//     if (el === el.toUpperCase()) {
+//       result.push(idx);
+//     }
+//     return result;
+//   }, []);
+
+// console.log(lowerCaseWords("nkLKnLn"));
