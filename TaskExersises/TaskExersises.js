@@ -227,3 +227,24 @@
 // }
 
 // fizzbuzz(15);
+
+// 11 ----Find annagram----
+function findAnnagram(string1, string2) {
+  const sortFirstString = string1
+    .toLowerCase()
+    .split("")
+    .sort()
+    .join("")
+    .replace(/[^\w\s]|_/g, "")
+    .trim();
+  console.log(sortFirstString);
+  const sortSecondString = string2
+    .toLowerCase()
+    .split("")
+    .sort()
+    .join("")
+    .replace(/[^\w\s]|_/g, "")
+    .trim();
+  console.log(sortFirstString === sortSecondString);
+}
+findAnnagram("Anna /1..3';  ", "an1an3   ");
