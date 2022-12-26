@@ -42,10 +42,10 @@
 
 
 
-
+//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 
 // Example 2 - Коллбек функції
-// Додайте об'єкту account  методи ззаписом
+// Додайте об'єкту account  методи з записом
 // withdraw(amount, onSuccess, onError) та deposit(amount, onSuccess, onError) де перший параметр це сума операції, а другий і третій - колбеки.
 // Метод withdraw викликає onError якщо amount більше TRANSACTION_LIMIT або this.balance та onSuccess в іншому випадку.
 // Метод deposit  викликає onError якщо amount більше TRANSACTION_LIMI або меньше або дорівнює нулю, та onSuccess в іншому випадку.

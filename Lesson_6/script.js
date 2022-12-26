@@ -38,100 +38,101 @@
 // console.log(calcBMI('68,3', '1.65'));
 // console.log(calcBMI('118,3', '1.95'));
 
-//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 //  Task 2 (Деструктуризація)
 // Перепиши функцію так щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
 
-// function printContactsInfo({names, phones}) {
-//     const nameList = names.split(',');
-//     const phoneList = phones.split(',');
-//     for (let i = 0; i < nameList.length; i += 1) {
-//         console.log(`${nameList[i]}: ${phoneList[i]}`);
+// function printContactsInfo({ names, phones }) {
+//   const nameList = names.split(",");
+//   const phoneList = phones.split(",");
+//   for (let i = 0; i < nameList.length; i += 1) {
+//     if (i < phoneList.length) {
+//       console.log(`${nameList[i]}: ${phoneList[i]}`);
+//     } else {
+//       console.log(`${nameList[i]}: номер відсутній`);
 //     }
+//   }
 // }
 
 // printContactsInfo({
-//     names: 'Jacob,William,Solomon,Artemis',
-//     phones: '89001234567,89001112233,890055566377,890055566300'
+//   names: "Jacob,William,Solomon,Artemis",
+//   phones: "89001234567,89001112233,890055566377",
 // });
 
 //  Task 3 (Глибока деструктуризація)
 // Перепиши функцію так щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
 
 // function getBotReport({
-//     companyName,
-//     bots: {
-//         repairBots: {
-//             type1: repairType1,
-//             type2: repairType2
-//         },
-//         defenceBots: {
-//             type1: defenceType1,
-//             type2: defenceType2
-//         }
-//     }
+//   companyName,
+//   bots: {
+//     repairBots: { type1: repairType1, type2: repairType2 },
+//     defenceBots: { type1: defenceType1, type2: defenceType2 },
+//   },
 // }) {
-// console.log(obj.bots.repairBots.type1);
-// console.log(companyName);
-// console.log('repairType1',repairType1);
-// console.log('repairType2',repairType2);
-// console.log('defenceType1',defenceType1);
-// console.log('defenceType2',defenceType2);
-// // console.log(bots); не доступний
-// return `${companyName} has ${repairBots + defenceBots} bots in stock`;
+//   // console.log(obj.bots.repairBots.type1);
+//   console.log(companyName);
+//   console.log("repairType1", repairType1);
+//   console.log("repairType2", repairType2);
+//   console.log("defenceType1", defenceType1);
+//   console.log("defenceType2", defenceType2);
+//   // console.log(bots); //не доступний
+//   return `${companyName} has ${
+//     repairType1 + repairType2 + defenceType1 + defenceType2
+//   } bots in stock`;
+//   return `${companyName} has ${repairBots + defenceBots} bots in stock`;
 // }
 
-// console.log(getBotReport({
-//     companyName: 'Cyberdyne Systems',
+// console.log(
+//   getBotReport({
+//     companyName: "Cyberdyne Systems",
 //     bots: {
-//         repairBots: {
-//             type1: 150,
-//             type2: 200
-//         },
-//         defenceBots: {
-//             type1: 300,
-//             type2: 200
-//         },
-//     }
-// }));
-
+//       repairBots: {
+//         type1: 150,
+//         type2: 200,
+//       },
+//       defenceBots: {
+//         type1: 300,
+//         type2: 200,
+//       },
+//     },
+//   })
+// );
 
 // Task 4 (Деструктуризація)
 // Напишу функцію щоб вона приймала об'єкт параметрів із властивостями companyName і stock і виводила репорт про кількість товарів на складі будь-якої компанії.
 
-// function getStockReport({companyName, stock}) {
-// console.log(companyName);
-// console.log(stock);
-// const values = Object.values(stock)
-// console.log(values);
-// let total = 0
-// for(const value of values){
-//    total += value
-// }
-// console.log(total);
-
-// return `${companyName} has ${total} items in stock`
+// function getStockReport({ companyName, stock }) {
+//   console.log(companyName);
+//   console.log(stock);
+//   const values = Object.values(stock);
+//   console.log(values);
+//   let total = 0;
+//   for (const value of values) {
+//     total += value;
 //   }
+//   console.log(total);
+
+//   return `${companyName} has ${total} items in stock`;
+// }
 
 // console.log(
-//     getStockReport({
-//         companyName: 'Cyberdyne Systems',
-//         stock: {
-//             repairBots: 150,
-//             defenceBots: 50,
-//         },
-//     }),
+//   getStockReport({
+//     companyName: "Cyberdyne Systems",
+//     stock: {
+//       repairBots: 150,
+//       defenceBots: 50,
+//     },
+//   })
 // ); // "Cyberdyne Systems has 200 items in stock"
 
 // console.log(
-//     getStockReport({
-//         companyName: 'Belacci',
-//         stock: {
-//             shoes: 20,
-//             skirts: 10,
-//             hats: 5,
-//         },
-//     }),
+//   getStockReport({
+//     companyName: "Belacci",
+//     stock: {
+//       shoes: 20,
+//       skirts: 10,
+//       hats: 5,
+//     },
+//   })
 // ); // "Belacci has 35 item in stock"
 
 // Task 5 (spread)
@@ -163,10 +164,8 @@
 //     return '_' + Math.random().toString(36).substr(2, 9);
 // }
 
-
 // Task 6 (rest)
 // Напиши функцію transformUsername(user) так, щоб вона повертала новий об'єкт із властивістю fullName, замість firstName та lastName.
-
 
 // function transformUsername({
 //     firstName,

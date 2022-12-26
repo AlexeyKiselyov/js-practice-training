@@ -210,3 +210,20 @@
 //   }, []);
 
 // console.log(lowerCaseWords("nkLKnLn"));
+
+// 10 ---Console numbers. If number /3 - fizz, /5 -buzz, /3&/5 - fizzbuzz---
+// function fizzbuzz(number) {
+//   for (let i = 1; i <= number; i += 1) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       console.log("fizzbuzz");
+//     } else if (i % 3 === 0) {
+//       console.log("fizz");
+//     } else if (i % 5 === 0) {
+//       console.log("buzz");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
+
+// fizzbuzz(15);
