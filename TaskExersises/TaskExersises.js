@@ -229,22 +229,51 @@
 // fizzbuzz(15);
 
 // 11 ----Find annagram----
-function findAnnagram(string1, string2) {
-  const sortFirstString = string1
-    .toLowerCase()
-    .split("")
-    .sort()
-    .join("")
-    .replace(/[^\w\s]|_/g, "")
-    .trim();
-  console.log(sortFirstString);
-  const sortSecondString = string2
-    .toLowerCase()
-    .split("")
-    .sort()
-    .join("")
-    .replace(/[^\w\s]|_/g, "")
-    .trim();
-  console.log(sortFirstString === sortSecondString);
-}
-findAnnagram("Anna /1..3';  ", "an1an3   ");
+
+// first option
+// function findAnnagram(string1, string2) {
+//   const sortFirstString = string1
+//     .toLowerCase()
+//     .split("")
+//     .sort()
+//     .join("")
+//     .replace(/[^\w\s]|_/g, "")
+//     .trim();
+//   console.log(sortFirstString);
+//   const sortSecondString = string2
+//     .toLowerCase()
+//     .split("")
+//     .sort()
+//     .join("")
+//     .replace(/[^\w\s]|_/g, "")
+//     .trim();
+//   console.log(sortFirstString === sortSecondString);
+// }
+// findAnnagram("Anna /1..3';  ", "an1an3   ");
+
+// second option (not my version)
+
+// const objBilder = (str) => {
+//   const obj = {};
+//   console.log(str.replace(/[^\w]/g).toLowerCase());
+//   for (let char of str.replace(/[^\w]/g).toLowerCase()) {
+//     obj[char] = obj[char] + 1 || 1;
+//   }
+//   return obj;
+// };
+
+// const anagram = (strA, strB) => {
+//   const objA = objBilder(strA);
+//   const objB = objBilder(strB);
+//   if (Object.keys(objA).length !== Object.keys(objB).length) {
+//     return false;
+//   }
+//   for (let char in objA) {
+//     if (objA[char] !== objB[char]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
+
+// console.log(anagram("anna", "anan"));;
