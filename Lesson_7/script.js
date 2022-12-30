@@ -31,18 +31,11 @@
 //     quantity: 3
 // }, logProduct);
 
-
-
 // createProduct({
 //     name: '🍋',
 //     price: 20,
 //     quantity: 5
 // }, logTotalPrice);
-
-
-
-
-//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 
 // Example 2 - Коллбек функції
 // Додайте об'єкту account  методи з записом
@@ -92,16 +85,43 @@
 // // account.deposit(-600, handleSuccess, handleError);
 // account.deposit(600, handleSuccess, handleError);
 
-
-
-
-
-
 // Example 3 - Коллбек функції
 // Напишіть функцію each(array, callback), яка першим параметром очікує масив, а другим - функцію, яка застосовується до кожного елемента масиву. Функція each повинна повернути новий масив, елементами якого будуть результати виклику колббека.
 
 // function each(array, callback) {
+//   return array.map((number) => callback(number));
+// }
 
+// function multiplyByTwo(number) {
+//   return number * 2;
+// }
+
+// function minusTen(number) {
+//   return number - 10;
+// }
+
+// function sqrt(number) {
+//   return Math.sqrt(number);
+// }
+
+// function ceil(number) {
+//   return Math.ceil(number);
+// }
+
+// function floor(number) {
+//   return Math.floor(number);
+// }
+
+// console.log(each([64, 49, 36, 25, 16], multiplyOnTwo));
+// console.log(
+//   each([64, 49, 36, 25, 16], minusTen)
+// );
+// console.log(each([64, 49, 36, 25, 16], sqrt));
+// console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], ceil));
+// console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], floor));
+
+// task
+// function each(array, callback) {
 // }
 
 // console.log(
@@ -131,9 +151,6 @@
 // );
 
 
-
-
-
 // Example 4 - Стрілочні функції
 // Виконайте рефакторинг коду за допомогою стрілочних функцій.
 
@@ -144,7 +161,6 @@
 //     };
 //     callback(product);
 // }
-
 
 // const logProduct = (product) => console.log(product);
 // const logTotalPrice = product => console.log(product.price * product.quantity);
@@ -161,23 +177,16 @@
 //     quantity: 5
 // }, logTotalPrice);
 
-
-
-
-
-
-
-
 // Example 5 - Стрілочні функції
 // Виконайте рефакторинг коду за допомогою стрілочних функцій.
 
 // const each = (array, callback) => {
-//     const newArr = [];
-//     for (const el of array) {
-//         newArr.push(callback(el));
-//     }
-//     return newArr;
-// }
+//   const newArr = [];
+//   for (const el of array) {
+//     newArr.push(callback(el));
+//   }
+//   return newArr;
+// };
 
 // console.log( each([64, 49, 36, 25, 16], value => value * 2));
 // console.log(each([64, 49, 36, 25, 16],  (value) => value - 10));
@@ -185,39 +194,17 @@
 //     each([64, 49, 36, 25, 16], (value) => Math.sqrt(value)));
 
 // Не обовязково, але бажано
-// console.log(
-//     each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
-//         return Math.ceil(value);
-//     }),
-// );
-// console.log(
-//     each([1.5, 2.1, 16.4, 9.7, 11.3], function (value) {
-//         return Math.floor(value);
-//     }),
-// );
-
-
-
-
+// console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], (value) => Math.ceil(value)));
+// console.log(each([1.5, 2.1, 16.4, 9.7, 11.3], (value) => Math.floor(value)));
 
 // Example 6 - Метод forEach
 // Виконайте рефакторинг коду, використовуючи метод forEach і стрілочні функції.
 
-// function logItems(items) {
-//     console.log(items);
-//     items.forEach((item, i) => console.log(`${i+1} - ${item} `))
+// const logItems = (items) =>
+//   items.forEach((item, i) => console.log(`${i + 1} - ${item} `));
 
-// }
-
-// logItems(['Mango', 'Poly', 'Ajax']);
+// logItems(["Mango", "Poly", "Ajax"]);
 // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
-
-
-
-
-
-
-
 
 // Example 7 - Метод forEach
 // Виконайте рефакторинг коду, використовуючи метод forEach і стрілочні функції.
@@ -231,9 +218,6 @@
 //     names: 'Jacob,William,Solomon,Artemis',
 //     phones: '89001234567,89001112233,890055566377,890055566300',
 // });
-
-
-
 
 // Example 8 - Метод forEach
 // Виконайте рефакторинг коду, використовуючи метод forEach і стрілочні функції.
