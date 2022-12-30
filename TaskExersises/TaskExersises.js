@@ -276,4 +276,79 @@
 //   return true;
 // };
 
-// console.log(anagram("anna", "anan"));;
+// console.log(anagram("anna", "anan"));
+
+// 11 ------Find vowel letters--------
+
+// function findVowel(str) {
+//   let result = 0;
+//   for (let letter of str) {
+//     if (
+//       letter === "a" ||
+//       letter === "e" ||
+//       letter === "i" ||
+//       letter === "o" ||
+//       letter === "u"
+//     ) {
+//       result += 1;
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(findVowel("string"));
+
+// second option
+
+// function findVowel(str) {
+//   let result = 0;
+//   const vowel = ["a", "e", "i", "o", "u"];
+//   for (let letter of str) {
+//     if (vowel.includes(letter)) {
+//       result += 1;
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(findVowel("sting"));
+
+// third option
+
+// function findVowel(str) {
+//   const result = str.match(/[aeiou]/gi);
+//   return result ? result.length : 0;
+// }
+
+// console.log(findVowel("sting"));
+
+// 12--------Fobonachi---------
+
+// first option
+// function fibonachi(numb) {
+//   let result = [0, 1];
+//   if (numb === 0 || numb === 1) {
+//     return 0;
+//   }
+//   if (numb === 2) {
+//     return 1;
+//   }
+//   for (let i = 1; i <= numb; i += 1) {
+//     result.push(result[i] + result[i - 1]);
+//   }
+//   return result.join(",");
+// }
+
+// console.log(fibonachi(3));
+
+// second option
+
+// function fibonachi(numb) {
+//   if (numb < 2) {
+//     return numb;
+//   }
+
+//   return fibonachi(numb - 1) + fibonachi(numb - 2);
+// }
+
+// console.log(fibonachi(8));
