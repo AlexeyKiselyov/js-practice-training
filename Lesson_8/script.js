@@ -95,13 +95,13 @@ const cars = [{
 
 
 // Повертає масив такої самої довжини
-// const onSale = cars.map(car => {
-//     if(car.onSale){
-//         return car
-//     }
-// })
+const onSale = cars.map(car => {
+    if(car.onSale){
+        return car
+    }
+})
 
-// console.log(onSale);
+console.log(onSale);
 
 
 

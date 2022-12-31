@@ -352,3 +352,20 @@
 // }
 
 // console.log(fibonachi(8));
+
+// 13------divisibleBy([1, 2, 3, 4, 5, 6], 2) == [2, 4, 6]----
+
+// const divisibleBy = (a, b) => {
+//   let result = [];
+//   for (numb of a) {
+//     if (numb % b === 0) {
+//       result.push(numb);
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(divisibleBy([1, 2, 3, 4, 5, 6], 3));
+
+// 14------Age when father was older then his son in hulf-----
+
