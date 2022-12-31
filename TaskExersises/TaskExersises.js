@@ -369,3 +369,6 @@
 
 // 14------Age when father was older then his son in hulf-----
 
+// const findAge = (futherAge, sunAge) => (result = futherAge - sunAge * 2);
+
+// console.log(findAge(40, 4));
