@@ -372,3 +372,23 @@
 // const findAge = (futherAge, sunAge) => (result = futherAge - sunAge * 2);
 
 // console.log(findAge(40, 4));
+
+// 15------Find odd numbers lower then param----
+
+// const findOdd = (param) => {
+//   let result = [];
+//   for (let i = 1; i < param; i += 1) {
+//     if (i % 2 !== 0) {
+//       result.push(i);
+//     }
+//   }
+//   return `Quantity of numbers: ${result.length}.\nTotal result ${result}`;
+// };
+
+// console.log(findOdd(9));
+
+// 16-----Change string to number------
+
+// const stringToNumb = (str) => Number(str);
+// // const stringToNumb = (str) => Number.parseInt(str);
+// console.log(stringToNumb("-72"));
