@@ -95,26 +95,18 @@ const cars = [{
 
 
 // Повертає масив такої самої довжини
-const onSale = cars.map(car => {
-    if(car.onSale){
-        return car
-    }
-})
+// const onSale = cars.map(car => {
+//     if(car.onSale){
+//         return car
+//     }
+// })
 
-console.log(onSale);
-
-
-
-
-
-
-
-
+// console.log(onSale);
 
 
 
 //   Example 1 - Метод map
-// Нехай функція getModels повертає масив моделей (поле моделі) всіх автомобілів.Нехай функція getModels повертає масив моделей (поле моделі) всіх автомобілів.
+// Нехай функція getModels повертає масив моделей (поле моделі) всіх автомобілів.
 
 
 // // {
@@ -158,7 +150,7 @@ console.log(onSale);
 //         const disc = Math.round(car.price / 100 * discount)
 
 //         copyObj.oldPrice = car.price
-//         // console.log(disc);
+//         console.log(disc);
 //         copyObj.price -= disc
 //         copyObj.discount = disc
 //         return copyObj
@@ -191,7 +183,7 @@ console.log(onSale);
 // };
 // console.log(cars);
 // console.log(filterByPrice(cars, 30000));
-// console.table(filterByPrice(cars, 25000));
+// console.table(filterByPrice(cars, 23000));
 
 
 
@@ -274,12 +266,14 @@ console.log(onSale);
 // https://learn.javascript.ru/string
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare
 
-// const sortByAscendingAmount = cars => {
-//     cars.sort((a, b) => a.model.localeCompare(b.model) )
-//     console.log(cars);
-// };
+// const sortByAscendingAmount = cars => [...cars].sort((a, b) => a.amount - b.amount);
+
+// const sortByAscendingModel = cars => [...cars].sort((a, b) => a.model.localeCompare(b.model) );
 
 // console.table(sortByAscendingAmount(cars));
+// console.table(sortByAscendingModel(cars));
+// console.table(cars);
+
 
 
 
@@ -292,9 +286,10 @@ console.log(onSale);
 // Example 8 - Метод sort
 // Нехай функція sortByDescendingPrice повертає новий масив автомобілів, відсортований за зменшенням значення властивості price.
 
-// const sortByDescendingPrice = cars => {};
+// const sortByDescendingPrice = cars => [...cars].sort((a,b)=>b.price - a.price);
 
 // console.table(sortByDescendingPrice(cars));
+
 
 
 
@@ -306,7 +301,15 @@ console.log(onSale);
 // Example 9 - Метод sort
 // Нехай функція sortByModel повертає новий масив автомобілів відсортований за назвою моделі в алфавітному та зворотньому алфавітному порядку, залежно від значення параметра order.
 
-// const sortByModel = (cars, order) => {};
+// const sortByModel = (cars, order) => {
+//     if(order==="asc"){
+//         return [...cars].sort((a,b)=> a.model.localeCompare(b.model));
+//     }
+//     if(order==="desc"){
+//         return [...cars].sort((a,b)=> b.model.localeCompare(a.model))
+//     }
+//     return "Oops...Wrong order type"
+// };
 
 // console.table(sortByModel(cars, 'asc'));
 // console.table(sortByModel(cars, 'desc'));
@@ -377,6 +380,22 @@ console.log(onSale);
 //     price: 24045,
 //     onSale: true
 // },
+
+// const getSortedCarsOnSale = cars => {
+//     const sortedCars = [...cars].filter(({onSale})=>onSale).sort((a,b)=>a.price-b.price)
+//     const strings = sortedCars.map(({make,model,amount,price},idx)=>{
+//     return `${idx+1}. Марка ${make}, Модель: ${model}, Кількість: ${amount}, Ціна: ${price}\n`
+// }).join('');
+//     return `Кількість автомобілів ${sortedCars.reduce((acc,{amount}) => acc+=amount,0)}:\n`+strings
+// }
+
+// console.log(getSortedCarsOnSale(cars));
+
+
+
+
+
+
 // const getSortedCarsOnSale = cars => {
 //     const sortedCars = cars.filter(({
 //         onSale
@@ -414,6 +433,8 @@ console.log(onSale);
 // console.log(getCarsModel(cars));
 
 
+
+//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 
 
 // Потрібно повернути обєкт де ключом являється назва літери а значенням та кількість раз скільки ця літера зустрічаєьься в рядку 
