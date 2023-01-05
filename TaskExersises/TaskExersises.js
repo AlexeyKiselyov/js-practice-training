@@ -392,3 +392,50 @@
 // const stringToNumb = (str) => Number(str);
 // // const stringToNumb = (str) => Number.parseInt(str);
 // console.log(stringToNumb("-72"));
+
+// 17 ----Find index of nessesary number in Array------
+
+// first option
+// const findIndex = (arr, number) => arr.indexOf(number);
+
+// second option
+// const findIndex = (arr, number)=>{
+//   for(let i=0; i<arr.length; i+=1){
+//     if(arr[i]===number){
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+// const arr = [1,5,6,7,8,9,4,2,3,]
+// console.log(findIndex(arr, 1));
+
+// 18 ----Find all indexes of nessesary number in Array------
+
+// first option
+// const findIndexes = (arr, number) => {
+//   let result = [];
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] === number) {
+//       result.push(i);
+//     }
+//   }
+//   return result.length ? result : -1;
+// };
+
+// second option
+// const findIndexes = (arr, number) => {
+//   let result = [];
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] === number) {
+//       result.push(i);
+//     }
+//   }
+//   return result.length
+//     ? `Indexes of this number into this array are: ${result.join(",")} `
+//     : "This array doesn't include this number";
+// };
+
+// const arr = [1, 5, 6, 7, 8, 9, 6, 2, 6];
+// console.log(findIndexes(arr, 6));
