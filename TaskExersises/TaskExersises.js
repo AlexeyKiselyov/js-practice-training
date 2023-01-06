@@ -439,3 +439,30 @@
 
 // const arr = [1, 5, 6, 7, 8, 9, 6, 2, 6];
 // console.log(findIndexes(arr, 6));
+
+// 19 ------Flat Arr------------
+// const arrayOfArray = [[1, 2], [3, 4], [[5, 6]]];
+
+// first option
+// const flatArr = (arr) => arr.flatMap((el) => el);
+
+// console.log(flatArr(arrayOfArray));
+
+// first option
+// const flatArr = (arr) => arr.reduce((acc,el) => [...acc,...el],[]);
+
+// console.log(flatArr(arrayOfArray));
+
+// 20 ------Arr to Object ------------
+
+// const pairs = [
+//   ["a", 1],
+//   ["b", 2],
+//   ["c", 3],
+// ];
+
+// first option
+// const arrToObj = (arr) =>
+//   arr.reduce((acc, [key, prop]) => ({ ...acc, [key]: prop }), {});
+
+//   console.log(arrToObj(pairs));
