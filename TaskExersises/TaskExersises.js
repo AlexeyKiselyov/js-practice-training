@@ -448,7 +448,7 @@
 
 // console.log(flatArr(arrayOfArray));
 
-// first option
+// second option
 // const flatArr = (arr) => arr.reduce((acc,el) => [...acc,...el],[]);
 
 // console.log(flatArr(arrayOfArray));

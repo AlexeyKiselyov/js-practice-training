@@ -1,98 +1,96 @@
 //!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 
 // Колекція об'єктів для всіх прикладів з автомобілями
-const cars = [{
-        make: 'Honda',
-        model: 'CR-V',
-        type: 'suv',
-        amount: 14,
-        price: 24045,
-        onSale: true
-    },
-    {
-        make: 'Honda',
-        model: 'accord',
-        type: 'sedan',
-        amount: 2,
-        price: 22455,
-        onSale: true
-    },
-    {
-        make: 'Honda',
-        model: 'Accord',
-        type: 'sedan',
-        amount: 2,
-        price: 22455,
-        onSale: true
-    },
-    {
-        make: 'Mazda',
-        model: 'Mazda 6',
-        type: 'sedan',
-        amount: 8,
-        price: 24195,
-        onSale: false
-    },
-    {
-        make: 'Mazda',
-        model: 'CX-9',
-        type: 'suv',
-        amount: 7,
-        price: 31520,
-        onSale: true
-    },
-    {
-        make: 'Toyota',
-        model: '4Runner',
-        type: 'suv',
-        amount: 19,
-        price: 34210,
-        onSale: false
-    },
-    {
-        make: 'Toyota',
-        model: 'Sequoia',
-        type: 'suv',
-        amount: 16,
-        price: 45560,
-        onSale: false
-    },
-    {
-        make: 'Toyota',
-        model: 'Tacoma',
-        type: 'truck',
-        amount: 4,
-        price: 24320,
-        onSale: true
-    },
-    {
-        make: 'Ford',
-        model: 'F-150',
-        type: 'truck',
-        amount: 11,
-        price: 27110,
-        onSale: true
-    },
-    {
-        make: 'Ford',
-        model: 'Fusion',
-        type: 'sedan',
-        amount: 13,
-        price: 22120,
-        onSale: true
-    },
-    {
-        make: 'Ford',
-        model: 'Explorer',
-        type: 'suv',
-        amount: 6,
-        price: 31660,
-        onSale: false
-    }
-];
-
-
-
+// const cars = [
+//   {
+//     make: "Honda",
+//     model: "CR-V",
+//     type: "suv",
+//     amount: 14,
+//     price: 24045,
+//     onSale: true,
+//   },
+//   {
+//     make: "Honda",
+//     model: "accord",
+//     type: "sedan",
+//     amount: 2,
+//     price: 22455,
+//     onSale: true,
+//   },
+//   {
+//     make: "Honda",
+//     model: "Accord",
+//     type: "sedan",
+//     amount: 2,
+//     price: 22455,
+//     onSale: true,
+//   },
+//   {
+//     make: "Mazda",
+//     model: "Mazda 6",
+//     type: "sedan",
+//     amount: 8,
+//     price: 24195,
+//     onSale: false,
+//   },
+//   {
+//     make: "Mazda",
+//     model: "CX-9",
+//     type: "suv",
+//     amount: 7,
+//     price: 31520,
+//     onSale: true,
+//   },
+//   {
+//     make: "Toyota",
+//     model: "4Runner",
+//     type: "suv",
+//     amount: 19,
+//     price: 34210,
+//     onSale: false,
+//   },
+//   {
+//     make: "Toyota",
+//     model: "Sequoia",
+//     type: "suv",
+//     amount: 16,
+//     price: 45560,
+//     onSale: false,
+//   },
+//   {
+//     make: "Toyota",
+//     model: "Tacoma",
+//     type: "truck",
+//     amount: 4,
+//     price: 24320,
+//     onSale: true,
+//   },
+//   {
+//     make: "Ford",
+//     model: "F-150",
+//     type: "truck",
+//     amount: 11,
+//     price: 27110,
+//     onSale: true,
+//   },
+//   {
+//     make: "Ford",
+//     model: "Fusion",
+//     type: "sedan",
+//     amount: 13,
+//     price: 22120,
+//     onSale: true,
+//   },
+//   {
+//     make: "Ford",
+//     model: "Explorer",
+//     type: "suv",
+//     amount: 6,
+//     price: 31660,
+//     onSale: false,
+//   },
+// ];
 
 // Повертає масив такої самої довжини
 // const onSale = cars.map(car => {
@@ -103,11 +101,8 @@ const cars = [{
 
 // console.log(onSale);
 
-
-
 //   Example 1 - Метод map
 // Нехай функція getModels повертає масив моделей (поле моделі) всіх автомобілів.
-
 
 // // {
 //     make: 'Honda',
@@ -125,11 +120,6 @@ const cars = [{
 
 // console.log(getModels(cars));
 // console.log(cars);
-
-
-
-
-
 
 // Example 2 - Метод map
 // Нехай функція makeCarsWithDiscount повертає новий масив об'єктів із змінeнним значенням властивості price залежно від переданої знижки (%).
@@ -161,11 +151,6 @@ const cars = [{
 // console.log(makeCarsWithDiscount(cars, 6));
 // console.table(makeCarsWithDiscount(cars, 11));
 
-
-
-
-
-
 // Example 3 - Метод filter
 // Нехай функція filterByPrice повертає масив автомобілів ціна яких менша за значення параметра threshold.
 // // {
@@ -185,11 +170,6 @@ const cars = [{
 // console.log(filterByPrice(cars, 30000));
 // console.table(filterByPrice(cars, 23000));
 
-
-
-
-
-
 // Example 4 - Метод filter
 // Нехай функція getCarsWithDiscount повертає масив автомобілів властивість onSale яких true.
 
@@ -202,15 +182,10 @@ const cars = [{
 //     onSale: true
 // },
 
-
 // const getCarsWithDiscount = cars => cars.filter(({onSale}) => onSale )
 
 // // console.log(cars);
 // console.log(getCarsWithDiscount(cars));
-
-
-
-
 
 // Example 5 - Метод filter
 // Нехай функція getCarsWithType повертає масив автомобілів, тип яких збігається зі значенням параметра type.
@@ -228,13 +203,7 @@ const cars = [{
 // console.table(getCarsWithType(cars, 'suv'));
 // console.table(getCarsWithType(cars, 'sedan'));
 
-
-
-
-
-
 // // Example 6 - Метод find
-
 
 // // {
 //     make: 'Honda',
@@ -254,13 +223,6 @@ const cars = [{
 // console.log(getCarByModel(cars, 'F-150'));
 // console.log(getCarByModel(cars, 'CX-9'));
 
-
-
-
-
-
-
-
 // Example 7 - Метод sort
 // Нехай функція sortByAscendingAmount повертає новий масив автомобілів відсортований за збільшенням значення властивості amount.
 // https://learn.javascript.ru/string
@@ -274,29 +236,12 @@ const cars = [{
 // console.table(sortByAscendingModel(cars));
 // console.table(cars);
 
-
-
-
-
-
-
-
-
-
 // Example 8 - Метод sort
 // Нехай функція sortByDescendingPrice повертає новий масив автомобілів, відсортований за зменшенням значення властивості price.
 
 // const sortByDescendingPrice = cars => [...cars].sort((a,b)=>b.price - a.price);
 
 // console.table(sortByDescendingPrice(cars));
-
-
-
-
-
-
-
-
 
 // Example 9 - Метод sort
 // Нехай функція sortByModel повертає новий масив автомобілів відсортований за назвою моделі в алфавітному та зворотньому алфавітному порядку, залежно від значення параметра order.
@@ -314,17 +259,8 @@ const cars = [{
 // console.table(sortByModel(cars, 'asc'));
 // console.table(sortByModel(cars, 'desc'));
 
-
-
-
-
-
-
 // Example 10 - Метод reduce
 // Нехай функція getTotalAmount повертає загальну кількість автомобілів (значення властивостей amount).
-
-
-
 
 // // {
 //     make: 'Honda',
@@ -335,20 +271,14 @@ const cars = [{
 //     onSale: true
 // },
 
-
 // const getModelsOnSale = cars => {
 //     return cars.reduce((acc, {amount}) => acc += amount, 0)
 // };
 
 // console.log(getModelsOnSale(cars));
 
-
-
-
 // Example 11 - Ланцюжки методів
 // Нехай функція getAvailableCarNames повертає масив моделей автомобілів, але тільки тих, що зараз на розпродажі.
-
-
 
 // // {
 //     make: 'Honda',
@@ -365,10 +295,6 @@ const cars = [{
 // };
 
 // console.table(getModelsOnSale(cars));
-
-
-
-
 
 // Example 12 - Ланцюжки методів
 // Нехай функція getSortedCarsOnSale повертає список (Марка, Модель кількість та Ціна) автомобілів на розпродажі (властивість onSale), відсортованих за зростанням ціни.
@@ -390,11 +316,6 @@ const cars = [{
 // }
 
 // console.log(getSortedCarsOnSale(cars));
-
-
-
-
-
 
 // const getSortedCarsOnSale = cars => {
 //     const sortedCars = cars.filter(({
@@ -422,7 +343,6 @@ const cars = [{
 // 1...
 // 2...
 
-
 // function getCarsModel(arr) {
 //     return arr.reduce((acc, item) => {
 //         acc.push(item.model)
@@ -432,19 +352,29 @@ const cars = [{
 
 // console.log(getCarsModel(cars));
 
+// Потрібно повернути обєкт де ключом являється назва літери а значенням та кількість раз скільки ця літера зустрічаєьься в рядку
+// const str = "fwewfwfaczfascawdczxzsdaczzcsfacaDAxcadfa";
+// const str1 = 'fwewfwfaczfascazvdxfndgfmretnsrafGDBhwerDAxcadfa';
 
+// first option
+// const accountLettersInString = (str) => {
+//   const obj = {};
+//   for (letter of str) {
+//     if (!obj[letter]) {
+//       obj[letter] = 1;
+//     } else {
+//       obj[letter] += 1;
+//     }
+//   }
+//   return obj;
+// };
 
-//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
+// console.log(accountLettersInString(str));
 
-
-// Потрібно повернути обєкт де ключом являється назва літери а значенням та кількість раз скільки ця літера зустрічаєьься в рядку 
-// const str = 'fwewfwfaczfascawdczxzsdaczzcsfacaDAxcadfa';
-// const st1 = 'fwewfwfaczfascazvdxfndgfmretnsrafGDBhwerDAxcadfa';
-
-
+// second option
 // /**
 //  * Return object where symbol key ....
-//  * @param {String} str 
+//  * @param {String} str
 //  * @returns {Object}
 //  */
 // function returnObj(str) {
@@ -458,16 +388,15 @@ const cars = [{
 //     }, {})
 //     return obj
 // }
-// returnObj(str)
-// returnObj(str1)
+// console.log(returnObj(str));
+// console.log(returnObj(str1));
 
 // {
 //     f: 6,
 //     w: 4,
 // }
 
-
-
+//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 
 // function foo(number, onPositive, onNegative) {
 //     let result = 0;
@@ -481,7 +410,7 @@ const cars = [{
 //     return result
 // }
 
-// foo(0, positive, negative)
+// console.log(foo(-0, positive, negative));
 
 // function positive(number) {
 //     return -number
@@ -491,15 +420,12 @@ const cars = [{
 //     return number * -1
 // }
 
-
 // const strs = ['sdsdgsdfsdgadagsgasfa','asfweadasgwqvwfvqfq','qdcasfqwefqxdcqaxqqww','wefwcsfcass']
 // function boo(arr, callback){
 //     arr.forEach(str => console.log(callback(str)))
 // }
 
-
 // boo(strs, returnObj)
-
 
 // const carsEx = [{
 //         name: "Honda",
@@ -526,21 +452,23 @@ const cars = [{
 // const result =   [...honda, ...toyota]//honda.concat(toyota)
 // console.log(result);
 
-// const numbers = [1, 2, [3, [4, [1, 1, 1], 5], 6], 7]
+const numbers = [1, 2, [3, [4, [1, 1, 1], 5], 6], 7];
 // console.log(Array.isArray(numbers));
-// const getSomeNumbers = numbers => numbers.flatMap(value => {
-//     if()
-//         value
-//     })
-//     .flatMap(value => value).filter(value => value > 2);
+// const getSomeNumbers = (numbers) =>
+//   numbers
+//     .flatMap((value) => value)
+//     .flatMap((value) => value)
+//     .flatMap((value) => value)
+//     .filter((value) => value > 2);
 // https://learn.javascript.ru/recursion
 // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
 // function foo(arr) {
-//   return arr.flatMap(item => {
-//         if (Array.isArray(item)) {
-//             return foo(item)
-//         }
-//         return item
-//     })
+//   return arr.flatMap((item) => {
+//     if (Array.isArray(item)) {
+//       return foo(item);
+//     }
+//     return item;
+//   });
 // }
 
+// console.log(foo(numbers));
