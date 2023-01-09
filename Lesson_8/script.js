@@ -1,96 +1,96 @@
 //!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 
 // Колекція об'єктів для всіх прикладів з автомобілями
-// const cars = [
-//   {
-//     make: "Honda",
-//     model: "CR-V",
-//     type: "suv",
-//     amount: 14,
-//     price: 24045,
-//     onSale: true,
-//   },
-//   {
-//     make: "Honda",
-//     model: "accord",
-//     type: "sedan",
-//     amount: 2,
-//     price: 22455,
-//     onSale: true,
-//   },
-//   {
-//     make: "Honda",
-//     model: "Accord",
-//     type: "sedan",
-//     amount: 2,
-//     price: 22455,
-//     onSale: true,
-//   },
-//   {
-//     make: "Mazda",
-//     model: "Mazda 6",
-//     type: "sedan",
-//     amount: 8,
-//     price: 24195,
-//     onSale: false,
-//   },
-//   {
-//     make: "Mazda",
-//     model: "CX-9",
-//     type: "suv",
-//     amount: 7,
-//     price: 31520,
-//     onSale: true,
-//   },
-//   {
-//     make: "Toyota",
-//     model: "4Runner",
-//     type: "suv",
-//     amount: 19,
-//     price: 34210,
-//     onSale: false,
-//   },
-//   {
-//     make: "Toyota",
-//     model: "Sequoia",
-//     type: "suv",
-//     amount: 16,
-//     price: 45560,
-//     onSale: false,
-//   },
-//   {
-//     make: "Toyota",
-//     model: "Tacoma",
-//     type: "truck",
-//     amount: 4,
-//     price: 24320,
-//     onSale: true,
-//   },
-//   {
-//     make: "Ford",
-//     model: "F-150",
-//     type: "truck",
-//     amount: 11,
-//     price: 27110,
-//     onSale: true,
-//   },
-//   {
-//     make: "Ford",
-//     model: "Fusion",
-//     type: "sedan",
-//     amount: 13,
-//     price: 22120,
-//     onSale: true,
-//   },
-//   {
-//     make: "Ford",
-//     model: "Explorer",
-//     type: "suv",
-//     amount: 6,
-//     price: 31660,
-//     onSale: false,
-//   },
-// ];
+const cars = [
+  {
+    make: "Honda",
+    model: "CR-V",
+    type: "suv",
+    amount: 14,
+    price: 24045,
+    onSale: true,
+  },
+  {
+    make: "Honda",
+    model: "accord",
+    type: "sedan",
+    amount: 2,
+    price: 22455,
+    onSale: true,
+  },
+  {
+    make: "Honda",
+    model: "Accord",
+    type: "sedan",
+    amount: 2,
+    price: 22455,
+    onSale: true,
+  },
+  {
+    make: "Mazda",
+    model: "Mazda 6",
+    type: "sedan",
+    amount: 8,
+    price: 24195,
+    onSale: false,
+  },
+  {
+    make: "Mazda",
+    model: "CX-9",
+    type: "suv",
+    amount: 7,
+    price: 31520,
+    onSale: true,
+  },
+  {
+    make: "Toyota",
+    model: "4Runner",
+    type: "suv",
+    amount: 19,
+    price: 34210,
+    onSale: false,
+  },
+  {
+    make: "Toyota",
+    model: "Sequoia",
+    type: "suv",
+    amount: 16,
+    price: 45560,
+    onSale: false,
+  },
+  {
+    make: "Toyota",
+    model: "Tacoma",
+    type: "truck",
+    amount: 4,
+    price: 24320,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "F-150",
+    type: "truck",
+    amount: 11,
+    price: 27110,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "Fusion",
+    type: "sedan",
+    amount: 13,
+    price: 22120,
+    onSale: true,
+  },
+  {
+    make: "Ford",
+    model: "Explorer",
+    type: "suv",
+    amount: 6,
+    price: 31660,
+    onSale: false,
+  },
+];
 
 // Повертає масив такої самої довжини
 // const onSale = cars.map(car => {
@@ -298,7 +298,7 @@
 
 // Example 12 - Ланцюжки методів
 // Нехай функція getSortedCarsOnSale повертає список (Марка, Модель кількість та Ціна) автомобілів на розпродажі (властивість onSale), відсортованих за зростанням ціни.
-// // {
+// {
 //     make: 'Honda',
 //     model: 'CR-V',
 //     type: 'suv',
@@ -307,13 +307,24 @@
 //     onSale: true
 // },
 
-// const getSortedCarsOnSale = cars => {
-//     const sortedCars = [...cars].filter(({onSale})=>onSale).sort((a,b)=>a.price-b.price)
-//     const strings = sortedCars.map(({make,model,amount,price},idx)=>{
-//     return `${idx+1}. Марка ${make}, Модель: ${model}, Кількість: ${amount}, Ціна: ${price}\n`
-// }).join('');
-//     return `Кількість автомобілів ${sortedCars.reduce((acc,{amount}) => acc+=amount,0)}:\n`+strings
-// }
+// const getSortedCarsOnSale = (cars) => {
+//   const sortedCars = [...cars]
+//     .filter(({ onSale }) => onSale)
+//     .sort((a, b) => a.price - b.price);
+//   const strings = sortedCars
+//     .map(({ make, model, amount, price }, idx) => {
+//       return `${
+//         idx + 1
+//       }. Марка ${make}, Модель: ${model}, Кількість: ${amount}, Ціна: ${price}\n`;
+//     })
+//     .join("");
+//   return (
+//     `Кількість автомобілів ${sortedCars.reduce(
+//       (acc, { amount }) => (acc += amount),
+//       0
+//     )}:\n` + strings
+//   );
+// };
 
 // console.log(getSortedCarsOnSale(cars));
 
@@ -396,7 +407,6 @@
 //     w: 4,
 // }
 
-//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 
 // function foo(number, onPositive, onNegative) {
 //     let result = 0;
@@ -452,7 +462,7 @@
 // const result =   [...honda, ...toyota]//honda.concat(toyota)
 // console.log(result);
 
-const numbers = [1, 2, [3, [4, [1, 1, 1], 5], 6], 7];
+// const numbers = [1, 2, [3, [4, [1, 1, 1], 5], 6], 7];
 // console.log(Array.isArray(numbers));
 // const getSomeNumbers = (numbers) =>
 //   numbers
