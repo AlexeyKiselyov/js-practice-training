@@ -466,3 +466,17 @@
 //   arr.reduce((acc, [key, prop]) => ({ ...acc, [key]: prop }), {});
 
 //   console.log(arrToObj(pairs));
+
+// 21 -------Find indexis of Upper Case letters--------
+
+const str = "cOddDJsdf";
+
+const findIndexis = (string) =>
+  string.split("").reduce((acc, letter, idx) => {
+    if (letter === letter.toUpperCase()) {
+      acc.push(idx);
+    }
+    return acc;
+  }, []);
+
+console.log(findIndexis(str));
