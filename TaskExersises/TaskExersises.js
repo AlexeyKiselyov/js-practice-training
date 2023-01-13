@@ -469,14 +469,34 @@
 
 // 21 -------Find indexis of Upper Case letters--------
 
-const str = "cOddDJsdf";
+// const str = "cOddDJsdf";
 
-const findIndexis = (string) =>
-  string.split("").reduce((acc, letter, idx) => {
-    if (letter === letter.toUpperCase()) {
-      acc.push(idx);
-    }
-    return acc;
-  }, []);
+// const findIndexis = (string) =>
+//   string.split("").reduce((acc, letter, idx) => {
+//     if (letter === letter.toUpperCase()) {
+//       acc.push(idx);
+//     }
+//     return acc;
+//   }, []);
 
-console.log(findIndexis(str));
+// console.log(findIndexis(str));
+
+// 22 ------Output numbers from 0 to n (if %3 = foo, if%5=bar, if%3,5=foobar)---
+
+// const foobar = (numb) => {
+//   let result = [];
+//   for (let i = 1; i <= numb; i += 1) {
+//     if (i % 3 === 0 && i % 5 === 0) {
+//       result.push("foobar");
+//     } else if (i % 3 === 0) {
+//       result.push("foo");
+//     } else if (i % 5 === 0) {
+//       result.push("bar");
+//     } else {
+//       result.push(i);
+//     }
+//   }
+//   return result.join(",");
+// };
+
+// console.log(foobar(15));
