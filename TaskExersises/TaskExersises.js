@@ -500,3 +500,129 @@
 // };
 
 // console.log(foobar(15));
+
+// 23--------Work with Date--------------
+
+//Find years range with Date:
+const yearsRangeFind = (date) => {
+  const year = date.getUTCFullYear();
+  const dateNow = new Date().getUTCFullYear();
+  const result = dateNow - date;
+  console.log(result);
+};
+
+//Find years range:
+
+const yearsRange = (dateString) => {
+  const date = new Date(dateString).getUTCFullYear();
+  const dateNow = new Date().getUTCFullYear();
+  const result = dateNow - date;
+  console.log(result);
+};
+yearsRange("2020-02-12");
+
+// Year number to string:
+const year = 15;
+
+const yearsToWord = (years) => {
+  let yearWord = "no data";
+
+  if (year < 0) {
+    yearWord = "wrong data of birthday";
+  } else if (year > 15) {
+    yearWord = "long-liver";
+  } else {
+    switch (year) {
+      case 0:
+        yearWord = "less then one year";
+        break;
+      case 1:
+        yearWord = "one year";
+        break;
+      case 2:
+        yearWord = "two years";
+        break;
+      case 3:
+        yearWord = "three years";
+        break;
+      case 4:
+        yearWord = "four years";
+        break;
+      case 5:
+        yearWord = "five years";
+        break;
+      case 6:
+        yearWord = "six years";
+        break;
+      case 7:
+        yearWord = "seven years";
+        break;
+      case 8:
+        yearWord = "eight years";
+        break;
+      case 9:
+        yearWord = "nine years";
+        break;
+      case 10:
+        yearWord = "ten years";
+        break;
+      case 11:
+        yearWord = "eleven years";
+        break;
+      case 12:
+        yearWord = "twelve years";
+        break;
+      case 13:
+        yearWord = "thirteen years";
+        break;
+      case 14:
+        yearWord = "fourteen years";
+        break;
+      case 15:
+        yearWord = "fifteen years";
+        break;
+      case 16:
+        yearWord = "sixteen years";
+        break;
+
+      default:
+        console.log("Some date error");
+    }
+  }
+  return yearWord;
+};
+
+console.log(yearsToWord(year));
+
+// Date format functions:
+// Date string to format dd.mm.yyyy
+function formatDate(date) {
+  let d = new Date(date),
+    month = "" + (d.getMonth() + 1),
+    day = "" + d.getDate(),
+    year = d.getFullYear();
+
+  if (month.length < 2) month = "0" + month;
+  if (day.length < 2) day = "0" + day;
+
+  return [day, month, year].join(".");
+}
+console.log(formatDate("2020-02-12"));
+
+const date = new Date("2020-02-12");
+console.log(date);
+
+// Date  to format dd.mm.yyyy
+function formatDateFormat(date) {
+  let d = date,
+    month = "" + (d.getMonth() + 1),
+    day = "" + d.getDate(),
+    year = d.getFullYear();
+
+  if (month.length < 2) month = "0" + month;
+  if (day.length < 2) day = "0" + day;
+
+  return [day, month, year].join(".");
+}
+
+console.log(formatDateFormat(date));
