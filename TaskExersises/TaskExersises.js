@@ -511,7 +511,7 @@
 //   console.log(result);
 // };
 
-// //Find years range:
+// //Find years range with string argument:
 
 // const yearsRange = (dateString) => {
 //   const date = new Date(dateString).getUTCFullYear();
@@ -627,151 +627,107 @@
 
 // console.log(formatDateFormat(date));
 
-// 24
-const notices =
- [
-  {
-    _id: "63c988064776c4b0ffd742f8",
-    title: "First Dog lost",
-    category: "lost-found",
-    name: "Bill",
-    birthdate: "2020-10-09T21:00:00.000Z",
-    breed: "Breed",
-    location: "Vorzel,Kyiv",
-    comments:
-      " Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consectetur  Lorem ipsum dolor sit amet",
-    imgURL:
-      "https://res.cloudinary.com/dgne23at6/image/upload/v1674151945/168b05f192b8971e509a1a55d70a2bb9_esozbw.jpg",
-    owner: {
-      _id: "63c45001026dd5830f48ee1c",
-      name: "TestUserNotice",
-      email: "test@gmail.com",
-    },
-    createdAt: "2023-01-19T18:12:22.950Z",
-    updatedAt: "2023-01-19T18:12:22.950Z",
-  },
-  {
-    _id: "63c988414776c4b0ffd742fe",
-    title: "Cat lost",
-    category: "lost-found",
-    name: "Michel",
-    birthdate: "2021-10-09T21:00:00.000Z",
-    breed: "Breed",
-    location: "Vorzel,Kyiv",
-    comments:
-      " Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consectetur  Lorem ipsum dolor sit amet",
-    imgURL:
-      "https://res.cloudinary.com/dgne23at6/image/upload/v1674152003/9fd5446a3b700733d685a4ac42d5645b_scu7oh.jpg",
-    owner: {
-      _id: "63c45001026dd5830f48ee1c",
-      name: "TestUserNotice",
-      email: "test@gmail.com",
-    },
-    createdAt: "2023-01-19T18:13:21.015Z",
-    updatedAt: "2023-01-19T18:13:21.015Z",
-  },
-  {
-    _id: "63c988884776c4b0ffd74302",
-    title: "Cat lost",
-    category: "lost-found",
-    name: "Monica",
-    birthdate: "2022-10-09T21:00:00.000Z",
-    breed: "Breed",
-    location: "Vorzel,Kyiv",
-    comments:
-      " Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consectetur  Lorem ipsum dolor sit amet",
-    imgURL:
-      "https://res.cloudinary.com/dgne23at6/image/upload/v1674152075/4f8cff11728273263492d90a00813ac6_salwma.jpg",
-    owner: {
-      _id: "63c45001026dd5830f48ee1c",
-      name: "TestUserNotice",
-      email: "test@gmail.com",
-    },
-    createdAt: "2023-01-19T18:14:32.627Z",
-    updatedAt: "2023-01-19T18:14:32.627Z",
-  },
-  {
-    _id: "63ce71a42cd0304013f0efb9",
-    title: "hh",
-    category: "sell",
-    name: "hz",
-    breed: "",
-    location: "hz, hz",
-    comments: "ddhhhhhh",
-    price: 200,
-    imgURL:
-      "http://res.cloudinary.com/digml0rat/image/upload/v1673906206/Fullstack%20Group%20Project/home-pets_hywfgq.png",
-    owner: {
-      _id: "63c45001026dd5830f48ee1c",
-      name: "TestUserNotice",
-      email: "test@gmail.com",
-    },
-    createdAt: "2023-01-23T11:38:12.518Z",
-    updatedAt: "2023-01-23T11:38:12.518Z",
-  },
-  {
-    _id: "63ce9d268ab989895ee7ca17",
-    title: "hh",
-    category: "sell",
-    name: "gg",
-    birthdate: "2023-02-28T22:00:00.000Z",
-    breed: "jh",
-    sex: "male",
-    location: "Kharkiv, Kharkiv",
-    comments: "jjjjjjjjjj",
-    price: 1,
-    imgURL:
-      "http://res.cloudinary.com/digml0rat/image/upload/v1673906206/Fullstack%20Group%20Project/home-pets_hywfgq.png",
-    owner: {
-      _id: "63c45001026dd5830f48ee1c",
-      name: "TestUserNotice",
-      email: "test@gmail.com",
-    },
-    createdAt: "2023-01-23T14:43:50.180Z",
-    updatedAt: "2023-01-23T14:43:50.180Z",
-  },
-  {
-    _id: "63ce9da18ab989895ee7ca1a",
-    title: "hh",
-    category: "sell",
-    name: "gg",
-    birthdate: "2015-02-28T22:00:00.000Z",
-    breed: "jh",
-    sex: "male",
-    location: "Kharkiv, Kharkiv",
-    comments: "jjjjjjjjjj",
-    price: 1,
-    imgURL:
-      "http://res.cloudinary.com/digml0rat/image/upload/v1673906206/Fullstack%20Group%20Project/home-pets_hywfgq.png",
-    owner: {
-      _id: "63c45001026dd5830f48ee1c",
-      name: "TestUserNotice",
-      email: "test@gmail.com",
-    },
-    createdAt: "2023-01-23T14:45:53.856Z",
-    updatedAt: "2023-01-23T14:45:53.856Z",
-  },
+// 24 --------revers() practic--------
+// const notices = [
+//   {
+//     _id: "63c988064776c4b0ffd742f8",
+//     title: "First Dog lost",
+//     category: "lost-found",
+//     name: "Bill",
+//     birthdate: "2020-10-09T21:00:00.000Z",
+//     breed: "Breed",
+//     location: "Vorzel,Kyiv",
+//     comments:
+//       " Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consectetur  Lorem ipsum dolor sit amet",
+//     imgURL:
+//       "https://res.cloudinary.com/dgne23at6/image/upload/v1674151945/168b05f192b8971e509a1a55d70a2bb9_esozbw.jpg",
+//     owner: {
+//       _id: "63c45001026dd5830f48ee1c",
+//       name: "TestUserNotice",
+//       email: "test@gmail.com",
+//     },
+//     createdAt: "2023-01-19T18:12:22.950Z",
+//     updatedAt: "2023-01-19T18:12:22.950Z",
+//   },
 
-  {
-    _id: "63d2a25185a15b7213a2b318",
-    title: "Last hh",
-    category: "sell",
-    birthdate: "2023-01-07T22:00:00.000Z",
-    comments: "dhkjfdvkjdfv",
-    price: 1,
-    imgURL:
-      "http://res.cloudinary.com/digml0rat/image/upload/v1673906206/Fullstack%20Group%20Project/home-pets_hywfgq.png",
-    owner: {
-      _id: "63c45001026dd5830f48ee1c",
-      name: "TestUserNotice",
-      email: "test@gmail.com",
-    },
-    createdAt: "2023-01-26T15:54:57.642Z",
-    updatedAt: "2023-01-26T15:54:57.642Z",
-  },
-];
-console.log(notices);
+//   {
+//     _id: "63c988884776c4b0ffd74302",
+//     title: "Cat lost",
+//     category: "lost-found",
+//     name: "Monica",
+//     birthdate: "2022-10-09T21:00:00.000Z",
+//     breed: "Breed",
+//     location: "Vorzel,Kyiv",
+//     comments:
+//       " Lorem ipsum dolor sit amet, consecteturLorem ipsum dolor sit amet, consectetur  Lorem ipsum dolor sit amet",
+//     imgURL:
+//       "https://res.cloudinary.com/dgne23at6/image/upload/v1674152075/4f8cff11728273263492d90a00813ac6_salwma.jpg",
+//     owner: {
+//       _id: "63c45001026dd5830f48ee1c",
+//       name: "TestUserNotice",
+//       email: "test@gmail.com",
+//     },
+//     createdAt: "2023-01-19T18:14:32.627Z",
+//     updatedAt: "2023-01-19T18:14:32.627Z",
+//   },
+//   {
+//     _id: "63ce9d268ab989895ee7ca17",
+//     title: "hh",
+//     category: "sell",
+//     name: "gg",
+//     birthdate: "2023-02-28T22:00:00.000Z",
+//     breed: "jh",
+//     sex: "male",
+//     location: "Kharkiv, Kharkiv",
+//     comments: "jjjjjjjjjj",
+//     price: 1,
+//     imgURL:
+//       "http://res.cloudinary.com/digml0rat/image/upload/v1673906206/Fullstack%20Group%20Project/home-pets_hywfgq.png",
+//     owner: {
+//       _id: "63c45001026dd5830f48ee1c",
+//       name: "TestUserNotice",
+//       email: "test@gmail.com",
+//     },
+//     createdAt: "2023-01-23T14:43:50.180Z",
+//     updatedAt: "2023-01-23T14:43:50.180Z",
+//   },
+//   {
+//     _id: "63d2a25185a15b7213a2b318",
+//     title: "Last hh",
+//     category: "sell",
+//     birthdate: "2023-01-07T22:00:00.000Z",
+//     comments: "dhkjfdvkjdfv",
+//     price: 1,
+//     imgURL:
+//       "http://res.cloudinary.com/digml0rat/image/upload/v1673906206/Fullstack%20Group%20Project/home-pets_hywfgq.png",
+//     owner: {
+//       _id: "63c45001026dd5830f48ee1c",
+//       name: "TestUserNotice",
+//       email: "test@gmail.com",
+//     },
+//     createdAt: "2023-01-26T15:54:57.642Z",
+//     updatedAt: "2023-01-26T15:54:57.642Z",
+//   },
+// ];
+// console.log(notices);
 
-const reversed = notices.reverse();
-console.log(reversed);
-console.log(notices);
+// const reversed = [...notices].reverse();
+// console.log(reversed);
+// console.log(notices);
+
+// 25 -----unique number-------
+// first option
+// const uniqueNumbersArr = (...arg) =>
+//   [...arg]
+//     .join()
+//     .split(",")
+//     .filter((number, idx, arr) => arr.indexOf(number) === idx)
+//     .sort((a, b) => a - b);
+
+// console.log(uniqueNumbersArr([1, 8, 6], [2, 4, 8], [4, 9, 1]));
+
+// second option
+// const uniqueNumbersArr = (...arg) =>
+//   [...new Set([...arg].flat())].sort((a, b) => a - b);
+
+// console.log(uniqueNumbersArr([1, 8, 6], [2, 4, 8], [4, 9, 1]));
