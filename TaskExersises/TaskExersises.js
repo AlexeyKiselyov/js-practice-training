@@ -731,3 +731,42 @@
 //   [...new Set([...arg].flat())].sort((a, b) => a - b);
 
 // console.log(uniqueNumbersArr([1, 8, 6], [2, 4, 8], [4, 9, 1]));
+
+// 26 -----Mobile phone number from 9th numbers (xxx) xxx-xxx  -----
+
+// first option
+// const createPhoneNumber = (digits) => {
+//   let result = ["("];
+//   const arr = digits.toString().split("");
+//   for (let i = 0; i <= arr.length; i += 1) {
+//     if (i === 2) {
+//       result.push(arr[i].toString() + ")" + " ");
+//     } else if (i === 5) {
+//       result.push(arr[i].toString() + "-");
+//     } else {
+//       result.push(arr[i]);
+//     }
+//   }
+//   return result.join("");
+// };
+
+// console.log(createPhoneNumber(123456789));
+
+// second option
+// const createPhoneNumber = (digits) => {
+//   const arr = digits.toString().split("");
+//   const result=`(${arr[0]}${arr[1]}${arr[2]}) ${arr[3]}${arr[4]}${arr[5]}-${arr[6]}${arr[7]}${arr[8]}`
+//   return result;
+// };
+
+// console.log(createPhoneNumber(123456789));
+
+// third option
+
+// const createPhoneNumber = (digits) => {
+//   const string = digits.toString();
+//   const result=`(${string.slice(0,3)}) ${string.slice(3,6)}-${string.slice(6,9)}`
+//   return result;
+// };
+
+// console.log(createPhoneNumber(123456789));
