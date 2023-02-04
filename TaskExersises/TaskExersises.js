@@ -769,4 +769,79 @@
 //   return result;
 // };
 
+// console.log(createPhoneNumber((123456789);
+
+// fourth option
+
+// const createPhoneNumber = (digits) => {
+//   const result = digits.toString().split("");
+//   result.splice(0, 0, "(");
+//   result.splice(4, 0, ")");
+//   result.splice(5, 0, " ");
+//   result.splice(9, 0, "-");
+//   return result.join("");
+// };
+
 // console.log(createPhoneNumber(123456789));
+
+// 27 -----Find vowels-------
+
+// first option
+// const findVowels = (string) => {
+//   const result = string.match(/[aeiou]/gi);
+//   return result ? result.length : 0;
+// };
+
+// console.log(findVowels("oueasd"));
+
+// second option
+// const findVowels = (string) => {
+//   const vowels = ["a", "e", "i", "o", "u"];
+//   let result = 0;
+//   for (const letter of string.toLowerCase()) {
+//     if (vowels.includes(letter)) {
+//       result += 1;
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(findVowels("lklkjloo"));
+
+// third option
+// const findVowels = (string) => {
+//   const result = string
+//     .toLowerCase()
+//     .split("")
+//     .filter(
+//       (letter) =>
+//         letter === "a" ||
+//         letter === "e" ||
+//         letter === "i" ||
+//         letter === "o" ||
+//         letter === "u"
+//     );
+//   return result.length;
+// };
+
+// console.log(findVowels("millooeou"));
+
+// fourth option
+// const findVowels = (string) => {
+//   const arr = string.toLowerCase().split("");
+//   let result = 0;
+//   for (const letter of arr) {
+//     if (
+//       letter === "a" ||
+//       letter === "e" ||
+//       letter === "i" ||
+//       letter === "o" ||
+//       letter === "u"
+//     ) {
+//       result += 1;
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(findVowels("mango"));
