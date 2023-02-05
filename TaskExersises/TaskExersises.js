@@ -845,3 +845,21 @@
 // };
 
 // console.log(findVowels("mango"));
+
+// 28 ----Sentence to capotal case-----
+
+// first option
+// const toCapitalCase = (sentence) =>
+//   sentence
+//     .split(" ")
+//     .map((word) => word.charAt(0).toUpperCase() + word.substring(1))
+//     .join(" ");
+// console.log(toCapitalCase("Ssdd sdsd sdsd sdsdvv"));
+
+
+// second option
+// const toCapitalCase = (sentence) => {
+//   const result = sentence.split(" ").map(word=>word[0].toUpperCase()+word.slice(1)).join(" ");
+//   return result;
+// };
+// console.log(toCapitalCase("Ssdd sdsd sdsd sdsdvv"));
