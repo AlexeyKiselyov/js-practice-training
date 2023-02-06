@@ -856,10 +856,31 @@
 //     .join(" ");
 // console.log(toCapitalCase("Ssdd sdsd sdsd sdsdvv"));
 
-
 // second option
 // const toCapitalCase = (sentence) => {
 //   const result = sentence.split(" ").map(word=>word[0].toUpperCase()+word.slice(1)).join(" ");
 //   return result;
 // };
 // console.log(toCapitalCase("Ssdd sdsd sdsd sdsdvv"));
+
+// 29 -------Polindrome--------------
+
+// const findPolidrom = (str) => {
+//   const reverseStr = str.split("").reverse().join("");
+//   return reverseStr.toLowerCase() === str.toLowerCase();
+// };
+// console.log(findPolidrom("Alla"));
+
+// polindrome task from freecodecamp
+const findPolidrom = (str) => {
+  const exceptions = [",", ".", " ", "_",":","-","/","(",")"];
+  const reverseStr = str.split("");
+  let arr = [];
+  for (const el of reverseStr) {
+    if (!exceptions.includes(el)) {
+      arr.push(el);
+    }
+  }
+  return [...arr].reverse().join("").toLowerCase()===arr.join("").toLowerCase();
+};
+console.log(findPolidrom("0_0 (: /-\ :) 0-0"));
