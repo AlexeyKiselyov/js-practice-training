@@ -872,15 +872,305 @@
 // console.log(findPolidrom("Alla"));
 
 // polindrome task from freecodecamp
-const findPolidrom = (str) => {
-  const exceptions = [",", ".", " ", "_",":","-","/","(",")"];
-  const reverseStr = str.split("");
-  let arr = [];
-  for (const el of reverseStr) {
-    if (!exceptions.includes(el)) {
-      arr.push(el);
+// const findPolidrom = (str) => {
+//   const exceptions = [",", ".", " ", "_",":","-","/","(",")"];
+//   const reverseStr = str.split("");
+//   let arr = [];
+//   for (const el of reverseStr) {
+//     if (!exceptions.includes(el)) {
+//       arr.push(el);
+//     }
+//   }
+//   return [...arr].reverse().join("").toLowerCase()===arr.join("").toLowerCase();
+// };
+// console.log(findPolidrom("0_0 (: /-\ :) 0-0"));
+
+// 30----------Convert To Roman------------
+
+const convertToRoman = (numb) => {
+  const arr = numb.toString().split("");
+  let result = [];
+  if (arr.length === 1) {
+    switch (arr[0]) {
+      case "1":
+        result.push("I");
+        break;
+      case "2":
+        result.push("II");
+        break;
+      case "3":
+        result.push("III");
+        break;
+      case "4":
+        result.push("IV");
+        break;
+      case "5":
+        result.push("V");
+        break;
+      case "6":
+        result.push("VI");
+        break;
+      case "7":
+        result.push("VII");
+        break;
+      case "8":
+        result.push("VIII");
+        break;
+      case "9":
+        result.push("IX");
+        break;
     }
   }
-  return [...arr].reverse().join("").toLowerCase()===arr.join("").toLowerCase();
+  if (arr.length === 2) {
+    switch (arr[0]) {
+      case "1":
+        result.push("X");
+        break;
+      case "2":
+        result.push("XX");
+        break;
+      case "3":
+        result.push("XXX");
+        break;
+      case "4":
+        result.push("XL");
+        break;
+      case "5":
+        result.push("L");
+        break;
+      case "6":
+        result.push("LX");
+        break;
+      case "7":
+        result.push("LXX");
+        break;
+      case "8":
+        result.push("LXXX");
+        break;
+      case "9":
+        result.push("XC");
+        break;
+    }
+    switch (arr[1]) {
+      case "1":
+        result.push("I");
+        break;
+      case "2":
+        result.push("II");
+        break;
+      case "3":
+        result.push("III");
+        break;
+      case "4":
+        result.push("IV");
+        break;
+      case "5":
+        result.push("V");
+        break;
+      case "6":
+        result.push("VI");
+        break;
+      case "7":
+        result.push("VII");
+        break;
+      case "8":
+        result.push("VIII");
+        break;
+      case "9":
+        result.push("IX");
+        break;
+    }
+  }
+  if (arr.length === 3) {
+    switch (arr[0]) {
+      case "1":
+        result.push("C");
+        break;
+      case "2":
+        result.push("CC");
+        break;
+      case "3":
+        result.push("CCC");
+        break;
+      case "4":
+        result.push("CD");
+        break;
+      case "5":
+        result.push("D");
+        break;
+      case "6":
+        result.push("DC");
+        break;
+      case "7":
+        result.push("DCC");
+        break;
+      case "8":
+        result.push("DCCC");
+        break;
+      case "9":
+        result.push("CM");
+        break;
+    }
+    switch (arr[1]) {
+      case "1":
+        result.push("X");
+        break;
+      case "2":
+        result.push("XX");
+        break;
+      case "3":
+        result.push("XXX");
+        break;
+      case "4":
+        result.push("XL");
+        break;
+      case "5":
+        result.push("L");
+        break;
+      case "6":
+        result.push("LX");
+        break;
+      case "7":
+        result.push("LXX");
+        break;
+      case "8":
+        result.push("LXXX");
+        break;
+      case "9":
+        result.push("XC");
+        break;
+    }
+    switch (arr[2]) {
+      case "1":
+        result.push("I");
+        break;
+      case "2":
+        result.push("II");
+        break;
+      case "3":
+        result.push("III");
+        break;
+      case "4":
+        result.push("IV");
+        break;
+      case "5":
+        result.push("V");
+        break;
+      case "6":
+        result.push("VI");
+        break;
+      case "7":
+        result.push("VII");
+        break;
+      case "8":
+        result.push("VIII");
+        break;
+      case "9":
+        result.push("IX");
+        break;
+    }
+  }
+  if (arr.length === 4) {
+    switch (arr[0]) {
+      case "1":
+        result.push("M");
+        break;
+      case "2":
+        result.push("MM");
+        break;
+      case "3":
+        result.push("MMM");
+        break;
+    }
+    switch (arr[1]) {
+      case "1":
+        result.push("C");
+        break;
+      case "2":
+        result.push("CC");
+        break;
+      case "3":
+        result.push("CCC");
+        break;
+      case "4":
+        result.push("CD");
+        break;
+      case "5":
+        result.push("D");
+        break;
+      case "6":
+        result.push("DC");
+        break;
+      case "7":
+        result.push("DCC");
+        break;
+      case "8":
+        result.push("DCCC");
+        break;
+      case "9":
+        result.push("CM");
+        break;
+    }
+    switch (arr[2]) {
+      case "1":
+        result.push("X");
+        break;
+      case "2":
+        result.push("XX");
+        break;
+      case "3":
+        result.push("XXX");
+        break;
+      case "4":
+        result.push("XL");
+        break;
+      case "5":
+        result.push("L");
+        break;
+      case "6":
+        result.push("LX");
+        break;
+      case "7":
+        result.push("LXX");
+        break;
+      case "8":
+        result.push("LXXX");
+        break;
+      case "9":
+        result.push("XC");
+        break;
+    }
+    switch (arr[3]) {
+      case "1":
+        result.push("I");
+        break;
+      case "2":
+        result.push("II");
+        break;
+      case "3":
+        result.push("III");
+        break;
+      case "4":
+        result.push("IV");
+        break;
+      case "5":
+        result.push("V");
+        break;
+      case "6":
+        result.push("VI");
+        break;
+      case "7":
+        result.push("VII");
+        break;
+      case "8":
+        result.push("VIII");
+        break;
+      case "9":
+        result.push("IX");
+        break;
+    }
+  }
+  return result.join("");
 };
-console.log(findPolidrom("0_0 (: /-\ :) 0-0"));
+
+console.log(convertToRoman(3999));
