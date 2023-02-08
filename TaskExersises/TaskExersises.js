@@ -888,33 +888,33 @@
 // 30----------Convert To Roman------------
 
 // first option
-const convertToRoman = (num) => {
-  const ref = [
-    ["M", 1000],
-    ["CM", 900],
-    ["D", 500],
-    ["CD", 400],
-    ["C", 100],
-    ["XC", 90],
-    ["L", 50],
-    ["XL", 40],
-    ["X", 10],
-    ["IX", 9],
-    ["V", 5],
-    ["IV", 4],
-    ["I", 1],
-  ];
-  let res = [];
-  ref.forEach((el) => {
-    while (num >= el[1]) {
-      res.push(el[0]);
-      num -= el[1];
-    }
-  });
-  return res.join("");
-};
+// const convertToRoman = (num) => {
+//   const ref = [
+//     ["M", 1000],
+//     ["CM", 900],
+//     ["D", 500],
+//     ["CD", 400],
+//     ["C", 100],
+//     ["XC", 90],
+//     ["L", 50],
+//     ["XL", 40],
+//     ["X", 10],
+//     ["IX", 9],
+//     ["V", 5],
+//     ["IV", 4],
+//     ["I", 1],
+//   ];
+//   let res = [];
+//   ref.forEach((el) => {
+//     while (num >= el[1]) {
+//       res.push(el[0]);
+//       num -= el[1];
+//     }
+//   });
+//   return res.join("");
+// };
 
-console.log(convertToRoman(10));
+// console.log(convertToRoman(10));
 
 // second option
 // const convertToRoman = (numb) => {
@@ -1337,3 +1337,51 @@ console.log(convertToRoman(10));
 // };
 
 // console.log(convertToRoman(3999));
+
+//31 ------Cipher Cesare--------
+const cipherCesare = (str) => {
+  const cipher = [
+    ["A", "N"],
+    ["B", "O"],
+    ["C", "P"],
+    ["D", "Q"],
+    ["E", "R"],
+    ["F", "S"],
+    ["G", "T"],
+    ["H", "U"],
+    ["I", "V"],
+    ["J", "W"],
+    ["K", "X"],
+    ["L", "Y"],
+    ["M", "Z"],
+    ["N", "A"],
+    ["O", "B"],
+    ["P", "C"],
+    ["Q", "D"],
+    ["R", "E"],
+    ["S", "F"],
+    ["T", "G"],
+    ["U", "H"],
+    ["V", "I"],
+    ["W", "J"],
+    ["X", "K"],
+    ["Y", "L"],
+    ["Z", "M"],
+  ];
+  const exceptions = [" ", ",", ".", "!", "?"];
+  const arr = str.split("");
+  let result = [];
+  for (const letter of arr) {
+    if (exceptions.includes(letter)) {
+      result.push(letter);
+    } else {
+      for (const el of cipher) {
+        if (el[0] === letter.toUpperCase()) {
+          result.push(el[1]);
+        }
+      }
+    }
+  }
+  return result.join("");
+};
+console.log(cipherCesare("SERR PBQR PNZC")); //FREE CODE CAMP (13=>; A=>N)
