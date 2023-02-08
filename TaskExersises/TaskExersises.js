@@ -1339,49 +1339,94 @@
 // console.log(convertToRoman(3999));
 
 //31 ------Cipher Cesare--------
+
+// first option
+const cipher = {
+  A: "N",
+  B: "O",
+  C: "P",
+  D: "Q",
+  E: "R",
+  F: "S",
+  G: "T",
+  H: "U",
+  I: "V",
+  J: "W",
+  K: "X",
+  L: "Y",
+  M: "Z",
+  N: "A",
+  O: "B",
+  P: "C",
+  Q: "D",
+  R: "E",
+  S: "F",
+  T: "G",
+  U: "H",
+  V: "I",
+  W: "J",
+  X: "K",
+  Y: "L",
+  Z: "M",
+};
+
 const cipherCesare = (str) => {
-  const cipher = [
-    ["A", "N"],
-    ["B", "O"],
-    ["C", "P"],
-    ["D", "Q"],
-    ["E", "R"],
-    ["F", "S"],
-    ["G", "T"],
-    ["H", "U"],
-    ["I", "V"],
-    ["J", "W"],
-    ["K", "X"],
-    ["L", "Y"],
-    ["M", "Z"],
-    ["N", "A"],
-    ["O", "B"],
-    ["P", "C"],
-    ["Q", "D"],
-    ["R", "E"],
-    ["S", "F"],
-    ["T", "G"],
-    ["U", "H"],
-    ["V", "I"],
-    ["W", "J"],
-    ["X", "K"],
-    ["Y", "L"],
-    ["Z", "M"],
-  ];
-  const exceptions = [" ", ",", ".", "!", "?"];
   const arr = str.split("");
-  let result = [];
-  for (const letter of arr) {
-    if (exceptions.includes(letter)) {
-      result.push(letter);
-    } else {
-      for (const el of cipher) {
-        if (el[0] === letter.toUpperCase()) {
-          result.push(el[1]);
-        }
-      }
+  const result = arr.map((letter) => {
+    if (cipher.hasOwnProperty(letter)) {
+      letter = cipher[letter];
     }
-  }
+    return letter;
+  });
   return result.join("");
 };
-console.log(cipherCesare("SERR PBQR PNZC")); //FREE CODE CAMP (13=>; A=>N)
+
+console.log(cipherCesare("SERR PBQR PNZC"))
+
+// second option
+// const cipherCesare = (str) => {
+//   const cipher = [
+//     ["A", "N"],
+//     ["B", "O"],
+//     ["C", "P"],
+//     ["D", "Q"],
+//     ["E", "R"],
+//     ["F", "S"],
+//     ["G", "T"],
+//     ["H", "U"],
+//     ["I", "V"],
+//     ["J", "W"],
+//     ["K", "X"],
+//     ["L", "Y"],
+//     ["M", "Z"],
+//     ["N", "A"],
+//     ["O", "B"],
+//     ["P", "C"],
+//     ["Q", "D"],
+//     ["R", "E"],
+//     ["S", "F"],
+//     ["T", "G"],
+//     ["U", "H"],
+//     ["V", "I"],
+//     ["W", "J"],
+//     ["X", "K"],
+//     ["Y", "L"],
+//     ["Z", "M"],
+//   ];
+//   const exceptions = [" ", ",", ".", "!", "?"];
+//   const arr = str.split("");
+//   let result = [];
+//   for (const letter of arr) {
+//     if (exceptions.includes(letter)) {
+//       result.push(letter);
+//     } else {
+//       for (const el of cipher) {
+//         if (el[0] === letter.toUpperCase()) {
+//           result.push(el[1]);
+//         }
+//       }
+//     }
+//   }
+//   return result.join("");
+// };
+// console.log(cipherCesare("SERR PBQR PNZC")); //FREE CODE CAMP (13=>; A=>N)
