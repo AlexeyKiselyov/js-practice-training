@@ -1341,47 +1341,47 @@
 //31 ------Cipher Cesare--------
 
 // first option
-const cipher = {
-  A: "N",
-  B: "O",
-  C: "P",
-  D: "Q",
-  E: "R",
-  F: "S",
-  G: "T",
-  H: "U",
-  I: "V",
-  J: "W",
-  K: "X",
-  L: "Y",
-  M: "Z",
-  N: "A",
-  O: "B",
-  P: "C",
-  Q: "D",
-  R: "E",
-  S: "F",
-  T: "G",
-  U: "H",
-  V: "I",
-  W: "J",
-  X: "K",
-  Y: "L",
-  Z: "M",
-};
+// const cipher = {
+//   A: "N",
+//   B: "O",
+//   C: "P",
+//   D: "Q",
+//   E: "R",
+//   F: "S",
+//   G: "T",
+//   H: "U",
+//   I: "V",
+//   J: "W",
+//   K: "X",
+//   L: "Y",
+//   M: "Z",
+//   N: "A",
+//   O: "B",
+//   P: "C",
+//   Q: "D",
+//   R: "E",
+//   S: "F",
+//   T: "G",
+//   U: "H",
+//   V: "I",
+//   W: "J",
+//   X: "K",
+//   Y: "L",
+//   Z: "M",
+// };
 
-const cipherCesare = (str) => {
-  const arr = str.split("");
-  const result = arr.map((letter) => {
-    if (cipher.hasOwnProperty(letter)) {
-      letter = cipher[letter];
-    }
-    return letter;
-  });
-  return result.join("");
-};
+// const cipherCesare = (str) => {
+//   const arr = str.split("");
+//   const result = arr.map((letter) => {
+//     if (cipher.hasOwnProperty(letter)) {
+//       letter = cipher[letter];
+//     }
+//     return letter;
+//   });
+//   return result.join("");
+// };
 
-console.log(cipherCesare("SERR PBQR PNZC"))
+// console.log(cipherCesare("SERR PBQR PNZC"))
 
 // second option
 // const cipherCesare = (str) => {
@@ -1430,3 +1430,42 @@ console.log(cipherCesare("SERR PBQR PNZC"))
 //   return result.join("");
 // };
 // console.log(cipherCesare("SERR PBQR PNZC")); //FREE CODE CAMP (13=>; A=>N)
+
+// 32 ------Telephone Check-------------
+
+// first option
+
+// const regexprs = [
+//   /^\d{3}-\d{3}-\d{4}$/,
+//   /^\(\d{3}\)\d{3}-\d{4}$/,
+//   /^\(\d{3}\) \d{3}-\d{4}$/,
+//   /^\d{3} \d{3} \d{4}$/,
+//   /^\d{10}$/,
+//   /^1 \d{3} \d{3} \d{4}$/,
+//   /^1 \d{3}-\d{3}-\d{4}$/,
+//   /^1 \(\d{3}\) \d{3}-\d{4}$/,
+//   /^1\(\d{3}\)\d{3}-\d{4}$/,
+// ];
+
+// const telephoneCheck = (str) => {
+//     let result = false;
+//   for (const exp of regexprs){
+//     if(exp.test(str)){
+//       result = true;
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(telephoneCheck("1(555)555-5555"));
+
+// second option
+
+const regexp =
+  /^([+]?1[\s]?)?((?:[(](?:[2-9]1[02-9]|[2-9][02-8][0-9])[)][\s]?)|(?:(?:[2-9]1[02-9]|[2-9][02-8][0-9])[\s.-]?)){1}([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2}[\s.-]?){1}([0-9]{4}){1}$/;
+
+const telephoneCheck = (str) => {
+  return regexp.test(str);
+};
+
+console.log(telephoneCheck("1(555)555-5555"));
