@@ -1461,11 +1461,90 @@
 
 // second option
 
-const regexp =
-  /^([+]?1[\s]?)?((?:[(](?:[2-9]1[02-9]|[2-9][02-8][0-9])[)][\s]?)|(?:(?:[2-9]1[02-9]|[2-9][02-8][0-9])[\s.-]?)){1}([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2}[\s.-]?){1}([0-9]{4}){1}$/;
+// const regexp =
+//   /^([+]?1[\s]?)?((?:[(](?:[2-9]1[02-9]|[2-9][02-8][0-9])[)][\s]?)|(?:(?:[2-9]1[02-9]|[2-9][02-8][0-9])[\s.-]?)){1}([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2}[\s.-]?){1}([0-9]{4}){1}$/;
 
-const telephoneCheck = (str) => {
-  return regexp.test(str);
+// const telephoneCheck = (str) => {
+//   return regexp.test(str);
+// };
+
+// console.log(telephoneCheck("1(555)555-5555"));
+
+// 33---------Check Cash Register----------//freecodecamp
+
+const checkCashRegister = (price, cash, cid) => {
+  let change;
+  return change;
 };
 
-console.log(telephoneCheck("1(555)555-5555"));
+checkCashRegister(19.5, 20, [
+  ["PENNY", 1.01],
+  ["NICKEL", 2.05],
+  ["DIME", 3.1],
+  ["QUARTER", 4.25],
+  ["ONE", 90],
+  ["FIVE", 55],
+  ["TEN", 20],
+  ["TWENTY", 60],
+  ["ONE HUNDRED", 100],
+]);
+
+// Пенні	$0.01 (ПЕННІ)
+// Нікель	$0.05 (НІКЕЛЬ)
+// Дайм	$0.1 (ДАЙМ)
+// Чверть	$0.25 (ЧВЕРТЬ)
+// Долар	$1 (ОДИН)
+// П’ять доларів	$5 (П’ЯТЬ)
+// Десять доларів	$10 (ДЕСЯТЬ)
+// Двадцять доларів	$20 (ДВАДЦЯТЬ)
+// Сто доларів	$100 (СТО)
+
+// 34--------- JS tasks--------------
+
+// 1st
+// function doReverse(p1) {
+//   return p1.split("").reverse().join("")
+// }
+// function someFunction(p1, p2, p3) {
+//   p1 = doReverse(p1);
+//   p2 = ['1', '2', '3'];
+//   p3.push('9999');
+// }
+// let a = 'xyz';
+// let b = ['123', '567'];
+// let c = ['abc', 'def'];
+// someFunction(a, b, c);
+// // answer
+// console.log(a); //'xyz'
+// console.log(b); //['123', '567']
+// console.log(c); //['abc', 'def',"9999"
+
+// 2d
+// var number = 10;
+// var display = function () {
+//   console.log(number);
+//   var number = 20;
+// };
+// // answer
+// display(); //undefind
+
+// 3d
+async function callMe() {
+  console.log(1);
+  try {
+    await crazyFunction();
+  } catch (err) {
+    console.log(err);
+  }
+  console.log(3);
+}
+function crazyFunction() {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      console.log(2);
+      rej("promise err")
+    }, 1000);
+  });
+}
+callMe();
+//  1=>2=>3
