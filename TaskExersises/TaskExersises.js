@@ -1595,3 +1595,21 @@
 // }
 // callMe();
 // //  1=>2=>3
+
+// 35--------- Create generator--------------
+const sequence = (start = 0, step = 1) => {
+  let counter = 0;
+  return () => (!counter ? (counter = start) : (counter += step));
+};
+
+const generator = sequence(10, 3);
+const generator1 = sequence(7, 1);
+
+console.log(generator());
+console.log(generator());
+console.log(generator1());
+console.log(generator());
+console.log(generator1());
+console.log(generator1());
+console.log(generator1());
+console.log(generator());
