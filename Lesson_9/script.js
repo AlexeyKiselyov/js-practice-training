@@ -28,52 +28,52 @@
 //   ],
 
 //   calcTotalPrice(stoneName) {
-//       const findStone = (stoneName) => this.stones.find(({
-//           name
-//       }) => name === stoneName);
-//       const stone = findStone(stoneName);
-//       const result = stone.price * stone.quantity;
-//       return result
+//     const findStone = (stoneName) =>
+//       this.stones.find(({ name }) => name === stoneName);
+//     const stone = findStone(stoneName);
+//     const result = stone.price * stone.quantity;
+//     return result;
 //   },
 
-// //   calcTotalPrice(stoneName) {
-// //     const stone = this.stones.find(({ name }) => name === stoneName);
-// //     const result = stone.price * stone.quantity;
-// //     return result;
-// //   },
+//   //   calcTotalPrice(stoneName) {
+//   //     const stone = this.stones.find(({ name }) => name === stoneName);
+//   //     const result = stone.price * stone.quantity;
+//   //     return result;
+//   //   },
 // };
 
 // console.log(chopShop.calcTotalPrice("Emerald")); // 5200
 
-//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
-
 // const chopShop2 = {
-//     stones: [{
-//             name: 'sdadgf',
-//             price: 1300,
-//             quantity: 4
-//         },
-//         {
-//             name: 'adsfdgfg',
-//             price: 2700,
-//             quantity: 3
-//         },
-//         {
-//             name: 'afdsgfdhgfh',
-//             price: 1400,
-//             quantity: 7
-//         },
-//         {
-//             name: 'asdfg',
-//             price: 800,
-//             quantity: 2
-//         },
-//     ],
-// }
-// chopShop.calcTotalPrice.call(chopShop2)
-// console.log(chopShop.calcTotalPrice('Diamond')); // 8100
-// console.log(chopShop.calcTotalPrice('Sapphire')); // 9800
-// console.log(chopShop.calcTotalPrice('Ruby')); // 1600
+//   stones: [
+//     {
+//       name: "sdadgf",
+//       price: 1300,
+//       quantity: 4,
+//     },
+//     {
+//       name: "adsfdgfg",
+//       price: 2700,
+//       quantity: 3,
+//     },
+//     {
+//       name: "afdsgfdhgfh",
+//       price: 1400,
+//       quantity: 7,
+//     },
+//     {
+//       name: "asdfg",
+//       price: 800,
+//       quantity: 2,
+//     },
+//   ],
+// };
+
+// const shopFunc2=chopShop.calcTotalPrice.bind(chopShop2);
+// console.log(chopShop.calcTotalPrice.apply(chopShop2, ["asdfg"])); // 1600
+// console.log(shopFunc2("asdfg")); // 1600
+// console.log(chopShop.calcTotalPrice("Sapphire")); // 9800
+// console.log(chopShop.calcTotalPrice("Ruby")); // 1600
 
 // Example 2 - Телефонна книга
 // Виконайте рефакторинг методів об'єкта phonebook щоб код запрацював.
@@ -112,6 +112,7 @@
 //     }),
 // );
 
+//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 // Example 3 - Калькулятор
 // Створіть об'єкт calculator із трьома методами:
 
@@ -142,6 +143,7 @@
 // const foo = () => {
 //   console.log(this);
 // };
+// foo(); //Window
 
 // const obj = {
 //   test: this,
@@ -153,21 +155,23 @@
 //     foo();
 //   },
 // };
-// obj.testFoo();
-// console.log(obj.test);
+
+// obj.testFoo(); //Window
+// console.log(obj.test); //Window
 // console.log(obj);
-// obj.foo()
+// // obj.foo() //Err not a function
+
 // const obj = {
-//     name: "My name"
+//   name: "My name",
+// };
+
+// function foo(a, b) {
+//   console.log(this, a, b);
 // }
 
-// function foo(a,b) {
-//     console.log(this, a,b);
-// }
-
-// const test = foo.bind(obj)
-// test()
-// test(3,4)
-// test(31,42)
-
-// foo(444,555)
+// const test = foo.bind(obj);
+// test() //obj, und, und
+// test(3, 4); //obj, 3, 4
+// test(31, 42); //obj, 31, 42
+// foo(444, 555); //und, 444, 555
+// foo.call(obj, 444, 555); //obj, 444, 555
