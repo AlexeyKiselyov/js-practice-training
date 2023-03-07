@@ -1,65 +1,69 @@
 // function sayHello(name) {
-//     console.log('Function say Hello', name);
-// }
-// String.prototype.sayHello = sayHello;
+    //     console.log('Function say Hello', name);
+    // }
+    // String.prototype.sayHello = sayHello;
+    
+    // console.log(typeof "sdf")
+    // const str = 'User'
+    // console.log(str.sayHello('David'));
+    // console.log(String.prototype.sayHello("Michel"));
+    
+    
+    //!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
+class User {
+    static Roles = {
+        gold: "Gold"
+    }
+    #age;
+    constructor(name, age, password, role) {
+        this.userName = name;
+        this.#age = age;
+        this.password = password;
+        this.nickName = 'qwert'
+        this.number = '1111'
+        this.role = role
+    }
 
-// const str = 'User'
-// console.log(str.sayHello('David'));
+    changeName(newName) {
+        this.userName = newName;
+    }
+
+    get userAge() {
+        console.log(this.#age);
+    }
+
+    set userAge(newAge) {
+        if (newAge >= 0) {
+            this.#age = newAge;
+        } else {
+            console.log('AGE < 0');
+        }
+    }
+
+    get passworD() {
+        const number = prompt('Enter number')
+        if (number === this.number) {
+            console.log(this.password);
+        } else {
+            console.log("Хацкер?");
+        }
+    }
+
+    set passworD(newPassword) {
+        if (newPassword.length > 5) {
+            this.password = newPassword
+        }
+    }
+}
 
 
-// class User {
-//     static Roles = {
-//         gold: "Gold"
-//     }#
-//     age;
-//     constructor(name, age, password, role) {
-//         this.userName = name;
-//         this.#age = age;
-//         this.password = password;
-//         this.nickName = 'qwert'
-//         this.number = '1111'
-//         this.role = role
-//     }
+class Admin extends User {
+    constructor(name, age, password, secretPassword) {
+        super(name, age, password)
+        this.secretPassword = secretPassword
+    }
+}
 
-//     changeName(newName) {
-//         this.userName = newName;
-//     }
-
-//     get userAge() {
-//         console.log(this.#age);
-//     }
-
-//     set userAge(newAge) {
-//         if (newAge >= 0) {
-//             this.#age = newAge;
-//         } else {
-//             console.log('AGE < 0');
-//         }
-//     }
-
-//     get passworD() {
-//         const number = prompt('Enter number')
-//         if (number === this.number) {
-//             console.log(this.password);
-//         } else {
-//             console.log("Хацкер?");
-//         }
-//     }
-
-//     set passworD(newPassword) {
-//         if (newPassword.length > 5) {
-//             this.password = newPassword
-//         }
-//     }
-// }
-
-
-// class Admin extends User {
-//     constructor(name, age, password, secretPassword) {
-//         super(name, age, password)
-//         this.secretPassword = secretPassword
-//     }
-// }
 // const goldUser2 = new User('Ajax', 12, '12345',User.Roles.gold)
 // const superAdmin = new Admin ('Admin',22,'12343', '2134564352435151324' )
 // console.log(superAdmin);
