@@ -1,90 +1,85 @@
 // function sayHello(name) {
-    //     console.log('Function say Hello', name);
-    // }
-    // String.prototype.sayHello = sayHello;
-    
-    // console.log(typeof "sdf")
-    // const str = 'User'
-    // console.log(str.sayHello('David'));
-    // console.log(String.prototype.sayHello("Michel"));
-    
-    
-    //!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
-class User {
-    static Roles = {
-        gold: "Gold"
-    }
-    #age;
-    constructor(name, age, password, role) {
-        this.userName = name;
-        this.#age = age;
-        this.password = password;
-        this.nickName = 'qwert'
-        this.number = '1111'
-        this.role = role
-    }
+//         console.log('Function say Hello', name);
+//     }
+//     String.prototype.sayHello = sayHello;
 
-    changeName(newName) {
-        this.userName = newName;
-    }
+//     console.log(typeof "sdf")
+//     const str = 'User'
+// console.log(str.sayHello('David'));
+// console.log(String.prototype.sayHello("Michel"));
 
-    get userAge() {
-        console.log(this.#age);
-    }
+// class User {
+//   static Roles = {
+//     gold: 'Gold',
+//     silver: 'Silver',
+//   };
+//   #age;
+//   constructor(name, age, password, role) {
+//     this.userName = name;
+//     this.#age = age;
+//     this.password = password;
+//     this.nickName = 'qwert';
+//     this.number = '1111';
+//     this.role = role;
+//   }
 
-    set userAge(newAge) {
-        if (newAge >= 0) {
-            this.#age = newAge;
-        } else {
-            console.log('AGE < 0');
-        }
-    }
+//   changeName(newName) {
+//     this.userName = newName;
+//   }
 
-    get passworD() {
-        const number = prompt('Enter number')
-        if (number === this.number) {
-            console.log(this.password);
-        } else {
-            console.log("Хацкер?");
-        }
-    }
+//   get userAge() {
+//     console.log(this.#age);
+//   }
 
-    set passworD(newPassword) {
-        if (newPassword.length > 5) {
-            this.password = newPassword
-        }
-    }
-}
+//   set userAge(newAge) {
+//     if (newAge >= 0) {
+//       this.#age = newAge;
+//     } else {
+//       console.log('AGE < 0');
+//     }
+//   }
 
+//   get passworD() {
+//     const number = prompt('Enter number');
+//     if (number === this.number) {
+//       console.log(this.password);
+//     } else {
+//       console.log('Хацкер?');
+//     }
+//   }
 
-class Admin extends User {
-    constructor(name, age, password, secretPassword) {
-        super(name, age, password)
-        this.secretPassword = secretPassword
-    }
-}
+//   set passworD(newPassword) {
+//     if (newPassword.length > 5) {
+//       this.password = newPassword;
+//       return;
+//     }
+//     console.log('Password must be more then 5 simbols');
+//   }
+// }
 
-// const goldUser2 = new User('Ajax', 12, '12345',User.Roles.gold)
-// const superAdmin = new Admin ('Admin',22,'12343', '2134564352435151324' )
+// class Admin extends User {
+//   constructor(name, age, password, secretPassword) {
+//     super(name, age, password);
+//     this.secretPassword = secretPassword;
+//   }
+// }
+
+// const goldUser2 = new User('Ajax', 12, '12345', User.Roles.gold);
+// const superAdmin = new Admin('Admin', 22, '12343', '2134564352435151324');
 // console.log(superAdmin);
 // console.log(goldUser2);
-// const goldUser = new User('Poly', 10)
-// const goldUser1 = new User('Mango', 11)
-// const goldUser2 = new User('Ajax', 12, '12345',User.Roles.gold)
+// const goldUser = new User('Poly', 10);
+// const goldUser1 = new User('Mango', 11);
+// const goldUser2 = new User('Ajax', 12, '12345', User.Roles.gold);
 // goldUser2.changeName('Zina');
-// // goldUser2.userAge = 99;
+// goldUser2.userAge = 99;
 // goldUser2.#age = 101;
 
 // goldUser2.userAge = 1
-// goldUser2.password = '1'
+// goldUser2.password = '1';
+// goldUser2.passworD = '1256';
 // goldUser2.nickName = '0'
-// goldUser2.passworD
-
-
-
-
-
-
+// goldUser2.passworD;
 
 // console.log(goldUser);
 // console.log(goldUser1);
@@ -104,28 +99,51 @@ class Admin extends User {
 
 // Додай метод updatePostCount(value), який у параметрі value приймає кількість постів, які потрібно додати користувачеві.
 
-class Blogger {
-    constructor({
-        name,
-        age,
-        numberOfPosts,
-        topics
-    }) {
-        this.name = name;
-        this.age = age;
-        this.numberOfPosts = numberOfPosts;
-        this.topics = topics;
-    }
+// class Blogger {
+//   constructor({ email, age, numberOfPosts, topics }) {
+//     this.email = email;
+//     this.age = age;
+//     this.numberOfPosts = numberOfPosts;
+//     this.topics = topics;
+//   }
+//   getInfo() {
+//     return ` User ${this.email} is ${this.age} years old and has ${this.numberOfPosts} posts.`;
+//   }
 
-    getInfo() {
-        return `User ${this.name} is ${this.age} years old and has ${this.numberOfPosts} posts`
-    }
+//   updatePostCount(value) {
+//     if (value > 0) {
+//       this.numberOfPosts += value;
+//     }
+//   }
+// }
 
-    updatePostCount(value) {
-        return this.numberOfPosts += value
-    }
-}
+// const dataBlogger = {
+//   email: 'newblogger@gmail.com',
+//   age: 21,
+//   numberOfPosts: 5,
+//   topics: ['Pop', 'Classic'],
+// };
+// const blogger = new Blogger(dataBlogger);
+// blogger.updatePostCount(5);
 
+// console.log(blogger.getInfo());
+
+// class Blogger {
+//   constructor({ name, age, numberOfPosts, topics }) {
+//     this.name = name;
+//     this.age = age;
+//     this.numberOfPosts = numberOfPosts;
+//     this.topics = topics;
+//   }
+
+//   getInfo() {
+//     return `User ${this.name} is ${this.age} years old and has ${this.numberOfPosts} posts`;
+//   }
+
+//   updatePostCount(value) {
+//     return (this.numberOfPosts += value);
+//   }
+// }
 
 // const mango = new Blogger({
 //     name: 'mango@mail.com',
@@ -150,9 +168,7 @@ class Blogger {
 //   poly.updatePostCount(4);
 //   console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 21 posts
 
-
-
-
+//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 
 // Example 2 - Сховище
 // Напиши клас Storage, який створює об'єкти для управління складом товарів. При виклику отримуватиме один аргумент - початковий масив товарів, і записуватиме його у властивість items.
@@ -164,26 +180,24 @@ class Blogger {
 // removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних.
 
 class Storage {
-    constructor(items) {
-        this.items = items
+  constructor(items) {
+    this.items = items;
+  }
+  getItems() {
+    return this.items;
+  }
+  addItem(item) {
+    if (!this.items.includes(item)) {
+      this.items.push(item);
     }
-    getItems() {
-        return this.items;
+  }
+  removeItem(item) {
+    if (this.items.includes(item)) {
+      const idx = this.items.indexOf(item);
+      this.items.splice(idx, 1);
     }
-    addItem(item) {
-        if (!this.items.includes(item)) {
-            this.items.push(item)
-        }
-    }
-    removeItem(item) {
-        if (this.items.includes(item)) {
-            const idx = this.items.indexOf(item);
-            this.items.splice(idx, 1)
-        }
-    }
+  }
 }
-
-
 
 // const storage = new Storage(['🍎', '🍋', '🍇', '🍑']);
 // console.log(storage);
@@ -197,8 +211,6 @@ class Storage {
 // console.table(storage.items)
 // storage.removeItem('🍎');
 // console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
-
-
 
 // Example 3 - User
 // Напиши клас User який створює об'єкт із властивостями login та email. Оголоси приватні властивості #login та #email, доступ до яких зроби через геттер та сеттер login та email.
@@ -251,8 +263,6 @@ class Storage {
 //   poly.login = 'Polycutie';
 //   console.log(poly.login); // Polycutie
 
-
-
 // Example 4 - Нотатки
 // Напиши класс Notes который управляет коллекцией заметок в свойстве items. Заметка это объект со свойствами text и priority. Добавь классу статическое свойство Priority, в котором будет храниться объект с приоритетами.
 // {
@@ -279,7 +289,6 @@ class Storage {
 
 // myNotes.updateNote('Моя друга нотатка', Notes.Priority.HIGH);
 // console.log(myNotes.items);
-
 
 // Example 5 - Toggle
 // Напишіть клас Toggle, який приймає об'єкт налаштувань {isOpen: boolean} і оголошує одну властивість on - стан вкл/викл (true/false). За промовчанням значення властивості on має бути false.

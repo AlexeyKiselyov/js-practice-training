@@ -1598,23 +1598,28 @@
 
 // 35--------- Create generator--------------
 // 1
-const sequence = (start = 0, step = 1) => {
-  let counter = 0;
-  return () => (!counter ? (counter = start) : (counter += step));
-};
+// const sequence = (start = 0, step = 1) => {
+//   let counter = 0;
+//   return () => (!counter ? (counter = start) : (counter += step));
+// };
 
-const generator = sequence(10, 3);
-const generator1 = sequence(7, 1);
+// const generator = sequence(10, 3);
+// const generator1 = sequence(7, 1);
 
-// 2
-const take = (gen, x = 1) => {
-  let result = [];
-  while (x) {   
-    result.push(gen());
-    x -= 1;
-  }
-  return result;
-};
-const gen1 = sequence(0, 2);
-console.log(gen1);
-console.log(take(gen1, 5)); // [0, 2, 4, 6, 8 ]
+// // 2
+// const take = (gen, x = 1) => {
+//   let result = [];
+//   while (x) {
+//     result.push(gen());
+//     x -= 1;
+//   }
+//   return result;
+// };
+// const gen1 = sequence(0, 2);
+// console.log(gen1);
+// console.log(take(gen1, 5)); // [0, 2, 4, 6, 8 ]
+
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+const arr3 = arr1 + arr2;
+console.log(arr3);
