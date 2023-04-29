@@ -278,6 +278,25 @@
 
 // console.log(anagram("anna", "anan"));
 
+// third option
+// const isAnnagram = (str1, str2) =>
+//   str1
+//     .toLowerCase()
+//     .split('')
+//     .sort()
+//     .join('')
+//     .replace(/[^\w\s]|_/g, '')
+//     .trim() ===
+//   str2
+//     .toLowerCase()
+//     .split('')
+//     .sort()
+//     .join('')
+//     .replace(/[^\w\s]|_/g, '')
+//     .trim();
+
+// console.log(isAnnagram('  Anna', 'nana'));
+
 // 11 ------Find vowel letters--------
 
 // function findVowel(str) {
@@ -1473,15 +1492,15 @@
 // 33---------Check Cash Register----------//freecodecamp
 
 // const moneyObj = [
-//   { name: "ONE HUNDRED", val: 100 },
-//   { name: "TWENTY", val: 20 },
-//   { name: "TEN", val: 10 },
-//   { name: "FIVE", val: 5 },
-//   { name: "ONE", val: 1 },
-//   { name: "QUARTER", val: 0.25 },
-//   { name: "DIME", val: 0.1 },
-//   { name: "NICKEL", val: 0.05 },
-//   { name: "PENNY", val: 0.01 },
+//   { name: 'ONE HUNDRED', val: 100 },
+//   { name: 'TWENTY', val: 20 },
+//   { name: 'TEN', val: 10 },
+//   { name: 'FIVE', val: 5 },
+//   { name: 'ONE', val: 1 },
+//   { name: 'QUARTER', val: 0.25 },
+//   { name: 'DIME', val: 0.1 },
+//   { name: 'NICKEL', val: 0.05 },
+//   { name: 'PENNY', val: 0.01 },
 // ];
 
 // function checkCashRegister(price, cash, cid) {
@@ -1497,13 +1516,13 @@
 //   );
 
 //   if (register.total === change) {
-//     output.status = "CLOSED";
+//     output.status = 'CLOSED';
 //     output.change = cid;
 //     return output;
 //   }
 
 //   if (register.total < change) {
-//     output.status = "INSUFFICIENT_FUNDS";
+//     output.status = 'INSUFFICIENT_FUNDS';
 //     return output;
 //   }
 
@@ -1524,25 +1543,25 @@
 //   }, []);
 
 //   if (change_arr.length < 1 || change > 0) {
-//     output.status = "INSUFFICIENT_FUNDS";
+//     output.status = 'INSUFFICIENT_FUNDS';
 //     return output;
 //   }
-//   output.status = "OPEN";
+//   output.status = 'OPEN';
 //   output.change = change_arr;
 //   return output;
 // }
 
 // console.log(
-//   checkCashRegister(19.5, 20, [
-//     ["PENNY", 1.01],
-//     ["NICKEL", 2.05],
-//     ["DIME", 3.1],
-//     ["QUARTER", 4.25],
-//     ["ONE", 90],
-//     ["FIVE", 55],
-//     ["TEN", 20],
-//     ["TWENTY", 60],
-//     ["ONE HUNDRED", 100],
+//   checkCashRegister(19.5, 30, [
+//     ['PENNY', 1.01],
+//     ['NICKEL', 2.05],
+//     ['DIME', 3.1],
+//     ['QUARTER', 4.25],
+//     ['ONE', 90],
+//     ['FIVE', 55],
+//     ['TEN', 20],
+//     ['TWENTY', 60],
+//     ['ONE HUNDRED', 100],
 //   ])
 // );
 
@@ -1619,7 +1638,82 @@
 // console.log(gen1);
 // console.log(take(gen1, 5)); // [0, 2, 4, 6, 8 ]
 
-const arr1 = [1, 2];
-const arr2 = [3, 4];
-const arr3 = arr1 + arr2;
-console.log(arr3);
+// const arr1 = [1, 2];
+// const arr2 = [3, 4];
+// const arr3 = arr1 + arr2;
+// console.log(arr3);
+
+// Random array generator for 1 to n with natural numbers
+
+// const randomArr = n => {
+//   const arrLength = n + 1;
+//   let resultArr = [];
+//   const getRandomInt = (min = 1, max = n) => {
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     return Math.floor(Math.random() * (max - min + 1)) + min;
+//   };
+
+//   for (i = 1; i <= arrLength; i += 1) {
+//     resultArr.push(getRandomInt(1, n));
+//   }
+//   return resultArr;
+// };
+
+// 36--------- Find max number sum in arr interval (from tech interv)------------
+
+// const arr = [1, 3, -5, 7, -9, 4, 4];
+
+// const findMaxNumbersInterval = arr => {
+//   if (arr.length === 0) {
+//     return 'Empty array';
+//   }
+
+//   let currentSumm = 0;
+//   let maxSumm = 0;
+
+//   let currentStartInd = 0;
+//   let startInd = 0;
+//   let endInd = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] <= 0 && !currentSumm) {
+//       continue;
+//     }
+
+//     if (!endInd && !currentSumm) {
+//       currentStartInd = i;
+//     }
+
+//     currentSumm += arr[i];
+
+//     if (maxSumm < currentSumm) {
+//       maxSumm = currentSumm;
+//       startInd = currentStartInd;
+//       endInd = i;
+//     }
+
+//     if (currentSumm <= 0) {
+//       currentSumm = 0;
+//       currentStartInd = i + 1;
+//     }
+//   }
+//   return `Max summ: ${maxSumm}. Interval from ${startInd} to ${endInd} array indexes`;
+// };
+
+// console.log(findMaxNumbersInterval(arr));
+
+// -------------Task about twoo objects (from tech interv) -----------
+
+// let foo = { n: 1 };
+// let boo = foo;
+// boo.x = foo = { n: 5 };
+
+// console.log('foo', foo);
+// console.log('boo', boo);
+
+// 1. Выделили для переменной foo ячейку памяти и записали в нее объект.
+// 2.Переменной boo присвоили ссылку на ячейку памяти, занятую объектом foo.
+// 3. Добавили ключ объекту boo со значением объекта foo и тут же создали новую ячейку в памяти для переменной foo, в которую записали новый объект.
+// 4. В переменной boo осталась прежняя ссылка на первый объект
+// 5. Переменная foo получила новую ячеку в памяти и ссылки между двумя этими объектами теперь разные.
