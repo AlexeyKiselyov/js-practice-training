@@ -1662,8 +1662,9 @@
 
 // 36--------- Find max number sum in arr interval (from tech interv)------------
 
-// const arr = [1, 3, -5, 7, -9, 4, 4];
+// const arr = [1, 6, 3, -5, 7, -9, 4, 3];
 
+// first option
 // const findMaxNumbersInterval = arr => {
 //   if (arr.length === 0) {
 //     return 'Empty array';
@@ -1699,6 +1700,45 @@
 //     }
 //   }
 //   return `Max summ: ${maxSumm}. Interval from ${startInd} to ${endInd} array indexes`;
+// };
+
+// second option (with forEach)
+// const findMaxNumbersInterval = arr => {
+//   if (!arr.length) {
+//     return 'Array is empty';
+//   }
+
+//   let currentSum = 0;
+//   let maxSum = 0;
+
+//   let currentStartInd = 0;
+//   let startInd = 0;
+//   let endInd = 0;
+
+//   arr.forEach((el, ind) => {
+//     if (el <= 0 && !maxSum) {
+//       return;
+//     }
+
+//     if (!currentStartInd && !maxSum) {
+//       currentStartInd = ind;
+//     }
+
+//     currentSum += el;
+
+//     if (maxSum <= currentSum) {
+//       maxSum = currentSum;
+//       startInd = currentStartInd;
+//       endInd = ind;
+//     }
+
+//     if (currentSum <= 0) {
+//       currentSum = 0;
+//       currentStartInd = ind + 1;
+//     }
+//   });
+
+//   return `Sum ${maxSum}.Interval from ${startInd} to ${endInd} indexes`;
 // };
 
 // console.log(findMaxNumbersInterval(arr));
