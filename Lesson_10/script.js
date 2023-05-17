@@ -168,8 +168,6 @@
 //   poly.updatePostCount(4);
 //   console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 21 posts
 
-//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
-
 // Example 2 - Сховище
 // Напиши клас Storage, який створює об'єкти для управління складом товарів. При виклику отримуватиме один аргумент - початковий масив товарів, і записуватиме його у властивість items.
 
@@ -179,25 +177,28 @@
 // addItem(item) - отримує новий товар та додає його до поточних.
 // removeItem(item) - отримує товар і, якщо він є, видаляє його з поточних.
 
-class Storage {
-  constructor(items) {
-    this.items = items;
-  }
-  getItems() {
-    return this.items;
-  }
-  addItem(item) {
-    if (!this.items.includes(item)) {
-      this.items.push(item);
-    }
-  }
-  removeItem(item) {
-    if (this.items.includes(item)) {
-      const idx = this.items.indexOf(item);
-      this.items.splice(idx, 1);
-    }
-  }
-}
+// class Storage {
+//   constructor(items) {
+//     this.items = items;
+//   }
+
+//   getItems() {
+//     return this.items;
+//   }
+
+//   addItem(item) {
+//     if (!this.items.includes(item)) {
+//       this.items.push(item);
+//     }
+//   }
+
+//   removeItem(item) {
+//     if (this.items.includes(item)) {
+//       const idx = this.items.indexOf(item);
+//       this.items.splice(idx, 1);
+//     }
+//   }
+// }
 
 // const storage = new Storage(['🍎', '🍋', '🍇', '🍑']);
 // console.log(storage);
@@ -214,6 +215,36 @@ class Storage {
 
 // Example 3 - User
 // Напиши клас User який створює об'єкт із властивостями login та email. Оголоси приватні властивості #login та #email, доступ до яких зроби через геттер та сеттер login та email.
+
+// class User {
+//   #login;
+//   #email;
+
+//   constructor({ login, email }) {
+//     this.#login = login;
+//     this.#email = email;
+//   }
+
+//   get login() {
+//     return this.#login;
+//   }
+
+//   set login(login) {
+//     if (login) {
+//       this.#login = login;
+//     }
+//   }
+
+//   get email() {
+//     this.#email = email;
+//   }
+
+//   set email(email) {
+//     if (email) {
+//       this.#email = email;
+//     }
+//   }
+// }
 
 // class User {
 //     #login;
@@ -273,6 +304,42 @@ class Storage {
 
 // Додай методи addNote(note), removeNote(text) та updatePriority(text, newPriority).
 
+// class Notes {
+//   static Priority = {
+//     LOW: 'low',
+//     NORMAL: 'normal',
+//     HIGH: 'high',
+//   };
+
+//   constructor(items) {
+//     this.items = items;
+//   }
+
+//   addNote(note) {
+//     if (!this.items.find(el => el.text === note.text)) {
+//       this.items.push(note);
+//     }
+//   }
+
+//   removeNote(text) {
+//     const idx = this.items.findIndex(el => el.text === text);
+//     if (idx >= 0) {
+//       this.items.splice(idx, 1);
+//       return;
+//     }
+//     console.log('There is no such note in collection');
+//   }
+
+//   updatePriority(text, newPriority) {
+//     const idx = this.items.findIndex(el => el.text === text);
+//     if (idx >= 0) {
+//       this.items[idx].priority = newPriority;
+//       return;
+//     }
+//     console.log('There is no such note for update in collection');
+//   }
+// }
+
 // const myNotes = new Notes([]);
 
 // myNotes.addNote({ text: 'Моя перша нотатка', priority: Notes.Priority.LOW });
@@ -287,11 +354,21 @@ class Storage {
 // myNotes.removeNote('Моя перша нотатка');
 // console.log(myNotes.items);
 
-// myNotes.updateNote('Моя друга нотатка', Notes.Priority.HIGH);
+// myNotes.updatePriority('Моя друга нотатка', Notes.Priority.HIGH);
 // console.log(myNotes.items);
 
 // Example 5 - Toggle
 // Напишіть клас Toggle, який приймає об'єкт налаштувань {isOpen: boolean} і оголошує одну властивість on - стан вкл/викл (true/false). За промовчанням значення властивості on має бути false.
+
+// class Toggle {
+//   constructor({ isOpen = false } = {}) {
+//     this.on = isOpen;
+//   }
+
+//   toggle() {
+//     this.on = !this.on;
+//   }
+// }
 
 // const firstToggle = new Toggle({ isOpen: true });
 // console.group('firstToggle');
