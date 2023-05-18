@@ -383,3 +383,49 @@
 // secondToggle.toggle();
 // console.log(secondToggle.on);
 // console.groupEnd('secondToggle');
+
+// Animal class
+// class Animal {
+//   constructor(animal, voice) {
+//     this.animal = animal;
+//     this.voice = voice;
+//   }
+
+//   say() {
+//     console.log(`${this.animal} say ${this.voice}`);
+//   }
+// }
+
+// const dog = new Animal('Dog', 'Waf');
+// dog.say();
+
+// const cat = new Animal('Cat', 'Meu');
+// cat.say();
+
+// class FavoriteAnimalDish extends Animal {
+//   constructor(animal, dish) {
+//     super(animal);
+//     this.dish = dish;
+//   }
+
+//   getFavoriteDish() {
+//     console.log(`${this.animal} like ${this.dish}`);
+//   }
+// }
+
+// const rabbit = new FavoriteAnimalDish('Rabbit', 'Carrot');
+
+// rabbit.getFavoriteDish();
+
+// class BigAnimal extends Animal {
+//   constructor(animal, voice) {
+//     super(animal, voice);
+//   }
+
+//   say() {
+//     console.log(`This big ${this.animal} say ${this.voice}`);
+//   }
+// }
+
+// const elephant = new BigAnimal('Elephant', 'Booo');
+// elephant.say();
