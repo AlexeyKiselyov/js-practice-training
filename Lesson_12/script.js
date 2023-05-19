@@ -1,21 +1,23 @@
 //!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
 
-// const button = document.querySelector('.click')
-// button.addEventListener('click', onClick)
-// const input = document.querySelector('.input')
-// input.addEventListener('input', onInput)
+const button = document.querySelector('.click');
+button.addEventListener('click', onClick);
+const inputEmail = document.querySelector('input[name = "email"]');
+inputEmail.addEventListener('input', onInput);
+const inputPassword = document.querySelector('input[name = "password"]');
+inputPassword.addEventListener('input', onInput);
 
-// function onClick(evt) {
-//     console.log(evt);
-// }
+function onClick(evt) {
+  console.log(evt);
+}
 
-// function onInput(evt) {
-//     console.log(evt);
-//     console.log(evt.target.value);
-// }
+function onInput(evt) {
+  console.log(evt);
+  console.log(evt.target.value);
+}
 
-// const form = document.querySelector('.login')
-// form.addEventListener('submit', onSubmit)
+const form = document.querySelector('.login');
+form.addEventListener('submit', onSubmit);
 
 function onSubmit(evt) {
   evt.preventDefault();
@@ -41,12 +43,12 @@ function onClickDiv(evt) {
   console.log(evt.target);
 }
 
-// const test = document.querySelector('.test')
-// test.addEventListener('click', onClick)
-// function onClick(evt){
-//     console.log(evt.currentTarget);
-//     console.log(evt.target);
-// }
+const test = document.querySelector('.test');
+test.addEventListener('click', onClick);
+function onClick(evt) {
+  console.log(evt.currentTarget);
+  console.log(evt.target);
+}
 // 'keydown' або "keyup"  працюють з службовими клавішами
 document.addEventListener('keydown', onKey);
 // keyCode - Deprecated
