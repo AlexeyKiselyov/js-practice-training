@@ -429,3 +429,80 @@
 
 // const elephant = new BigAnimal('Elephant', 'Booo');
 // elephant.say();
+
+// Copy method
+// class House {
+//   constructor(n) {
+//     this.street = n;
+//   }
+
+//   showAddress() {
+//     console.log('Address: ' + this.street);
+//   }
+// }
+
+// const house = new House('Middle-earth');
+// house.showAddress();
+
+// const houseCopy = { showAddress: house.showAddress };
+// houseCopy.showAddress.call(house);
+
+// const houseCopy1 = { street: 'Mira', showAddress: house.showAddress };
+// houseCopy1.showAddress();
+
+// extends
+// 1
+// class User {
+//   #email;
+
+//   constructor(email) {
+//     this.#email = email;
+//   }
+
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(newEmail) {
+//     this.#email = newEmail;
+//   }
+// }
+
+// class ContentEditor extends User {
+//   // Тело класса ContentEditor
+// }
+
+// const editor = new ContentEditor('mango@mail.com');
+// console.log(editor); // { email: "mango@mail.com" }
+// console.log(editor.email); // "mango@mail.com"
+
+// 2
+// class NewClass {
+//   #private = 'Private';
+// }
+
+// class NewClassExt extends NewClass {}
+// console.log(NewClass);
+// console.log(NewClassExt); //private property don't ext.;
+
+// class NewClass1 {
+//   #privateItem;
+//   constructor(privateItem) {
+//     this.#privateItem = privateItem;
+//   }
+// }
+
+// class NewClass1Ext extends NewClass1 {
+//   constructor(privateItem, item) {
+//     super(privateItem);
+//     this.item = item;
+//   }
+// }
+
+// const newObj = new NewClass1Ext('qwer', 'asdf');
+// console.log(NewClass1);
+// console.log(NewClass1Ext); //private property don't ext.;
+// console.log(newObj);
+// console.log(newObj.item);
+
+// 3
