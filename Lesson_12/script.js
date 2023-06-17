@@ -1,5 +1,3 @@
-//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
-
 const button = document.querySelector('.click');
 button.addEventListener('click', onClick);
 const inputEmail = document.querySelector('input[name = "email"]');
