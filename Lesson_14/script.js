@@ -35,33 +35,41 @@ const markup = cats.reduce((acc, item) => {
   );
 }, '');
 
-// list.insertAdjacentHTML('beforeend', markup)
+list.insertAdjacentHTML('beforeend', markup);
 
-// const input = document.querySelector('.test')
-// input.addEventListener('input', _.debounce(onInput, 500))
+// const input = document.querySelector('.test');
+// input.addEventListener('input', _.debounce(onInput, 500));
 
 // function onInput(e) {
-//     console.log(e);
-//     console.log(e.target.value);
+//   console.log(e);
+//   console.log(e.target.value);
 // }
 
-document.addEventListener('keydown', onESC, { once: true });
+document.addEventListener(
+  'keydown',
+  onESC
+  // { once: true }
+);
 
 function onESC(e) {
   console.log(e);
   if (e.key === 'Escape') {
-    // document.removeEventListener('keydown', onESC)
+    document.removeEventListener('keydown', onESC);
   }
 }
 
-// document.addEventListener('scroll', _.debounce(onScroll, 3000, {
-//     leading: true,
-//     trailing: false
-// }));
-// let i = 0;
+document.addEventListener(
+  'scroll',
+  _.debounce(onScroll, 3000, {
+    leading: true,
+    trailing: true,
+  })
+);
 
-// function onScroll(e) {
-//     i += 1
-//     console.log(e);
-//     console.log(i);
-// }
+let i = 0;
+
+function onScroll(e) {
+  i += 1;
+  console.log(e);
+  console.log(i);
+}
