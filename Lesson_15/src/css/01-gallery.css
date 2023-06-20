@@ -40,3 +40,12 @@
 .gallery__link:hover {
   cursor: zoom-in;
 }
+
+.gallery__descr {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  z-index: 1;
+
+  color: white;
+}
