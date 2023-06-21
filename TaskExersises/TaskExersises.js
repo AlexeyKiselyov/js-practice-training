@@ -1757,3 +1757,26 @@
 // 3. Добавили ключ объекту boo со значением объекта foo и тут же создали новую ячейку в памяти для переменной foo, в которую записали новый объект.
 // 4. В переменной boo осталась прежняя ссылка на первый объект
 // 5. Переменная foo получила новую ячеку в памяти и ссылки между двумя этими объектами теперь разные.
+
+// range func
+
+// 1st
+const arrResult = [];
+for (let i = 0; i <= 5; i++) {
+  arrResult.push(i);
+}
+console.log(arrResult);
+
+// 2d
+const range = Array(5);
+console.log(range);
+range.fill();
+const result = range.map((item, i) => i);
+console.log(result);
+
+// 3d
+const test = Array(5).keys();
+console.log(test);
+
+const test1 = [...Array(5).keys()];
+console.log(test1);

@@ -71,26 +71,36 @@ const KEY_SESSION = 'array_KEY_SESSION';
 try {
   const response = JSON.parse(localStorage.getItem(KEY_LOCAL));
 } catch (e) {}
+
 session.addEventListener('click', onSession);
 local.addEventListener('click', onLocal);
+
 sessionStorage.setItem(KEY_SESSION, JSON.stringify(arr));
 sessionStorage.setItem('KEY_SESSION2', JSON.stringify(arr));
+
 function onSession() {
   sessionStorage.clear();
 }
+
 localStorage.setItem(`KEY_LOCAL0`, JSON.stringify(arr));
 localStorage.setItem('KEY_LOCAL', JSON.stringify(arr));
 localStorage.setItem(`KEY_LOCAL2`, JSON.stringify(arr));
 localStorage.setItem(`KEY_LOCAL3`, JSON.stringify(arr));
+
 function onLocal() {
   localStorage.removeItem(KEY_LOCAL);
 }
+
 console.log(localStorage.length);
+
 for (let i = 0; i < localStorage.length; i += 1) {
   console.log(localStorage.key(i));
 }
 
 console.log(localStorage.key(2));
+
+console.log(localStorage.getItem('KEY_LOCAL0'));
+
 // localStorage працює в рамках url адресу та привязує значення до неї, не важливо перезавантаження, закритя вкладки або браузера. Видаляємо елементи тільки примусово. removeItem або clear.
 
 // sessionStorage він працює в рамках сесії(привязка до вкладки) працює при перезавантажені.Видаляємо елементи при закриті сесії (аюо експайр сесії). removeItem або clear.
