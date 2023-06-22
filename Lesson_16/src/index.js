@@ -52,8 +52,6 @@
 //   document.body.style.backgroundColor = 'white';
 // }
 
-//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
-
 // console.log("Hello world");
 
 const session = document.querySelector('.session');
