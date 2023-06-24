@@ -1760,23 +1760,25 @@
 
 // range func
 
-// 1st
-const arrResult = [];
-for (let i = 0; i <= 5; i++) {
-  arrResult.push(i);
-}
-console.log(arrResult);
+// // 1st
+// const arrResult = [];
+// for (let i = 0; i <= 5; i++) {
+//   arrResult.push(i);
+// }
+// console.log(arrResult);
 
-// 2d
-const range = Array(5);
-console.log(range);
-range.fill();
-const result = range.map((item, i) => i);
-console.log(result);
+// // 2d
+// const range = Array(5);
+// console.log(range);
+// range.fill();
+// const result = range.map((item, i) => i);
+// console.log(result);
 
-// 3d
-const test = Array(5).keys();
-console.log(test);
+// // 3d
+// const test = Array(5).keys();
+// console.log(test);
 
-const test1 = [...Array(5).keys()];
-console.log(test1);
+// const test1 = [...Array(5).keys()];
+// console.log(test1);
+
+// CHI Test Sandbox

@@ -1,5 +1,3 @@
-//!!!!!!!!!!!FINISH HIRE!!!!!!!!!!!!!!!
-
 // const obj = {
 //     email : 'test@gmail.com',
 //     password : '123456'
