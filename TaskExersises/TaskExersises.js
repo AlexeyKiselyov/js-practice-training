@@ -1781,4 +1781,126 @@
 // const test1 = [...Array(5).keys()];
 // console.log(test1);
 
-// CHI Test Sandbox
+// tech live coding
+
+// -------fizBaz-------
+
+// 1st variant
+// const fizBaz = numb => {
+//   if (numb % 2 === 0 && numb % 3 === 0) {
+//     return 'fizbaz';
+//   }
+//   if (numb % 2 === 0) {
+//     return 'fiz';
+//   }
+//   if (numb % 3 === 0) {
+//     return 'baz';
+//   }
+//   return 'Data do not has fiz or baz';
+// };
+
+// console.log(fizBaz(21));
+
+// 2nd variant
+// const fizBaz = numb => {
+//   let result = '';
+
+//   if (numb % 2 === 0) {
+//     result += 'fiz';
+//   }
+//   if (numb % 3 === 0) {
+//     result += 'baz';
+//   }
+
+//   return result;
+// };
+
+// console.log(fizBaz(6));
+
+// ----anagram----
+
+// 1st variant
+// const anagram = (str1, str2) => {
+//   if (str1.lenght !==str2.lenght){
+//   return 'This is not anagram'}
+
+//   const firstStr = str1
+//     .split('')
+//     .sort((a, b) => a.localeCompare(b))
+//     .join('');
+//   console.log(firstStr);
+
+//   const secondStr = str2
+//     .split('')
+//     .sort((a, b) => a.localeCompare(b))
+//     .join('');
+//   console.log(firstStr);
+//   console.log(secondStr);
+
+//   return firstStr === secondStr ? 'This is anagram' : 'This is not anagram';
+// };
+
+// console.log(anagram('anna', 'nana'));
+
+// 2nd variant o(n)
+// const anagram = (str1, str2) => {
+//   if (str1.lenght !== str2.lenght) {
+//     return false;
+//   }
+
+//   const firstStrObj = str1.split('').reduce((acc, letter) => {
+//     if (!acc[letter]) {
+//       acc[letter] = 1;
+//       return acc;
+//     } else {
+//       acc[letter] += 1;
+//       return acc;
+//     }
+//   }, {});
+
+//   for (const letter of str2) {
+//     firstStrObj[letter] -= 1;
+//   }
+
+//   const valuesOfFirstStrObj = Object.values(firstStrObj).some(
+//     value => value !== 0
+//   );
+
+//   return valuesOfFirstStrObj ? false : true;
+// };
+
+// console.log(anagram('anna', 'nana'));
+
+// 3d variant
+// const anagram = (str1, str2) => {
+//   if (str1.lenght !== str2.lenght) {
+//     return 'This is not anagram';
+//   }
+
+//   const str1arr = str1.split('');
+//   const str2arr = str2.split('');
+
+//   let counter = 0;
+//   let result = true;
+
+//   for (const letter of str1arr) {
+//     const index = str2arr.indexOf(letter);
+//     counter += 1;
+
+//     if (index < 0 || str1arr.lenght < counter) {
+//       counter = 0;
+//       result = false;
+//       break;
+//     }
+
+//     str2arr.splice(index, 1);
+//   }
+
+//   if (counter === 0 || str1arr.length !== counter) {
+//     result = false;
+//   }
+
+//   return result;
+// };
+
+// console.log(anagram('anna', 'nana'));
