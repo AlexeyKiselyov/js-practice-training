@@ -1904,3 +1904,35 @@
 // };
 
 // console.log(anagram('anna', 'nana'));
+
+// -----function with two arguments (array any async callback)-----
+
+// const callback = async sring => {
+//   if (!sring) {
+//     const result = Promise.reject('Empty field');
+//     return result;
+//   }
+
+//   const result = await Promise.resolve(sring.toUpperCase());
+//   return result;
+// };
+
+// // 1st variant
+// const arrayAsyncIterrator = async (arr, callback) => {
+//   for (const string of arr) {
+//     const result = await callback(string);
+//     console.log(result);
+//   }
+// };
+
+// // 2d variant
+// // const arrayAsyncIterrator = (arr, callback) => {
+// //   arr.forEach(async string => {
+// //     const result = await callback(string);
+// //     console.log(result);
+// //   });
+// // };
+
+// arrayAsyncIterrator(['bill', 'kate', 'dAvid'], callback).catch(err =>
+//   console.log(err)
+// );
