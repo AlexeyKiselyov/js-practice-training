@@ -1955,6 +1955,10 @@ let counter = 0;
 let timer;
 
 function onStartClick() {
+  startRef.disabled = true;
+  stopRef.disabled = false;
+  resetRef.disabled = false;
+
   timer = setInterval(() => {
     counter += 1000;
     const time = convertMs(counter);
@@ -1967,11 +1971,18 @@ function onStartClick() {
 
 function onStopClick() {
   clearInterval(timer);
+
+  startRef.disabled = false;
+  stopRef.disabled = true;
 }
 
 function onResetClick() {
   clearInterval(timer);
   counter = 0;
+
+  startRef.disabled = false;
+  stopRef.disabled = true;
+  resetRef.disabled = true;
 
   hoursRef.textContent = '00';
   minutesRef.textContent = '00';
