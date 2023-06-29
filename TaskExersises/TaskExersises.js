@@ -1939,77 +1939,77 @@
 
 // -----------------Timer------------------
 
-const hoursRef = document.querySelector('.hours');
-const minutesRef = document.querySelector('.minutes');
-const secondsRef = document.querySelector('.seconds');
+// const hoursRef = document.querySelector('.hours');
+// const minutesRef = document.querySelector('.minutes');
+// const secondsRef = document.querySelector('.seconds');
 
-const startRef = document.querySelector('.start');
-const stopRef = document.querySelector('.stop');
-const resetRef = document.querySelector('.reset');
+// const startRef = document.querySelector('.start');
+// const stopRef = document.querySelector('.stop');
+// const resetRef = document.querySelector('.reset');
 
-startRef.addEventListener('click', onStartClick);
-stopRef.addEventListener('click', onStopClick);
-resetRef.addEventListener('click', onResetClick);
+// startRef.addEventListener('click', onStartClick);
+// stopRef.addEventListener('click', onStopClick);
+// resetRef.addEventListener('click', onResetClick);
 
-let counter = 0;
-let timer;
+// let counter = 0;
+// let timer;
 
-function onStartClick() {
-  startRef.disabled = true;
-  stopRef.disabled = false;
-  resetRef.disabled = false;
+// function onStartClick() {
+//   startRef.disabled = true;
+//   stopRef.disabled = false;
+//   resetRef.disabled = false;
 
-  timer = setInterval(() => {
-    counter += 1000;
-    const time = convertMs(counter);
+//   timer = setInterval(() => {
+//     counter += 1000;
+//     const time = convertMs(counter);
 
-    hoursRef.textContent = time.hours;
-    minutesRef.textContent = time.minutes;
-    secondsRef.textContent = time.seconds;
-  }, 1000);
-}
+//     hoursRef.textContent = time.hours;
+//     minutesRef.textContent = time.minutes;
+//     secondsRef.textContent = time.seconds;
+//   }, 1000);
+// }
 
-function onStopClick() {
-  clearInterval(timer);
+// function onStopClick() {
+//   clearInterval(timer);
 
-  startRef.disabled = false;
-  stopRef.disabled = true;
-}
+//   startRef.disabled = false;
+//   stopRef.disabled = true;
+// }
 
-function onResetClick() {
-  clearInterval(timer);
-  counter = 0;
+// function onResetClick() {
+//   clearInterval(timer);
+//   counter = 0;
 
-  startRef.disabled = false;
-  stopRef.disabled = true;
-  resetRef.disabled = true;
+//   startRef.disabled = false;
+//   stopRef.disabled = true;
+//   resetRef.disabled = true;
 
-  hoursRef.textContent = '00';
-  minutesRef.textContent = '00';
-  secondsRef.textContent = '00';
-}
+//   hoursRef.textContent = '00';
+//   minutesRef.textContent = '00';
+//   secondsRef.textContent = '00';
+// }
 
-function convertMs(ms) {
-  // Number of milliseconds per unit of time
-  const second = 1000;
-  const minute = second * 60;
-  const hour = minute * 60;
-  const day = hour * 24;
+// function convertMs(ms) {
+//   // Number of milliseconds per unit of time
+//   const second = 1000;
+//   const minute = second * 60;
+//   const hour = minute * 60;
+//   const day = hour * 24;
 
-  // Remaining days
-  const days = addLeadingZero(Math.floor(ms / day));
-  // Remaining hours
-  const hours = addLeadingZero(Math.floor((ms % day) / hour));
-  // Remaining minutes
-  const minutes = addLeadingZero(Math.floor(((ms % day) % hour) / minute));
-  // Remaining seconds
-  const seconds = addLeadingZero(
-    Math.floor((((ms % day) % hour) % minute) / second)
-  );
+//   // Remaining days
+//   const days = addLeadingZero(Math.floor(ms / day));
+//   // Remaining hours
+//   const hours = addLeadingZero(Math.floor((ms % day) / hour));
+//   // Remaining minutes
+//   const minutes = addLeadingZero(Math.floor(((ms % day) % hour) / minute));
+//   // Remaining seconds
+//   const seconds = addLeadingZero(
+//     Math.floor((((ms % day) % hour) % minute) / second)
+//   );
 
-  return { days, hours, minutes, seconds };
-}
+//   return { days, hours, minutes, seconds };
+// }
 
-function addLeadingZero(value) {
-  return String(value).padStart(2, '0');
-}
+// function addLeadingZero(value) {
+//   return String(value).padStart(2, '0');
+// }
