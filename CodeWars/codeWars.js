@@ -71,3 +71,68 @@
 
 // console.log(isTriangle(1, 2, 2));
 // console.log(isTriangle(7, 2, 2));
+
+// -----------Mumbling-------------
+
+// 1nd option
+// function accum(str) {
+//   return str
+//     .split('')
+//     .map(
+//       (letter, ind) => letter.toUpperCase() + letter.toLowerCase().repeat(ind)
+//     )
+//     .join('-');
+// }
+
+// console.log(accum('abcd')); //"A-Bb-Ccc-Dddd"
+
+// // 2nd option
+// function accum(str) {
+//   const result = str.split('').map((letter, ind) => {
+//     let counter = '';
+//     for (let i = 0; i < ind; i++) {
+//       counter += letter.toLowerCase();
+//     }
+//     return letter.toUpperCase() + counter;
+//   });
+
+//   return result.join('-');
+// }
+
+// console.log(accum('abcd')); //"A-Bb-Ccc-Dddd"
+
+// -----------Jaden Casing Strings--------------
+
+// String.prototype.toJadenCase = function () {
+//   return this.split(' ')
+//     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//     .join(' ');
+// };
+
+// console.log("How can mirrors be real if our eyes aren't real".toJadenCase());
+
+// --------------Highest and Lowest--------------
+
+// 1st option
+// function highAndLow(numbers) {
+//   const sortArr = numbers.split(' ');
+
+//   const maxNumb = Math.max(...sortArr);
+//   const minNumb = Math.min(...sortArr);
+
+//   return maxNumb + ' ' + minNumb;
+// }
+
+// console.log(highAndLow('8 3 -5 42 -1 0 0 -9 4 7 4 -4'));
+
+// 2nd option
+// function highAndLow(numbers) {
+//   const sortArr = numbers.split(' ').sort((a, b) => a - b);
+
+//   const maxNumb = sortArr[sortArr.length - 1];
+//   const minNumb = sortArr[0];
+
+//   return maxNumb + ' ' + minNumb;
+// }
+
+// console.log(highAndLow('8 3 -5 42 -1 0 0 -9 4 7 4 -4'));
