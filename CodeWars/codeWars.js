@@ -136,3 +136,32 @@
 // }
 
 // console.log(highAndLow('8 3 -5 42 -1 0 0 -9 4 7 4 -4'));
+
+// ------------Regex validate PIN code--------------
+
+// 1st option
+// function validatePIN(pin) {
+//   const regex = /^\d+$/;
+
+//   return regex.test(pin) && (pin.length === 4 || pin.length === 6);
+// }
+
+// console.log(validatePIN('123456'));
+
+// 2nd option
+// function validatePIN(pin) {
+//   return /^(\d{4}|\d{6})$/.test(pin);
+// }
+
+// console.log(validatePIN('123456'));
+
+// 3d options
+// function validatePIN(pin) {
+//   const pinHaveOnlyDigits = pin.split('').some(i => {
+//     return Number.isNaN(Number(i));
+//   });
+
+//   return !pinHaveOnlyDigits && (pin.length === 4 || pin.length === 6);
+// }
+
+// console.log(validatePIN('1234'));
