@@ -165,3 +165,61 @@
 // }
 
 // console.log(validatePIN('1234'));
+
+// ---------------Stop gninnipS My sdroW!--------------
+
+// 1st option
+// function spinWords(string) {
+//   return string
+//     .split(' ')
+//     .map(word => {
+//       if (word.length > 4) {
+//         return word.split('').reverse().join('');
+//       }
+//       return word;
+//     })
+//     .join(' ');
+// }
+
+// console.log(spinWords('Hey fellow warriors'));
+// console.log(spinWords('Hello'));
+// console.log(spinWords('Hi'));
+
+// 2nd option
+// function spinWords(string) {
+//   if (!string.includes(' ') && string.length > 4) {
+//     return string.split('').reverse().join('');
+//   }
+
+//   if (!string.includes(' ') && string.length < 5) {
+//     return string;
+//   }
+
+//   return string
+//     .split(' ')
+//     .map(word => {
+//       if (word.length > 4) {
+//         return word.split('').reverse().join('');
+//       }
+//       return word;
+//     })
+//     .join(' ');
+// }
+
+// console.log(spinWords('Hey fellow warriors'));
+// console.log(spinWords('Hello'));
+
+// ------------Does my number look big in this?-----------
+
+// function narcissistic(value) {
+//   const result = String(value)
+//     .split('')
+//     .reduce((acc, numb, ind, arr) => {
+//       acc += Math.pow(Number(numb), arr.length);
+//       return acc;
+//     }, 0);
+
+//   return result === Number(value);
+// }
+
+// console.log(narcissistic(153));
