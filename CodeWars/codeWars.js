@@ -223,3 +223,32 @@
 // }
 
 // console.log(narcissistic(153));
+
+// -----------Valid Braces---------------
+
+function validBraces(braces) {
+  const stack = [];
+  const openingBraces = ['(', '[', '{'];
+  const closingBraces = [')', ']', '}'];
+  const bracePairs = {
+    '(': ')',
+    '[': ']',
+    '{': '}',
+  };
+
+  for (const brace of braces) {
+    if (openingBraces.includes(brace)) {
+      stack.push(brace);
+    } else if (closingBraces.includes(brace)) {
+      if (stack.length === 0 || bracePairs[stack.pop()] !== brace) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
+}
+
+console.log(validBraces('[{]}'));
+console.log(validBraces('[]{}'));
+console.log(validBraces('[({})][()()]'));
