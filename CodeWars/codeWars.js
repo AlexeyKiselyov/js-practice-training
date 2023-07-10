@@ -226,29 +226,95 @@
 
 // -----------Valid Braces---------------
 
-function validBraces(braces) {
-  const stack = [];
-  const openingBraces = ['(', '[', '{'];
-  const closingBraces = [')', ']', '}'];
-  const bracePairs = {
-    '(': ')',
-    '[': ']',
-    '{': '}',
-  };
+// 1st option
+// function validBraces(braces) {
+//   const stack = [];
+//   const openingBraces = ['(', '[', '{'];
+//   const closingBraces = [')', ']', '}'];
+//   const bracePairs = {
+//     '(': ')',
+//     '[': ']',
+//     '{': '}',
+//   };
 
-  for (const brace of braces) {
-    if (openingBraces.includes(brace)) {
-      stack.push(brace);
-    } else if (closingBraces.includes(brace)) {
-      if (stack.length === 0 || bracePairs[stack.pop()] !== brace) {
-        return false;
-      }
-    }
-  }
+//   for (const brace of braces) {
+//     if (openingBraces.includes(brace)) {
+//       stack.push(brace);
+//     } else if (closingBraces.includes(brace)) {
+//       if (stack.length === 0 || bracePairs[stack.pop()] !== brace) {
+//         return false;
+//       }
+//     }
+//   }
 
-  return stack.length === 0;
-}
+//   return stack.length === 0;
+// }
 
-console.log(validBraces('[{]}'));
-console.log(validBraces('[]{}'));
-console.log(validBraces('[({})][()()]'));
+// console.log(validBraces('[{]}'));
+// console.log(validBraces('[]{}'));
+// console.log(validBraces('[({})][()()]'));
+
+// 2nd option
+
+// function validBraces(braces) {
+//   while (/\(\)|\[\]|\{\}/g.test(braces)) {
+//     braces = braces.replace(/\(\)|\[\]|\{\}/g, '');
+//   }
+//   return !braces.length;
+// }
+
+// -----------Maximum subarray sum----------
+
+// 1st option
+// var maxSequence = function (arr) {
+//   let min = 0;
+//   let result = 0;
+//   let sum = 0;
+
+//   arr.forEach(numb => {
+//     sum += numb;
+//     min = Math.min(sum, min);
+//     result = Math.max(result, sum - min);
+//   });
+
+//   return result;
+// };
+
+// 2nd option (with indexes)
+// var maxSequence = function (arr) {
+//   let maxSum = 0;
+//   let currentSum = 0;
+
+//   let currentStartInd;
+//   let startInd;
+//   let endInd;
+
+//   arr.forEach((numb, ind) => {
+//     currentSum += numb;
+
+//     if (currentSum < 0) {
+//       currentSum = 0;
+//       currentStartInd = ind + 1;
+//     }
+
+//     if (currentSum > maxSum) {
+//       maxSum = currentSum;
+//       startInd = currentStartInd;
+//       endInd = ind;
+//     }
+//   });
+
+//   const interval = startInd
+//     ? `(from ${startInd} index to ${endInd} index)`
+//     : '';
+
+//   return `Result: ${maxSum} ${interval} `;
+// };
+
+console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+console.log(maxSequence([2, 4, 6, 8]));
+console.log(maxSequence([-2, -4, -6, -8]));
+console.log(maxSequence([]));
+console.log(maxSequence([-19, 4, 49, 47, 17, -5, -27, 38]));
+
+console.log(maxSequence([-2, -4, 7]));
