@@ -336,6 +336,49 @@
 //   return abc.split('').every(letter => stringNormalize.includes(letter));
 // }
 
+// 3rd option
+// function isPangram(string) {
+//   const abcObj = {
+//     a: 0,
+//     b: 0,
+//     c: 0,
+//     d: 0,
+//     e: 0,
+//     f: 0,
+//     g: 0,
+//     h: 0,
+//     i: 0,
+//     j: 0,
+//     k: 0,
+//     l: 0,
+//     m: 0,
+//     n: 0,
+//     o: 0,
+//     p: 0,
+//     q: 0,
+//     r: 0,
+//     s: 0,
+//     t: 0,
+//     u: 0,
+//     v: 0,
+//     w: 0,
+//     x: 0,
+//     w: 0,
+//     z: 0,
+//   };
+//   const stringNormalize = string.toLowerCase().split('');
+
+//   stringNormalize.forEach(letter => {
+//     if (abcObj[letter] === 0) {
+//       abcObj[letter] += 1;
+//     }
+//   });
+
+//   const abcObjValues = Object.values(abcObj);
+
+//   return abcObjValues.every(letter => letter > 0);
+// }
+
 // console.log(isPangram('The quick brown fox jumps over the lazy dog'));
 // console.log(isPangram('Cwm fjord bank glyphs vext quiz'));
 // console.log(isPangram('Cwm fjord bank glyphs vext qui'));
