@@ -311,10 +311,31 @@
 //   return `Result: ${maxSum} ${interval} `;
 // };
 
-console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
-console.log(maxSequence([2, 4, 6, 8]));
-console.log(maxSequence([-2, -4, -6, -8]));
-console.log(maxSequence([]));
-console.log(maxSequence([-19, 4, 49, 47, 17, -5, -27, 38]));
+// console.log(maxSequence([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+// console.log(maxSequence([2, 4, 6, 8]));
+// console.log(maxSequence([-2, -4, -6, -8]));
+// console.log(maxSequence([]));
+// console.log(maxSequence([-19, 4, 49, 47, 17, -5, -27, 38]));
 
-console.log(maxSequence([-2, -4, 7]));
+// console.log(maxSequence([-2, -4, 7]));
+
+// ------------------Detect Pangram----------------
+
+// 1st option
+// function isPangram(string) {
+//   const regex = /([a-z])(?!.*\1)/gi;
+
+//   return (string.match(regex) || []).length === 26;
+// }
+
+// 2nd option
+// function isPangram(string) {
+//   const abc = 'abcdefghijklmnopqrstuvwxyz';
+//   const stringNormalize = string.toLowerCase();
+
+//   return abc.split('').every(letter => stringNormalize.includes(letter));
+// }
+
+// console.log(isPangram('The quick brown fox jumps over the lazy dog'));
+// console.log(isPangram('Cwm fjord bank glyphs vext quiz'));
+// console.log(isPangram('Cwm fjord bank glyphs vext qui'));
