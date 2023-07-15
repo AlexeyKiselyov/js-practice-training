@@ -382,3 +382,82 @@
 // console.log(isPangram('The quick brown fox jumps over the lazy dog'));
 // console.log(isPangram('Cwm fjord bank glyphs vext quiz'));
 // console.log(isPangram('Cwm fjord bank glyphs vext qui'));
+
+// ---------------Help Suzuki purchase his Tofu!---------------------
+
+// 1st option
+// function buyTofu(cost, box) {
+//   const boxArr = box.split(' ');
+
+//   const moneyObj = boxArr.reduce(
+//     (acc, item) => {
+//       if (item === 'mon') {
+//         acc.mon += 1;
+//         acc.total += 1;
+//       }
+//       if (item === 'monme') {
+//         acc.monme += 1;
+//         acc.total += 60;
+//       }
+//       return acc;
+//     },
+//     { mon: 0, monme: 0, total: 0 }
+//   );
+
+//   if (moneyObj.total < cost) {
+//     return 'leaving the market';
+//   }
+
+//   let counter = cost;
+//   let coinsQuantity = 0;
+//   const monmeValue = 60;
+//   const monValue = 1;
+//   const moneyObjCopy = { ...moneyObj };
+
+//   while (counter - 60 >= 0) {
+//     if (moneyObjCopy.monme <= 0) {
+//       break;
+//     }
+//     counter -= monmeValue;
+//     coinsQuantity += 1;
+//     moneyObjCopy.monme -= 1;
+//   }
+
+//   while (counter - 1 >= 0) {
+//     if (moneyObjCopy.mon <= 0) {
+//       break;
+//     }
+//     counter -= monValue;
+//     coinsQuantity += 1;
+//     moneyObjCopy.mon -= 1;
+//   }
+
+//   if (counter) {
+//     return 'leaving the market';
+//   }
+
+//   return [moneyObj.mon, moneyObj.monme, moneyObj.total, coinsQuantity];
+// }
+
+// const box = 'mon monme';
+// // const box =
+// //   'mon mon mon mon mon apple mon mon mon mon mon mon mon monme mon mon monme mon mon mon mon cloth monme mon mon mon mon mon mon mon mon cloth mon mon monme mon mon mon mon monme mon mon mon mon mon mon mon mon mon mon mon mon mon';
+
+// const cost = 5;
+// // const cost = 124;
+
+// // [count of mon coins in box, count of monme coins in box,sum of all coins value in box, minimum number of coins needed for Tofu]
+
+// console.log(buyTofu(cost, box));
+
+// 2nd option
+// const buyTofu = (cost, box) => {
+//   let monme_cnt = (box.match(/\bmonme\b/g) || []).length,
+//     mon_cnt = (box.match(/\bmon\b/g) || []).length,
+//     monme_req = Math.min(monme_cnt, (cost / 60) | 0),
+//     mon_req = cost - monme_req * 60;
+
+//   return mon_req > mon_cnt
+//     ? 'leaving the market'
+//     : [mon_cnt, monme_cnt, mon_cnt + monme_cnt * 60, mon_req + monme_req];
+// };
