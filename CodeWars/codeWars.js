@@ -461,3 +461,39 @@
 //     ? 'leaving the market'
 //     : [mon_cnt, monme_cnt, mon_cnt + monme_cnt * 60, mon_req + monme_req];
 // };
+
+// ------------Capitalization and Mutability--------------
+
+// function capitalizeWord(word) {
+//   return word[0].toUpperCase() + word.slice(1);
+// }
+
+// console.log(capitalizeWord('word'));
+
+// --------------Welcome!------------------
+
+// const greetings = {
+//   english: 'Welcome',
+//   czech: 'Vitejte',
+//   danish: 'Velkomst',
+//   dutch: 'Welkom',
+//   estonian: 'Tere tulemast',
+//   finnish: 'Tervetuloa',
+//   flemish: 'Welgekomen',
+//   french: 'Bienvenue',
+//   german: 'Willkommen',
+//   irish: 'Failte',
+//   italian: 'Benvenuto',
+//   latvian: 'Gaidits',
+//   lithuanian: 'Laukiamas',
+//   polish: 'Witamy',
+//   spanish: 'Bienvenido',
+//   swedish: 'Valkommen',
+//   welsh: 'Croeso',
+// };
+
+// function greet(language) {
+//   return greetings[language] || 'Welcome';
+// }
+
+// console.log(greet('polish'));
