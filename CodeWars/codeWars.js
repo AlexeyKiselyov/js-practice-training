@@ -497,3 +497,38 @@
 // }
 
 // console.log(greet('polish'));
+
+// -----------Vampire Numbers-------------
+
+// 1st option
+// function vampireTest(a, b) {
+//   const innerDataForCompare = (String(a) + String(b)).split('').sort().join('');
+
+//   const multDataForCompare = String(a * b)
+//     .split('')
+//     .sort()
+//     .join('');
+
+//   return innerDataForCompare === multDataForCompare;
+// }
+
+// 2nd option
+// function vampireTest(a, b) {
+//   const innerDataForCompare = (String(a) + String(b)).split('');
+
+//   const multDataForCompare = String(a * b).split('');
+
+//   multDataForCompare.forEach(item => {
+//     const checkInd = innerDataForCompare.indexOf(item);
+//     if (checkInd < 0) {
+//       return false;
+//     } else {
+//       innerDataForCompare.splice(checkInd, 1);
+//     }
+//   });
+
+//   return innerDataForCompare.length === 0;
+// }
+
+// console.log(vampireTest(6, 21));
+// console.log(vampireTest(30, -51));
