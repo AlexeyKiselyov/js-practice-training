@@ -532,3 +532,34 @@
 
 // console.log(vampireTest(6, 21));
 // console.log(vampireTest(30, -51));
+
+// ------------Volume of a Cuboid-------------
+
+// class Kata {
+//   static getVolumeOfCuboid(length, width, height) {
+//     return length * width * height;
+//   }
+// }
+
+// console.log(Kata.getVolumeOfCuboid(1, 2, 2));
+
+// ----------Leap Years---------------
+
+// 1st option
+// function isLeapYear(year) {
+//   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
+// }
+
+// 2nd option
+// function isLeapYear(year) {
+//   if (year % 4 === 0 && year % 100 === 0 && year % 400 === 0) {
+//     return true;
+//   }
+//   if (year % 4 === 0 && year % 100 === 0 && year % 400 !== 0) {
+//     return false;
+//   }
+//   return year % 4 === 0;
+// }
+
+// console.log(isLeapYear(2020));
+// console.log(isLeapYear(2100));
