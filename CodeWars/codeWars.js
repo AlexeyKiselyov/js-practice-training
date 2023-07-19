@@ -563,3 +563,64 @@
 
 // console.log(isLeapYear(2020));
 // console.log(isLeapYear(2100));
+
+// --------------Simple multiplication------------------
+
+// function simpleMultiplication(number) {
+//   return number % 2 === 0 ? number * 8 : number * 9;
+// }
+
+// console.log(simpleMultiplication(2));
+// console.log(simpleMultiplication(1));
+
+// -------------Who ate the cookie?-------------
+
+// function cookie(x) {
+//   if (typeof x === 'string') {
+//     return 'Who ate the last cookie? It was Zach!';
+//   }
+//   if (typeof x === 'number') {
+//     return 'Who ate the last cookie? It was Monica!';
+//   }
+//   return 'Who ate the last cookie? It was the dog!';
+// }
+
+// console.log(cookie('hi'));
+
+// ------------Who is going to pay for the wall?-------
+
+// function whoIsPaying(name) {
+//   return name.length > 2 ? [name, name.slice(0, 2)] : [name];
+// }
+
+// console.log(whoIsPaying('Mexico'));
+// console.log(whoIsPaying('Me'));
+// console.log(whoIsPaying(''));
+
+// ----------Grasshopper - Function syntax debugging---------
+
+// function main(verb, noun) {
+//   return verb + noun;
+// }
+
+// console.log(main('take ', 'item'));
+
+// -----------No zeros for heros--------------
+
+// function noBoringZeros(n) {
+//   if (n === 0) {
+//     return 0;
+//   }
+//   const numbToString = String(n).split('').reverse();
+//   for (let numb of numbToString) {
+//     console.log(numb);
+//     if (numb === 0) {
+//       n.pop();
+//     } else {
+//       break;
+//     }
+//   }
+// }
+
+// console.log(noBoringZeros(1450));
+// console.log(noBoringZeros(0));
