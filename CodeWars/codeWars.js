@@ -607,19 +607,37 @@
 
 // -----------No zeros for heros--------------
 
+// 1st option
+// function noBoringZeros(n) {
+//   while (n % 10 === 0 && n !== 0) {
+//     n /= 10;
+//   }
+//   return n;
+// }
+
+// 2nd option
+// function noBoringZeros(n) {
+//   if (n % 10 === 0 && n !== 0) {
+//     return noBoringZeros(n / 10);
+//   }
+//   return n;
+// }
+
+// 3rd option
 // function noBoringZeros(n) {
 //   if (n === 0) {
 //     return 0;
 //   }
-//   const numbToString = String(n).split('').reverse();
-//   for (let numb of numbToString) {
-//     console.log(numb);
-//     if (numb === 0) {
-//       n.pop();
+//   const numbToString = String(n).split('');
+
+//   for (let i = numbToString.length - 1; i >= 0; i--) {
+//     if (numbToString[i] === '0') {
+//       numbToString.pop(i);
 //     } else {
 //       break;
 //     }
 //   }
+//   return +numbToString.join('');
 // }
 
 // console.log(noBoringZeros(1450));
