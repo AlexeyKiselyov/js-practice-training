@@ -642,3 +642,56 @@
 
 // console.log(noBoringZeros(1450));
 // console.log(noBoringZeros(0));
+
+// ----------------Draw stairs------------------
+
+// 1st option
+// function drawStairs(n) {
+//   const result = [...Array(n)]
+//     .map((item, ind) => ' '.repeat(ind) + 'I')
+//     .join('\n');
+//   return result;
+// }
+
+// 2nd option
+// function drawStairs(n) {
+//   let sumArr = [];
+
+//   for (let i = 0; i < n; i++) {
+//     sumArr.push(' '.repeat(i) + 'I\n');
+//   }
+
+//   return sumArr.join('');
+// }
+
+// 3rd option
+// function drawStairs(n) {
+//   if (n === 0) {
+//     return '';
+//   }
+
+//   let sumArr = [];
+//   let spaceCounter = '';
+
+//   for (let i = 0; i <= n; i++) {
+//     if (i === n - 1) {
+//       if (spaceCounter.length > 0) {
+//         sumArr.push(spaceCounter + 'I');
+//       } else {
+//         sumArr.push(spaceCounter + 'I');
+//       }
+//       break;
+//     } else {
+//       sumArr.push(spaceCounter + `I\n`);
+//       spaceCounter += ' ';
+//     }
+//   }
+
+//   return sumArr.join('');
+// }
+
+// console.log(drawStairs(0));
+// console.log(drawStairs(1));
+// console.log(drawStairs(2));
+// console.log(drawStairs(3));
+// console.log(drawStairs(7));
