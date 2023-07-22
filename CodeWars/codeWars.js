@@ -695,3 +695,72 @@
 // console.log(drawStairs(2));
 // console.log(drawStairs(3));
 // console.log(drawStairs(7));
+
+// ------------Sum of Multiples------------
+
+// 1st option
+// function sumMul(n, m) {
+//   let result = 0;
+
+//   for (let i = n; i < m; i += n) {
+//     result += i;
+//   }
+
+//   return result === 0 ? 'INVALID' : result;
+// }
+
+// 2nd option
+// function sumMul(n, m) {
+//   if (n >= m) {
+//     return 'INVALID';
+//   }
+
+//   const result = Array.from(Array(m), (_, index) => index)
+//     .slice(n)
+//     .reduce((acc, item) => {
+//       if (item % n === 0) {
+//         acc += item;
+//       }
+//       return acc;
+//     }, 0);
+
+//   return result;
+// }
+
+// 3rd option
+// function sumMul(n, m) {
+//   if (n >= m) {
+//     return 'INVALID';
+//   }
+//   const result = Array(m)
+//     .fill(null)
+//     .reduce((acc, item, ind) => {
+//       if (ind + 1 < n) {
+//         return acc;
+//       }
+//       if ((ind + 1) % n === 0) {
+//         acc += ind + 1;
+//       }
+//       return acc;
+//     }, 0);
+
+//   return result;
+// }
+
+// 4th option
+// function sumMul(n, m) {
+//   return n >= m
+//     ? 'INVALID'
+//     : Array.from(Array(m), (_, index) => index)
+//         .slice(n)
+//         .reduce((acc, item) => {
+//           if (item % n === 0) {
+//             acc += item;
+//           }
+//           return acc;
+//         }, 0);
+// }
+
+// console.log(sumMul(0, 0)); //"INVALID"
+// console.log(sumMul(2, 9)); //20
+// console.log(sumMul(4, -7)); //"INVALID"
