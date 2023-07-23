@@ -764,3 +764,71 @@
 // console.log(sumMul(0, 0)); //"INVALID"
 // console.log(sumMul(2, 9)); //20
 // console.log(sumMul(4, -7)); //"INVALID"
+
+// --------------Remove duplicates from list---------------
+
+// 1st option
+// function distinct(a) {
+//   return a.reduce((acc, item) => {
+//     if (!acc.includes(item) && item > 0) {
+//       acc.push(item);
+//     }
+//     return acc;
+//   }, []);
+// }
+
+// 2nd option
+// function distinct(a) {
+//   return [...new Set(a)];
+// }
+
+// console.log(distinct([1, 1, 2])); //[1, 2]
+// console.log(distinct([1, 1, 2, 2, 2, 2, 3, 5, 6, 8])); //[1, 2]
+
+// -------------Area or Perimeter---------------
+
+// const areaOrPerimeter = function (l, w) {
+//   return l === w ? l * w : (l + w) * 2;
+// };
+
+// console.log(areaOrPerimeter(3, 3)); //9
+// console.log(areaOrPerimeter(6, 10)); //32
+
+// -------------oliday VIII - Duty Free-----------
+
+// function dutyFree(normPrice, discount, hol) {
+//   const benefit = (normPrice * discount) / 100;
+//   const bottlesQuantity = Math.floor(hol / benefit);
+
+//   return bottlesQuantity;
+// }
+
+// console.log(dutyFree(12, 50, 1000)); // 166
+// console.log(dutyFree(17, 10, 500)); // 294
+
+// --------------Reverse List Order------------
+
+// function reverseList(list) {
+//   return list.reverse();
+// }
+
+// console.log(reverseList([1, 2, 3, 4]));
+// console.log(reverseList([3, 1, 5, 4]));
+
+// -------------Will there be enough space?---------
+
+// 1st option
+// function enough(cap, on, wait) {
+//   const QuantityOfPeopleWhoDontFit = wait - (cap - on);
+
+//   return QuantityOfPeopleWhoDontFit > 0 ? QuantityOfPeopleWhoDontFit : 0;
+// }
+
+// // 2nd option
+// function enough(cap, on, wait) {
+//   return Math.max(on + wait - cap, 0);
+// }
+
+// console.log(enough(10, 5, 5)); //0
+// console.log(enough(100, 60, 50)); //10
+// console.log(enough(20, 5, 5)); //0
