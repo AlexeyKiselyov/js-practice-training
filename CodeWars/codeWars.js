@@ -832,3 +832,103 @@
 // console.log(enough(10, 5, 5)); //0
 // console.log(enough(100, 60, 50)); //10
 // console.log(enough(20, 5, 5)); //0
+
+// -------------All Star Code Challenge #18------------
+
+// function strCount(str, letter) {
+//   return str.split('').filter(char => char === letter).length;
+// }
+
+// console.log(strCount('Hello', 'o')); // 1
+// console.log(strCount('', 'z')); // 0
+
+// ------------Triple Trouble--------------
+
+// 1st option
+// function tripleTrouble(one, two, three) {
+//   let result = '';
+
+//   for (let i = 0; i < one.length; i++) {
+//     result += one[i] + two[i] + three[i];
+//   }
+
+//   return result;
+// }
+
+// 2nd option
+// function tripleTrouble(one, two, three) {
+//   return one.split('').reduce((acc, letter, ind) => {
+//     acc += letter + two[ind] + three[ind];
+//     return acc;
+//   }, '');
+// }
+
+// console.log(tripleTrouble('aaa', 'bbb', 'ccc')); //"abcabcabc"
+
+// -----------------Find the position!-------------
+
+// const abc = 'abcdefghijklmnopqrstuvwxyz';
+
+// function position(letter) {
+//   const letterPosition = abc.indexOf(letter) + 1;
+//   return `Position of alphabet: ${letterPosition}`;
+// }
+
+// console.log(position('a')); //"Position of alphabet: 1"
+
+// ---------------MakeUpperCase----------------
+
+// function makeUpperCase(str) {
+//   return str.toUpperCase();
+// }
+
+// console.log(makeUpperCase('hello')); //"HELLO"
+
+// ------------Lario and Muigi Pipe Problem---------
+
+// 1st option
+// function pipeFix(numbers) {
+//   const firstNumb = numbers[0];
+//   const lastNumb = numbers[numbers.length - 1];
+//   let result = [];
+
+//   for (let i = firstNumb; i <= lastNumb; i++) {
+//     result.push(i);
+//   }
+
+//   return result;
+// }
+
+// 2nd option
+// function pipeFix(numbers) {
+//   if (numbers.length === 1) {
+//     return numbers;
+//   }
+
+//   const firstNumb = numbers.shift();
+//   const lastNumb = numbers.pop();
+//   let result = [];
+
+//   for (let i = firstNumb; i <= lastNumb; i++) {
+//     result.push(i);
+//   }
+
+//   return result;
+// }
+
+// 3d option
+// function pipeFix(numbers) {
+//   return numbers.reduce((acc, numb, ind, arr) => {
+//     let nextNumb = arr[ind + 1];
+//     for (let i = numb; i < nextNumb; i++) {
+//       acc.push(i);
+//     }
+//     if (ind === arr.length - 1) {
+//       acc.push(numb);
+//     }
+//     return acc;
+//   }, []);
+// }
+
+// console.log(pipeFix([1, 2, 3, 5, 6, 8, 9])); //[1,2,3,4,5,6,7,8,9]
+// console.log(pipeFix([2])); //[2]
