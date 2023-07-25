@@ -932,3 +932,55 @@
 
 // console.log(pipeFix([1, 2, 3, 5, 6, 8, 9])); //[1,2,3,4,5,6,7,8,9]
 // console.log(pipeFix([2])); //[2]
+
+// --Training JS #18: Methods of String object--concat() split() and its good friend join()--
+
+// function splitAndMerge(string, separator) {
+//   return string
+//     .split(' ')
+//     .map(sentence => {
+//       return sentence.split('').join(separator);
+//     })
+//     .join(' ');
+// }
+
+// console.log(splitAndMerge('My name is John', ' ')); //"M y n a m e i s J o h n"
+// console.log(splitAndMerge('My name is John', '-')); //"M-y n-a-m-e i-s J-o-h-n"
+
+// --------------------Drink about------------------
+
+// 1st option
+// const agesObj = {
+//   children: 'drink toddy',
+//   teens: 'drink coke',
+//   young: 'drink beer',
+//   adults: 'drink whisky',
+// };
+
+// function peopleWithAgeDrink(old) {
+//   if (old < 14) {
+//     return agesObj.children;
+//   } else if (old < 18) {
+//     return agesObj.teens;
+//   } else if (old < 21) {
+//     return agesObj.young;
+//   } else {
+//     return agesObj.adults;
+//   }
+// }
+
+// 2nd option
+// function peopleWithAgeDrink(age) {
+//   switch (true) {
+//     case age >= 21:
+//       return 'drink whisky';
+//     case age >= 18:
+//       return 'drink beer';
+//     case age >= 14:
+//       return 'drink coke';
+//     default:
+//       return 'drink toddy';
+//   }
+// }
+
+// console.log(peopleWithAgeDrink(22));
