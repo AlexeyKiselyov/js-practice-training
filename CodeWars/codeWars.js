@@ -984,3 +984,46 @@
 // }
 
 // console.log(peopleWithAgeDrink(22));
+
+// --------get character from ASCII Value----------
+
+// function getChar(c) {
+//   return String.fromCharCode(c);
+// }
+
+// console.log(getChar(55)); //7
+
+// ----------Quarter of the year-------------
+
+// 1st option
+// const quarterOf = month => {
+//   return Math.ceil(month / 3);
+// };
+
+// 2nd option
+// const quarterOf = month => {
+//   if (month < 4) {
+//     return 1;
+//   } else if (month < 7) {
+//     return 2;
+//   } else if (month < 10) {
+//     return 3;
+//   } else {
+//     return 4;
+//   }
+// };
+
+// console.log(quarterOf(3)); //1
+// console.log(quarterOf(8)); //3
+
+// --------Calculate average------------
+
+// function findAverage(array) {
+//   if (array.length === 0) return 0;
+
+//   const sum = array.reduce((acc, numb) => (acc += numb), 0);
+
+//   return sum / array.length;
+// }
+
+// console.log(findAverage([1, 2, 3, 4])); //2.5
