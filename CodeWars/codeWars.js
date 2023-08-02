@@ -1027,3 +1027,62 @@
 // }
 
 // console.log(findAverage([1, 2, 3, 4])); //2.5
+
+// ---------------Basic Mathematical Operations-----------
+
+// 1st option
+// function basicOp(operation, value1, value2) {
+//   switch (operation) {
+//     case '+':
+//       return value1 + value2;
+//     case '-':
+//       return value1 - value2;
+//     case '*':
+//       return value1 * value2;
+//     case '/':
+//       return value1 / value2;
+//   }
+// }
+
+// 2nd option
+// function basicOp(operation, value1, value2) {
+//   return eval(value1 + operation + value2);
+// }
+
+// 3dd option
+// function basicOp(operation, value1, value2) {
+//   const operationsObj = {
+//     '+': value1 + value2,
+//     '-': value1 - value2,
+//     '*': value1 * value2,
+//     '/': value1 / value2,
+//   };
+//   return operationsObj[operation];
+// }
+
+// console.log(basicOp('+', 4, 7)); //11
+// console.log(basicOp('-', 15, 18)); //-3
+
+// ------------Find Multiples of a Number--------------
+
+// function findMultiples(integer, limit) {
+//   let result = [];
+
+//   for (let i = integer; i <= limit; i++){
+//     if (i % integer === 0) {
+//       result.push(i);
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(findMultiples(5, 25)); //[5, 10, 15, 20, 25]
+
+// -------------Add Length-------------
+
+// function addLength(str) {
+//   return str.split(' ').map(word => `${word} ${word.length}`);
+// }
+
+// console.log(addLength('apple ban')); //["apple 5", "ban 3"]
