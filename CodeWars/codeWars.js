@@ -1086,3 +1086,39 @@
 // }
 
 // console.log(addLength('apple ban')); //["apple 5", "ban 3"]
+
+// -----------Last man standing----------
+
+// 1st option
+// function lastManStanding(n) {
+//   const arr = new Array(n).fill(1).map((item, ind) => item + ind);
+
+//   while (arr.length > 1) {
+//     const newArr = arr.filter((numb, ind) => ind % 2 !== 0).reverse();
+//     arr.splice(0, arr.length, ...newArr);
+//   }
+
+//   return arr[0];
+// }
+
+// console.log(lastManStanding(9)); //6
+
+// ----------Welcome to the City-----------
+
+// function sayHello(name, city, state) {
+//   const fullName = name.join(' ');
+//   return `Hello, ${fullName}! Welcome to ${city}, ${state}!`;
+// }
+
+// console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona')); //'Hello, John Smith! Welcome to Phoenix, Arizona!'
+
+// --------------Remove First and Last Character Part Two----------------
+
+// function array(string) {
+//   const result = string.split(',').slice(1, -1).join(' ');
+
+//   return result ? result : null;
+// }
+
+// console.log(array('1,2,3')); //2
+// console.log(array('1,2')); //null
