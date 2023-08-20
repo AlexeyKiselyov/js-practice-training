@@ -1122,3 +1122,43 @@
 
 // console.log(array('1,2,3')); //2
 // console.log(array('1,2')); //null
+
+// -----------Printing Array elements with Comma delimiters---------
+
+// function printArray(array) {
+//   return array.join(',');
+// }
+
+// console.log(printArray(['h', 'o', 'l', 'a'])); //"h,o,l,a"
+
+// ----------Double Char-----------
+
+// function doubleChar(str) {
+//   return str.split('').reduce((acc, item) => {
+//     acc += item + item;
+//     return acc;
+//   }, '');
+// }
+
+// console.log(doubleChar('abcd')); // "aabbccdd"
+
+// ------------Name on billboard-----------
+
+// function billboard(name, price = 30) {
+//   return name.split('').reduce((acc, item) => {
+//     acc += price;
+//     return acc;
+//   }, 0);
+// }
+
+// console.log(billboard('Jeong-Ho Aristotelis', 30)); //600
+
+// ---------------Jenny's secret message--------
+
+// function greet(name) {
+//   if (name === 'Johnny') return 'Hello, my love!';
+//   return 'Hello, ' + name + '!';
+// }
+
+// console.log(greet('Jim')); //"Hello, Jim!"
+// console.log(greet('Johnny')); // "Hello, my love!"
