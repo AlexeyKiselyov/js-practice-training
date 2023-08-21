@@ -1162,3 +1162,26 @@
 
 // console.log(greet('Jim')); //"Hello, Jim!"
 // console.log(greet('Johnny')); // "Hello, my love!"
+
+// ------Eliminate the intruders! Bit manipulation-----
+
+// 1st option
+// function eliminateUnsetBits(number) {
+//   return parseInt(number.replace(/0/g, '') || 0, 2);
+// }
+
+// 2nd optionS
+// function eliminateUnsetBits(number) {
+//   const withoutZeros = number.split('').reduce((acc, numb) => {
+//     if (numb === '1') {
+//       acc += 1;
+//     }
+//     return acc;
+//   }, '');
+//   return withoutZeros ? parseInt(withoutZeros, 2) : 0;
+// }
+
+// console.log(eliminateUnsetBits('111')); //7
+// console.log(eliminateUnsetBits('1000000')); //1
+// console.log(eliminateUnsetBits('0111110111100000011111101010')); //131071
+// console.log(eliminateUnsetBits('')); //0
