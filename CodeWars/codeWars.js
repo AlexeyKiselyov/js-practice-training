@@ -1185,3 +1185,18 @@
 // console.log(eliminateUnsetBits('1000000')); //1
 // console.log(eliminateUnsetBits('0111110111100000011111101010')); //131071
 // console.log(eliminateUnsetBits('')); //0
+
+// ----Short Long Short-------
+
+// function solution(a, b) {
+//   return a.length > b.length ? b + a + b : a + b + a;
+// }
+
+// console.log(solution('45', '1')); //'1451';
+
+// -----Removing Elements---------
+
+// function removeEveryOther(arr) {
+//   return arr.filter((_, ind) => ind % 2 === 0);
+// }
+// console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])); //['Hello', 'Hello Again'];
