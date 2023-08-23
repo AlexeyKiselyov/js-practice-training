@@ -1200,3 +1200,36 @@
 //   return arr.filter((_, ind) => ind % 2 === 0);
 // }
 // console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again'])); //['Hello', 'Hello Again'];
+
+// -----------Stringy Strings-------------
+
+// 1st option
+// function stringy(size) {
+//   return new Array(size)
+//     .fill(1)
+//     .map((_, ind) => {
+//       return ind % 2 === 0 ? 1 : 0;
+//     })
+//     .join('');
+// }
+
+// 2nd option
+// function stringy(size) {
+//   let result = '';
+//   while (size > 0) {
+//     if (result % 2 === 0) {
+//       result += 1;
+//     } else {
+//       result += 0;
+//     }
+//     size -= 1;
+//   }
+//   return result;
+// }
+
+// 3d option
+// function stringy(size) {
+//   return ''.padStart(size, 10);
+// }
+
+// console.log(stringy(4)); //'1010';
