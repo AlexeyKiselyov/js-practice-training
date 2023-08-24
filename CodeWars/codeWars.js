@@ -1233,3 +1233,19 @@
 // }
 
 // console.log(stringy(4)); //'1010';
+
+// --------Job Matching #1------
+// let candidate = {
+//   minSalary: 190000,
+// };
+// let job = {
+//   maxSalary: 171000,
+// };
+
+// function match(candidate, job) {
+//   if (!candidate.minSalary || !job.maxSalary) throw new Error();
+//   const candSalary = candidate.minSalary * 0.9;
+//   return job.maxSalary >= candSalary;
+// }
+
+// console.log(match(candidate, job));
