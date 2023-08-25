@@ -1249,3 +1249,23 @@
 // }
 
 // console.log(match(candidate, job));
+
+// --------Bin to Decimal---------
+
+// function binToDec(bin) {
+//   return parseInt(bin, 2);
+// }
+
+// console.log(binToDec('1001001')); //73;
+
+// ---------How good are you really?-------------
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   const resultsArr = [...classPoints, yourPoints];
+//   const averageAmount =
+//     resultsArr.reduce((acc, numb) => (acc += numb), 0) / resultsArr.length;
+
+//   return yourPoints >= averageAmount ? true : false;
+// }
+
+// console.log(betterThanAverage([2, 3], 5)); //true;
