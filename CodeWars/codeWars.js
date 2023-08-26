@@ -1269,3 +1269,43 @@
 // }
 
 // console.log(betterThanAverage([2, 3], 5)); //true;
+
+// ---Converting 12-hour time to 24-hour time---
+
+// first option
+// function to24hourtime(hour, minute, period) {
+//   const resultMinute = String(minute).padStart(2, '0');
+//   let resultHour = '';
+
+//   if (period === 'am') {
+//     if (hour === 12) {
+//       resultHour = '00';
+//     } else {
+//       resultHour = String(hour).padStart(2, '0');
+//     }
+//   }
+
+//   if (period === 'pm') {
+//     if (hour === 12) {
+//       resultHour = '12';
+//     } else {
+//       resultHour = String(hour + 12);
+//     }
+//   }
+
+//   return resultHour + resultMinute;
+// }
+
+// second option
+// function to24hourtime(hour, minute, period) {
+//   if (period === 'am' && hour === 12) {
+//     hour = 0;
+//   } else if (period === 'pm' && hour !== 12) {
+//     hour += 12;
+//   }
+//   return hour.toString().padStart(2, '0') + minute.toString().padStart(2, '0');
+// }
+
+// console.log(to24hourtime(1, 0, 'am')); //"0100"
+// console.log(to24hourtime(1, 0, 'pm')); //"1300"
+// console.log(to24hourtime(12, 0, 'pm')); //"1200"
