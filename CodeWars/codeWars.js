@@ -1309,3 +1309,20 @@
 // console.log(to24hourtime(1, 0, 'am')); //"0100"
 // console.log(to24hourtime(1, 0, 'pm')); //"1300"
 // console.log(to24hourtime(12, 0, 'pm')); //"1200"
+
+// ------NATO Phonetic Alphabet----------
+
+// the object LETTERS is preloaded
+// LETTERS['B'] === 'Bravo', etc
+
+// function nato(word) {
+//   return word
+//     .split('')
+//     .map((char, idx) => {
+//       if (idx === word.length - 1) {
+//         return LETTERS[char.toUpperCase()];
+//       }
+//       return LETTERS[char.toUpperCase()] + ' ';
+//     })
+//     .join('');
+// }
