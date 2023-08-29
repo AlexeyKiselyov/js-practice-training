@@ -1326,3 +1326,24 @@
 //     })
 //     .join('');
 // }
+
+// ----------Even or Odd-------------
+
+// function evenOrOdd(number) {
+//   return number % 2 === 0 ? 'Even' : 'Odd';
+// }
+
+// console.log(evenOrOdd(2)); //"Even";
+// console.log(evenOrOdd(7)); //"Odd";
+
+// -----------Find the smallest integer in the array--------
+
+// class SmallestIntegerFinder {
+//   findSmallestInt(args) {
+//     const sortedArr = args.sort((a, b) => a - b);
+//     return sortedArr[0];
+//   }
+// }
+// const result = new SmallestIntegerFinder();
+
+// console.log(result.findSmallestInt([78, 56, 232, 12, 8]));
