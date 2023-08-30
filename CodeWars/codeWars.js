@@ -1347,3 +1347,34 @@
 // const result = new SmallestIntegerFinder();
 
 // console.log(result.findSmallestInt([78, 56, 232, 12, 8]));
+
+// ----------Simple Fun #10: Range Bit Counting--------
+
+// 1st option
+// function rangeBitCount(a, b) {
+//   let result = 0;
+
+//   for (let i = a; i <= b; i++) {
+//     result += i.toString(2).split(1).length - 1;
+//   }
+
+//   return result;
+// }
+
+// 2nd option
+// function rangeBitCount(a, b) {
+//   let result = 0;
+
+//   for (let i = a; i <= b; i++) {
+//     const toBin = i.toString(2);
+//     toBin.split('').forEach(numb => {
+//       if (numb === '1') {
+//         result += 1;
+//       }
+//     });
+//   }
+
+//   return result;
+// }
+
+// console.log(rangeBitCount(2, 7)); // 11
