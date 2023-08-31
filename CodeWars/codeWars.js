@@ -1378,3 +1378,72 @@
 // }
 
 // console.log(rangeBitCount(2, 7)); // 11
+
+// -----Simple Fun #30: Strings Construction-----
+
+// 1st option
+// function stringsConstruction(A, B) {
+//   for (let i = 0; ; i++) {
+//     for (let c of A) {
+//       if (B.includes(c)) {
+//         B = B.replace(c, '-');
+//       } else {
+//         return i;
+//       }
+//     }
+//   }
+// }
+
+// 2nd option
+// function stringsConstruction(A, B) {
+//   const charCountA = {};
+//   const charCountB = {};
+
+//   // Count the characters in strings A and B
+//   for (const char of A) {
+//     charCountA[char] = (charCountA[char] || 0) + 1;
+//   }
+//   for (const char of B) {
+//     charCountB[char] = (charCountB[char] || 0) + 1;
+//   }
+
+//   // Initialize a variable to keep track of the minimum count
+//   let minCount = Infinity;
+
+//   // Calculate the minimum count of each character in A
+//   for (const char in charCountA) {
+//     const countInA = charCountA[char];
+//     const countInB = charCountB[char] || 0;
+//     const possibleCount = Math.floor(countInB / countInA);
+//     minCount = Math.min(minCount, possibleCount);
+//   }
+
+//   return minCount;
+// };
+
+// 3d option
+// function stringsConstruction(A, B) {
+//   let counter = 0;
+//   let condishion = true;
+//   const arrayA = A.split('');
+
+//   const objectOfChars = B.split('').reduce((acc, char) => {
+//     acc[char] ? (acc[char] += 1) : (acc[char] = 1);
+//     return acc;
+//   }, {});
+
+//   while (condishion) {
+//     for (let i = 0; i < arrayA.length; i++) {
+//       if (objectOfChars[arrayA[i]] <= 0) {
+//         condishion = false;
+//         break;
+//       }
+//       objectOfChars[arrayA[i]] -= 1;
+//     }
+//     if (condishion) counter += 1;
+//   }
+
+//   return counter;
+// }
+
+// console.log(stringsConstruction('abc', 'abccba')); //2
