@@ -1447,3 +1447,19 @@
 // }
 
 // console.log(stringsConstruction('abc', 'abccba')); //2
+
+// ---------Return substring instance count--------------
+
+// 1st option
+// function solution(fullText, searchText) {
+//   const regex = new RegExp(searchText, 'gi');
+//   const mutches = fullText.match(regex);
+//   return mutches ? mutches.length : 0;
+// }
+
+// 2nd option
+// function solution(fullText, searchText) {
+//   return fullText.split(searchText).length - 1;
+// }
+
+// console.log(solution('abababcabdababab', 'ab')); // 7
