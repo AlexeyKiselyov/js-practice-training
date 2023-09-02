@@ -1463,3 +1463,20 @@
 // }
 
 // console.log(solution('abababcabdababab', 'ab')); // 7
+
+// -----------Tail Swap-------------
+
+// function tailSwap(arr) {
+//   const str1FitstPart = arr[0].split(':')[0];
+//   const str1SecondPart = arr[0].split(':')[1];
+
+//   const str2FitstPart = arr[1].split(':')[0];
+//   const str2SecondPart = arr[1].split(':')[1];
+
+//   return [
+//     `${str1FitstPart}:${str2SecondPart}`,
+//     `${str2FitstPart}:${str1SecondPart}`,
+//   ];
+// }
+
+// console.log(tailSwap(['abc:123', 'cde:456'])); // ['abc:456', 'cde:123']
