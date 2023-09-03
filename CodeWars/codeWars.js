@@ -1480,3 +1480,11 @@
 // }
 
 // console.log(tailSwap(['abc:123', 'cde:456'])); // ['abc:456', 'cde:123']
+
+// -----------Friend or Foe?----------------
+
+// function friend(friends) {
+//   return friends.filter(name => name.length === 4);
+// }
+
+// console.log(friend(['Ryan', 'Kieran', 'Mark'])); // ['Ryan', 'Mark']
