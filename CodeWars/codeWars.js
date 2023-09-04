@@ -1488,3 +1488,25 @@
 // }
 
 // console.log(friend(['Ryan', 'Kieran', 'Mark'])); // ['Ryan', 'Mark']
+
+// ----------Cats and shelves---------
+
+// let counter = 0;
+
+// function solution(start, finish) {
+//   if (start === finish) {
+//     return counter;
+//   }
+
+//   if (finish - 3 > start) {
+//     counter += 1;
+//     return solution(start, finish - 3);
+//   }
+
+//   counter += 1;
+//   return solution(start, finish - 1);
+// }
+
+// console.log(solution(1, 5)); //  2
+// console.log(solution(3, 3)); //  0
+// console.log(solution(2, 4)); //  2
