@@ -1510,3 +1510,36 @@
 // console.log(solution(1, 5)); //  2
 // console.log(solution(3, 3)); //  0
 // console.log(solution(2, 4)); //  2
+
+// ------------FIXME: Replace all dots--------
+
+// var replaceDots = function (str) {
+//   return str.replace(/\./g, '-');
+// };
+
+// console.log(replaceDots('one.two.three')); //'one-two-three'
+
+// ------------Return Two Highest Values in List------------
+
+// 1st option
+// function twoHighest(arr) {
+//   return [...new Set(arr)].sort((a, b) => b - a).slice(0, 2);
+// }
+
+// 2nd option
+// function twoHighest(arr) {
+//   const result = [];
+//   const sortArr = arr
+//     .sort((a, b) => b - a)
+//     .forEach((numb, ind, initArr) => {
+//       if (numb !== initArr[ind - 1]) {
+//         result.push(numb);
+//       }
+//     });
+
+//   return result.length > 0 ? result.slice(0, 2) : result[0] || [];
+// }
+
+// console.log(twoHighest([15, 20, 20, 17])); // [20, 17]
+// console.log(twoHighest([15])); // [15]
+// console.log(twoHighest([])); // []
