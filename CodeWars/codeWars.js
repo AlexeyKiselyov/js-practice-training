@@ -1543,3 +1543,30 @@
 // console.log(twoHighest([15, 20, 20, 17])); // [20, 17]
 // console.log(twoHighest([15])); // [15]
 // console.log(twoHighest([])); // []
+
+// ------Running out of space--------
+
+// 1st option
+// function spacey(array) {
+//   let strCounter = '';
+
+//   return array.map(item => {
+//     strCounter += item;
+//     return strCounter;
+//   });
+// }
+
+// 2nd option
+// function spacey(array) {
+//   const result = [];
+//   let strCounter = '';
+
+//   array.forEach(item => {
+//     strCounter += item;
+//     result.push(strCounter);
+//   });
+
+//   return result;
+// }
+
+// console.log(spacey(['kevin', 'has', 'no', 'space'])); // [ 'kevin', 'kevinhas', 'kevinhasno', 'kevinhasnospace']
