@@ -1570,3 +1570,43 @@
 // }
 
 // console.log(spacey(['kevin', 'has', 'no', 'space'])); // [ 'kevin', 'kevinhas', 'kevinhasno', 'kevinhasnospace']
+
+// ----Cryptanalysis Word Patterns----
+
+// 1st option
+// const wordPattern = word => {
+//   word = word.toLowerCase();
+//   const set = [...new Set(word)];
+//   console.log(set);
+//   return word
+//     .split('')
+//     .map(e => set.indexOf(e))
+//     .join('.');
+// };
+
+// 2nd option
+// function wordPattern(word) {
+//   const wordToLowCaseArr = word.toLowerCase().split('');
+//   let counter = 0;
+//   const charObj = {};
+
+//   const result = wordToLowCaseArr.map((letter, ind) => {
+//     if (!charObj[letter] && ind === 0) {
+//       charObj[letter] = counter;
+//       return counter;
+//     }
+//     if (!charObj[letter] && charObj[letter] !== 0) {
+//       counter += 1;
+//       charObj[letter] = counter;
+//       return counter;
+//     }
+//     return charObj[letter];
+//   });
+//   console.log(charObj);
+
+//   return result.join('.');
+// }
+
+console.log(wordPattern('helLo')); // "0.1.2.2.3"
+
+// console.log(wordPattern('Hippopotomonstrosesquippedaliophobia')); // "0.1.2.2.3.2.3.4.3.5.3.6.7.4.8.3.7.9.7.10.11.1.2.2.9.12.13.14.1.3.2.0.3.15.1.13"
