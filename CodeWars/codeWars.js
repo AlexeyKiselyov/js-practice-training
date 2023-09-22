@@ -1618,3 +1618,49 @@
 // };
 
 // console.log(removeVowels('drake')); //"drk"
+
+// -------Trimming a string (not complited)------
+
+// function trim(str, size) {
+//   if (size >= str.length) {
+//     return str;
+//   } else if (str.length <= 3 && size === 1) {
+//     return str[0] + '...';
+//   } else {
+//     const baseStr = str.slice(0, size - 3);
+//     console.log(baseStr);
+//     return baseStr + '...';
+//   }
+// }
+
+// console.log(trim('Creating kata is fun', 14)); // "Creating ka..."
+// console.log(trim('He', 1)); // "H..."
+// console.log(trim('Code Wars is pretty rad', 50)); // "Code Wars is pretty rad"
+// console.log(trim('"eAlD"', 1)); // "e..."
+
+// -------------Price of Mangoes--------------
+
+// 1nd option
+// function mango(quantity, price) {
+//   const promoValue = 3;
+//   const freeMangos = Math.floor(quantity / promoValue);
+//   return (quantity - freeMangos) * price;
+// }
+
+// 2nd option
+// function mango(quantity, price) {
+//   let counter = 0;
+//   const promoValue = 3;
+//   const paidQuantity = 2;
+//   while (quantity - promoValue >= 0) {
+//     quantity -= promoValue;
+//     counter += 1;
+//   }
+//   const result =
+//     paidQuantity * counter * price +
+//     (quantity > 1 ? paidQuantity * price : quantity * price);
+//   return result;
+// }
+
+// console.log(mango(3, 3)); // 6
+// console.log(mango(9, 5)); // 30
