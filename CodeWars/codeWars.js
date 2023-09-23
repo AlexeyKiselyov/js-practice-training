@@ -1664,3 +1664,29 @@
 
 // console.log(mango(3, 3)); // 6
 // console.log(mango(9, 5)); // 30
+
+// -------------Number climber-------------
+
+// function climb(n) {
+//   const result = [n];
+//   while (n > 1) {
+//     n = Math.floor(n / 2);
+//     result.unshift(n);
+//   }
+//   return result;
+// }
+
+// console.log(climb(10)); // [1, 2, 5, 10]
+// console.log(climb(13)); // [1, 3, 6, 13]
+
+// ------------Is your period late?-------------
+
+// const MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+// function periodIsLate(last, today, cycleLength) {
+//   const daysDiff = Math.floor((today - last) / MS_PER_DAY);
+//   return cycleLength - daysDiff >= 0 ? false : true;
+// }
+
+// console.log(periodIsLate(new Date(2016, 6, 13), new Date(2016, 7, 16), 35)); // false
+// console.log(periodIsLate(new Date(2016, 7, 12), new Date(2016, 8, 9), 28)); // false
