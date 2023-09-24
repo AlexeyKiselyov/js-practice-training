@@ -1690,3 +1690,20 @@
 
 // console.log(periodIsLate(new Date(2016, 6, 13), new Date(2016, 7, 16), 35)); // false
 // console.log(periodIsLate(new Date(2016, 7, 12), new Date(2016, 8, 9), 28)); // false
+
+// ---------------Pillars-------------
+
+// function pillars(numPill, dist, width) {
+//   if (numPill < 2) return 0;
+
+//   const numbOfPillSpacing = numPill - 1;
+//   const allPillsWidth = numPill * width;
+//   const distInCent = dist * 100;
+//   const widthOfFirstAndLastPill = width * 2;
+
+//   const fullDistance = distInCent * numbOfPillSpacing + allPillsWidth;
+//   return fullDistance - widthOfFirstAndLastPill;
+// }
+
+// console.log(pillars(1, 10, 10)); // 0
+// console.log(pillars(2, 20, 25)); // 2000
