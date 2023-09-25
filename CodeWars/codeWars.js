@@ -1707,3 +1707,39 @@
 
 // console.log(pillars(1, 10, 10)); // 0
 // console.log(pillars(2, 20, 25)); // 2000
+
+// ----------Sum a list but ignore any duplicates-----------
+
+// 1st option
+// function sumNoDuplicates(arr) {
+//   let uniqueArr = [];
+//   let result = 0;
+//   arr.forEach(num => {
+//     if (arr.indexOf(num) === arr.lastIndexOf(num)) {
+//       uniqueArr.push(num);
+//       result += num;
+//     }
+//   });
+//   return result;
+// }
+
+// 2nd option
+// function sumNoDuplicates(numList) {
+//   let result = 0;
+
+//   const obj = numList.reduce((acc, item) => {
+//     !acc[item] ? (acc[item] = 1) : (acc[item] += 1);
+//     return acc;
+//   }, {});
+
+//   const objKeys = Object.keys(obj);
+//   for (const key of objKeys) {
+//     if (obj[key] === 1) {
+//       result += Number(key);
+//     }
+//   }
+
+//   return result;
+// }
+
+console.log(sumNoDuplicates([3, 4, 3, 6])); //10
