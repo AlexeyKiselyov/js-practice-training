@@ -1742,4 +1742,47 @@
 //   return result;
 // }
 
-console.log(sumNoDuplicates([3, 4, 3, 6])); //10
+// console.log(sumNoDuplicates([3, 4, 3, 6])); //10
+
+// ------------String ends with?--------------
+
+// 1st option
+// function solution(str, ending) {
+//   const endOfStr = str.slice(-ending.length);
+//   return endOfStr === ending;
+// }
+
+// 2nd option
+// function solution(str, ending) {
+//   return str.endsWith(ending);
+// }
+
+// 3rd oprion
+// function solution(str, ending) {
+//   const strReverse = str.split('').reverse().join('');
+//   const endReverse = ending.split('').reverse().join('');
+//   let result = true;
+
+//   for (let i = 0; i < ending.length; i++) {
+//     if (strReverse[i] !== endReverse[i]) {
+//       result = false;
+//       break;
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(solution('abc', 'bc')); //true
+// console.log(solution('abcde', 'abc')); //false
+
+// ------------Refactored Greeting-------------
+
+// class Person {
+//   constructor(myName) {
+//     this.name = myName;
+//   }
+//   greet(yourName) {
+//     return `Hello ${yourName}, my name is ${this.name}`;
+//   }
+// }
