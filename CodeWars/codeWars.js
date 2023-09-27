@@ -1786,3 +1786,24 @@
 //     return `Hello ${yourName}, my name is ${this.name}`;
 //   }
 // }
+
+// ----------------Elapsed Seconds--------------
+// const mlsecInSecond = 1000;
+
+// function elapsedSeconds(startDate, endDate) {
+//   return (endDate - startDate) / mlsecInSecond;
+// }
+
+// console.log(
+//   elapsedSeconds(new Date(2013, 1, 1, 0, 0, 1), new Date(2013, 1, 1, 0, 0, 2)) // 2
+// );
+
+// -------------Odd or Even?--------------
+
+// function oddOrEven(array) {
+//   const sumOfArr = array.reduce((acc, numb) => acc + numb, 0);
+//   return sumOfArr % 2 ? 'odd' : 'even';
+// }
+
+// console.log(oddOrEven([0, 1, 4])); //odd
+// console.log(oddOrEven([0, -1, -5])); //even
