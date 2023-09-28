@@ -1807,3 +1807,19 @@
 
 // console.log(oddOrEven([0, 1, 4])); //odd
 // console.log(oddOrEven([0, -1, -5])); //even
+
+// --------reverseIt-----------
+
+// function reverseIt(data) {
+//   if (typeof data === 'string') {
+//     return data.split('').reverse().join('');
+//   }
+//   if (typeof data === 'number') {
+//     const result = String(data).split('').reverse().join('');
+//     return Number(result);
+//   }
+//   return data;
+// }
+
+// console.log(reverseIt('Hello')); // "olleH"
+// console.log(reverseIt(314159)); // 951413
