@@ -1823,3 +1823,35 @@
 
 // console.log(reverseIt('Hello')); // "olleH"
 // console.log(reverseIt(314159)); // 951413
+
+// -------------Numbers in strings----------
+
+// 1st option
+
+// function solve(s) {
+//   return Math.max(...s.match(/\d+/g));
+// }
+
+// 2nd option
+// function solve(s) {
+//   let result = '';
+//   let compareNumb = '';
+//   const arrOfNumb = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
+//   for (let i = 0; i <= s.length; i++) {
+//     if (arrOfNumb.includes(s[i])) {
+//       compareNumb += s[i];
+//       continue;
+//     }
+//     if (Number(compareNumb) > Number(result)) {
+//       result = compareNumb;
+//     }
+//     compareNumb = '';
+//   }
+
+//   return +result;
+// }
+
+// console.log(solve('gh12cdy695m1')); //695
+// console.log(solve('2ti9iei7qhr5')); //9
+// console.log(solve('lu1j8qbbb85')); //85
