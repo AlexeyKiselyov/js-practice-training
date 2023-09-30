@@ -1855,3 +1855,24 @@
 // console.log(solve('gh12cdy695m1')); //695
 // console.log(solve('2ti9iei7qhr5')); //9
 // console.log(solve('lu1j8qbbb85')); //85
+
+// --------Closing in Sum-----------
+
+// function closingInSum(n) {
+//   const splitNumb = String(n).split('');
+//   const arrOfNumb = [];
+
+//   while (splitNumb.length > 0) {
+//     const firstNumb = splitNumb.shift();
+//     const lastNumb = splitNumb.pop();
+//     if (lastNumb) {
+//       arrOfNumb.push(firstNumb + lastNumb);
+//     } else {
+//       arrOfNumb.push(firstNumb);
+//     }
+//   }
+
+//   return arrOfNumb.reduce((acc, item) => acc + Number(item), 0);
+// }
+
+// console.log(closingInSum(121)); //13
