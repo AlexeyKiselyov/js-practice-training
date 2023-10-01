@@ -1577,7 +1577,6 @@
 // const wordPattern = word => {
 //   word = word.toLowerCase();
 //   const set = [...new Set(word)];
-//   console.log(set);
 //   return word
 //     .split('')
 //     .map(e => set.indexOf(e))
@@ -1628,7 +1627,6 @@
 //     return str[0] + '...';
 //   } else {
 //     const baseStr = str.slice(0, size - 3);
-//     console.log(baseStr);
 //     return baseStr + '...';
 //   }
 // }
@@ -1876,3 +1874,25 @@
 // }
 
 // console.log(closingInSum(121)); //13
+
+// ----------Number-Star ladder----------
+
+// 1st option
+// function pattern(n) {
+//   let result = '1';
+//   for (let i = 2; i <= n; i++) {
+//     result += '\n1' + '*'.repeat(i - 1) + i;
+//   }
+//   return result;
+// }
+
+// 2nd option
+// function pattern(n) {
+//   let result = '1';
+//   for (let i = 2; i <= n; i++) {
+//     result += '\n' + '1' + ''.padStart(i - 1, '*') + i;
+//   }
+//   return result;
+// }
+
+// console.log(pattern(3)); // "1\n1*2\n1**3"
