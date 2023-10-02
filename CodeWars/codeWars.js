@@ -1896,3 +1896,34 @@
 // }
 
 // console.log(pattern(3)); // "1\n1*2\n1**3"
+
+// ------------Multiples of 3 and 5 redux---------------
+
+// 1st option
+// function solution(number) {
+//   const sumDivisibleBy = num => {
+//     const numbSmallerOrEqual = Math.floor((number - 1) / num);
+//     return (num * numbSmallerOrEqual * (numbSmallerOrEqual + 1)) / 2;
+//   };
+
+//   const sumOfThrees = sumDivisibleBy(3);
+//   const sumOfFives = sumDivisibleBy(5);
+//   const sumOfFifteens = sumDivisibleBy(15);
+
+//   return sumOfThrees + sumOfFives - sumOfFifteens;
+// }
+
+// 2nd option
+// function solution(number) {
+//   let result = 0;
+
+//   for (let i = 0; i < number; i++) {
+//     if (i % 3 === 0 || i % 5 === 0) {
+//       result += i;
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(solution(10)); // 23
