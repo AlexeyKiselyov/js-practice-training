@@ -1927,3 +1927,45 @@
 // }
 
 // console.log(solution(10)); // 23
+
+// -----------Simple beads count----------
+
+// 1st option
+// function countRedBeads(n) {
+//   return n < 2 ? 0 : (n - 1) * 2;
+// }
+
+// 2nd option
+// const countRedBeads = n => n && --n * 2;
+
+// console.log(countRedBeads(0)); // 0
+// console.log(countRedBeads(1)); // 0
+// console.log(countRedBeads(3)); // 4
+
+// -------Find The Parity Outlier--------
+
+// 1st option
+// function findOutlier(integers) {
+//   let oddNumbs = [];
+//   let evenNumbs = [];
+
+//   integers.forEach(numb => {
+//     if (numb % 2 === 0) {
+//       evenNumbs.push(numb);
+//     } else {
+//       oddNumbs.push(numb);
+//     }
+//   });
+
+//   return oddNumbs.length === 1 ? oddNumbs[0] : evenNumbs[0];
+// }
+
+// 2nd option
+// function findOutlier(integers) {
+//   let oddNumbs = integers.filter(numb => numb % 2 === 0);
+//   let evenNumbs = integers.filter(numb => numb % 2 !== 0);
+
+//   return oddNumbs.length === 1 ? oddNumbs[0] : evenNumbs[0];
+// }
+
+// console.log(findOutlier([2, 6, 8, 10, 3])); // 3
