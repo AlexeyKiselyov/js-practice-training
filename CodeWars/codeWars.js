@@ -1969,3 +1969,32 @@
 // }
 
 // console.log(findOutlier([2, 6, 8, 10, 3])); // 3
+
+// -------------Boiled Eggs--------------
+
+// function cookingTime(eggs) {
+//   return Math.ceil(eggs / 8) * 5;
+// }
+
+// console.log(cookingTime(0)); //0
+// console.log(cookingTime(5)); //5
+// console.log(cookingTime(8)); //10
+
+// ------------Calculate Julie's Age----------
+
+// function age(x, y) {
+//   return x / (y - 1) + x;
+// }
+
+/*
+j = b + x
+j = b * y
+b * y = b + x
+b * y - b = x
+b(y - 1) = x
+b = x / (y - 1)
+
+j = x / (y - 1) + x
+
+*/
+// console.log(age(6, 3)); // 9
