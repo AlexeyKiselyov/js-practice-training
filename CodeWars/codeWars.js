@@ -1998,3 +1998,44 @@ j = x / (y - 1) + x
 
 */
 // console.log(age(6, 3)); // 9
+
+// ----------Build Tower--------------
+
+// 1st option
+// function towerBuilder(nFloors) {
+//   return [...new Array(nFloors)].map(
+//     (_, ind) =>
+//       ' '.repeat(nFloors - ind - 1) +
+//       '*'.repeat(ind * 2 + 1) +
+//       ' '.repeat(nFloors - ind - 1)
+//   );
+// }
+
+// 2nd option
+// function towerBuilder(nFloors) {
+//   const result = [];
+//   let counter = 1;
+
+//   for (let i = 1; i <= nFloors; i++) {
+//     result.push(
+//       `${' '.repeat(nFloors - i)}${'*'.repeat(counter)}${' '.repeat(
+//         nFloors - i
+//       )}`
+//     );
+//     counter += 2;
+//   }
+
+//   return result;
+// }
+
+// 3rd option
+// function towerBuilder(nFloors) {
+//   return Array.from({ length: nFloors }, function (_, ind) {
+//     const spaces = ' '.repeat(nFloors - ind - 1);
+//     return spaces + '*'.repeat(ind + ind + 1) + spaces;
+//   });
+// }
+
+// console.log(towerBuilder(1)); // ['*'];
+// console.log(towerBuilder(2)); // [' * ', '***'];
+// console.log(towerBuilder(3)); // ['  *  ', ' *** ','*****'];
