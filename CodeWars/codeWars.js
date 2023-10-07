@@ -2039,3 +2039,65 @@ j = x / (y - 1) + x
 // console.log(towerBuilder(1)); // ['*'];
 // console.log(towerBuilder(2)); // [' * ', '***'];
 // console.log(towerBuilder(3)); // ['  *  ', ' *** ','*****'];
+
+// --------Multiples of 3 or 5---------
+
+// function solution(number) {
+//   let result = 0;
+
+//   for (let i = 1; i < number; i++) {
+//     if (i % 3 === 0 || i % 5 === 0) {
+//       result += i;
+//     }
+//   }
+
+//   return result;
+// }
+
+// console.log(solution(-9)); //0
+// console.log(solution(10)); //23
+
+// ------Find the odd int----
+
+// 1st option
+// function findOdd(A) {
+//   return A.reduce((a, b) => a ^ b);
+// }
+
+// 2nd option
+// function findOdd(A) {
+//   return A.find(item => A.filter(numb => numb === item).length % 2);
+// }
+
+// 3rd option
+// function findOdd(A) {
+//   const sortObj = A.reduce((acc, numb) => {
+//     acc[numb] ? (acc[numb] += 1) : (acc[numb] = 1);
+//     return acc;
+//   }, {});
+
+//   const sortObjValues = Object.keys(sortObj);
+
+//   for (let i = 0; i < sortObjValues.length; i++) {
+//     if (sortObj[sortObjValues[i]] % 2 !== 0) {
+//       return +sortObjValues[i];
+//     }
+//   }
+// }
+
+// 4rd option
+// function findOdd(A) {
+//   const sortObj = A.reduce((acc, numb) => {
+//     acc[numb] ? (acc[numb] += 1) : (acc[numb] = 1);
+//     return acc;
+//   }, {});
+
+//   for (let key in sortObj) {
+//     if (sortObj.hasOwnProperty(key) && sortObj[key] % 2 !== 0) {
+//       return +key;
+//     }
+//   }
+// }
+
+// console.log(findOdd([7])); //7
+// console.log(findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5])); //-1
