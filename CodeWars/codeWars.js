@@ -2101,3 +2101,24 @@ j = x / (y - 1) + x
 
 // console.log(findOdd([7])); //7
 // console.log(findOdd([1, 1, 2, -2, 5, 2, 4, 4, -1, -2, 5])); //-1
+
+// ------------Sum of Digits / Digital Root---------------
+
+// 1st option
+// function digitalRoot(n) {
+//   if (n < 10) return n;
+
+//   const sumOfDigits = String(n)
+//     .split('')
+//     .reduce((acc, numb) => acc + +numb, 0);
+
+//   return digitalRoot(sumOfDigits);
+// }
+
+// 2nd option
+// function digitalRoot(n) {
+//   return ((n - 1) % 9) + 1; // formula of digital root
+// }
+
+// console.log(digitalRoot(16)); // 7
+// console.log(digitalRoot(456)); // 6
