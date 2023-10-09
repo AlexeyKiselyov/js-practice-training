@@ -2122,3 +2122,72 @@ j = x / (y - 1) + x
 
 // console.log(digitalRoot(16)); // 7
 // console.log(digitalRoot(456)); // 6
+
+// -------------Who likes it?---------------
+
+// 1st option
+// function likes(names) {
+//   if (names.length === 0) {
+//     return 'no one likes this';
+//   } else if (names.length === 1) {
+//     return `${names[0]} likes this`;
+//   } else if (names.length === 2) {
+//     return `${names[0]} and ${names[1]} like this`;
+//   } else if (names.length === 3) {
+//     return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+//   } else {
+//     return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+//   }
+// }
+
+// 2nd option
+// function likes(names) {
+//   switch (names.length) {
+//     case 0:
+//       return 'no one likes this';
+//     case 1:
+//       return `${names[0]} likes this`;
+//     case 2:
+//       return `${names[0]} and ${names[1]} like this`;
+//     case 3:
+//       return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+//     default:
+//       return `${names[0]}, ${names[1]} and ${
+//         names.length - 2
+//       } others like this`;
+//   }
+// }
+
+// console.log(likes([])); //"no one likes this"
+// console.log(likes(['Peter'])); //"Peter likes this"
+// console.log(likes(['Jacob', 'Alex'])); //"Jacob and Alex like this"
+// console.log(likes(['Max', 'John', 'Mark'])); //"Max, John and Mark like this"
+// console.log(likes(['Alex', 'Jacob', 'Mark', 'Max'])); //"Alex, Jacob and 2 others like this"
+
+// --------Array.diff-------------
+
+// 1st option
+// function arrayDiff(a, b) {
+//   return a.filter(numb => !b.includes(numb));
+// }
+
+// 2nd option
+// function arrayDiff(a, b) {
+//   return a.filter(numb => b.indexOf(numb) === -1);
+// }
+
+// 3d option
+// function arrayDiff(a, b) {
+//   let result = [...a];
+
+//   b.forEach(numb => {
+//     result = result.filter(item => item !== numb);
+//   });
+
+//   return result;
+// }
+
+// console.log(arrayDiff([1, 2], [1])); // [2]
+// console.log(arrayDiff([1, 2, 2], [1])); // [2,2]
+// console.log(arrayDiff([1, 2, 2], [2])); // [1]
+// console.log(arrayDiff([1, 2, 3], [1, 2])); // [3]
