@@ -2191,3 +2191,40 @@ j = x / (y - 1) + x
 // console.log(arrayDiff([1, 2, 2], [1])); // [2,2]
 // console.log(arrayDiff([1, 2, 2], [2])); // [1]
 // console.log(arrayDiff([1, 2, 3], [1, 2])); // [3]
+
+// ---------Create Phone Number---------
+
+// 1st option
+// function createPhoneNumber(numbers) {
+//   let phoneNumberCreator = '(xxx) xxx-xxxx';
+
+//   numbers.forEach(numb => {
+//     phoneNumberCreator = phoneNumberCreator.replace('x', numb);
+//   });
+
+//   return phoneNumberCreator;
+// }
+
+// 2nd option
+// function createPhoneNumber(numbers) {
+//   return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
+// }
+
+// console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])); // => returns "(123) 456-7890")
+
+// ------------Bit Counting-------------
+
+// 1st option
+// function countBits(n) {
+//   return n
+//     .toString(2)
+//     .split('')
+//     .reduce((acc, numb) => (numb === '1' ? acc + 1 : acc), 0);
+// }
+
+// 2st option
+// function countBits(n) {
+//   return n.toString(2).split('0').join('').length;
+// }
+
+// console.log(countBits(1234)); // 10011010010 => 5
