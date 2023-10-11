@@ -2228,3 +2228,33 @@ j = x / (y - 1) + x
 // }
 
 // console.log(countBits(1234)); // 10011010010 => 5
+
+// ----------Duplicate Encoder-----------
+
+// 1st option
+// function duplicateEncode(word) {
+//   const initialArr = word.toLowerCase().split('');
+
+//   return initialArr.reduce(
+//     (acc, item, _, arr) =>
+//       arr.indexOf(item) === arr.lastIndexOf(item) ? acc + '(' : acc + ')',
+//     ''
+//   );
+// }
+
+// 2nd option
+// function duplicateEncode(word) {
+//   const initialArr = word.toLowerCase().split('');
+
+//   return initialArr.reduce((acc, item, _, arr) => {
+//     if (arr.indexOf(item) === arr.lastIndexOf(item)) {
+//       acc += '(';
+//     } else {
+//       acc += ')';
+//     }
+//     return acc;
+//   }, '');
+// }
+
+// console.log(duplicateEncode('din')); // "((("
+// console.log(duplicateEncode('recede')); // "()()()"
