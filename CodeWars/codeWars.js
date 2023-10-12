@@ -2258,3 +2258,73 @@ j = x / (y - 1) + x
 
 // console.log(duplicateEncode('din')); // "((("
 // console.log(duplicateEncode('recede')); // "()()()"
+
+// ----------Replace With Alphabet Position-----------
+
+// const abc = [
+//   'a',
+//   'b',
+//   'c',
+//   'd',
+//   'e',
+//   'f',
+//   'g',
+//   'h',
+//   'i',
+//   'j',
+//   'k',
+//   'l',
+//   'm',
+//   'n',
+//   'o',
+//   'p',
+//   'q',
+//   'r',
+//   's',
+//   't',
+//   'u',
+//   'v',
+//   'w',
+//   'x',
+//   'y',
+//   'z',
+// ];
+// 1st option
+// function alphabetPosition(text) {
+//   return text
+//     .split('')
+//     .reduce((acc, item) => {
+//       if (abc.indexOf(item.toLowerCase()) >= 0) {
+//         acc.push(abc.indexOf(item.toLowerCase()) + 1);
+//       }
+//       return acc;
+//     }, [])
+//     .join(' ');
+// }
+
+// 2nd option
+// function alphabetPosition(text) {
+//   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+//   return text
+//     .toLowerCase()
+//     .split('')
+//     .filter(letter => {
+//       let index = alphabet.indexOf(letter);
+//       return index > -1;
+//     })
+//     .map(letter => alphabet.indexOf(letter) + 1)
+//     .join(' ');
+// }
+
+// 3rd option
+// function alphabetPosition(text) {
+//   let result = '';
+//   for (let i = 0; i < text.length; i++) {
+//     var code = text.toUpperCase().charCodeAt(i);
+//     if (code > 64 && code < 91) result += code - 64 + ' ';
+//   }
+
+//   return result.trim();
+// }
+
+// console.log(alphabetPosition("The sunset sets at twelve o' clock.")); //"20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
