@@ -2328,3 +2328,22 @@ j = x / (y - 1) + x
 // }
 
 // console.log(alphabetPosition("The sunset sets at twelve o' clock.")); //"20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11"
+
+// ------------Persistent Bugger---------
+
+// function persistence(num) {
+//   let counter = 0;
+
+//   while (String(num).length > 1) {
+//     num = String(num)
+//       .split('')
+//       .reduce((acc, numb) => acc * numb, 1);
+//     counter += 1;
+//   }
+
+//   return counter;
+// }
+
+// console.log(persistence(39)); //3
+// console.log(persistence(999)); //4
+// console.log(persistence(4)); //0
