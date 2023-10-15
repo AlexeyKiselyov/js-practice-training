@@ -2347,3 +2347,29 @@ j = x / (y - 1) + x
 // console.log(persistence(39)); //3
 // console.log(persistence(999)); //4
 // console.log(persistence(4)); //0
+
+// ---------Convert string to camel case---------
+
+// 1st option
+// function toCamelCase(str) {
+//   let normalizedArr = str.replace(/_/g, '-').split('-');
+
+//   return normalizedArr.reduce((acc, item, ind) => {
+//     if (ind === 0) {
+//       acc += item;
+//       return acc;
+//     }
+//     acc += item.slice(0, 1).toUpperCase() + item.slice(1);
+//     return acc;
+//   }, '');
+// }
+
+// 2nd option
+// function toCamelCase(str) {
+//   const regExp = /[-_]\w/gi;
+//   return str.replace(regExp, match => match.charAt(1).toUpperCase());
+// }
+
+// console.log(toCamelCase('')); // ""
+// console.log(toCamelCase('the_ste_alth-warrior')); // "theStealthWarrior"
+// console.log(toCamelCase('The-Stealth-Warrior')); // "TheStealthWarrior"
