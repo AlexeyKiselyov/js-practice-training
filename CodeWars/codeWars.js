@@ -2373,3 +2373,50 @@ j = x / (y - 1) + x
 // console.log(toCamelCase('')); // ""
 // console.log(toCamelCase('the_ste_alth-warrior')); // "theStealthWarrior"
 // console.log(toCamelCase('The-Stealth-Warrior')); // "TheStealthWarrior"
+
+// ---------Your order, please-----------
+
+// 1st option
+// function order(words) {
+//   const wordsToArr = words.split(' ');
+//   const sortArr = [];
+
+//   for (let i = 1; i <= wordsToArr.length; i++) {
+//     wordsToArr.forEach((item, ind) => {
+//       if (item.includes(i)) {
+//         sortArr.push(wordsToArr[ind]);
+//       }
+//     });
+//   }
+
+//   return sortArr.join(' ');
+// }
+
+// 2nd option
+// function order(words) {
+//   return words
+//     .split(' ')
+//     .sort((a, b) => a.match(/\d/) - b.match(/\d/))
+//     .join(' ');
+// }
+
+// 3rd option
+// function order(words) {
+//   const wordsToArr = words.split(' ');
+//   const sortArr = [];
+
+//   for (let i = 0; i < 10; i++) {
+//     if (wordsToArr.length < 1) break;
+//     wordsToArr.forEach((item, ind) => {
+//       if (item.includes(i)) {
+//         const nessItem = wordsToArr.splice(ind, 1);
+//         sortArr.push(...nessItem);
+//       }
+//     });
+//   }
+
+//   return sortArr.join(' ');
+// }
+
+// console.log(order('')); // ""
+// console.log(order('is2 Thi1s T4est 3a')); // "Thi1s is2 3a T4est"
