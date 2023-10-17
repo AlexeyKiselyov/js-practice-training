@@ -2420,3 +2420,42 @@ j = x / (y - 1) + x
 
 // console.log(order('')); // ""
 // console.log(order('is2 Thi1s T4est 3a')); // "Thi1s is2 3a T4est"
+
+// -------------Unique sorted elements----------
+
+// function uniqueSorterElements(iterable) {
+//   const initialData =
+//     typeof iterable === 'string' ? iterable.split('') : iterable;
+
+//   const filteredArr = initialData.reduce((acc, item) => {
+//     if (!acc.includes(item)) {
+//       acc.push(item);
+//     }
+//     return acc;
+//   }, []);
+
+//   return filteredArr.sort((a, b) => a - b);
+// }
+
+// console.log(uniqueSorterElements('AAAABBBCCDAABBB')); // ['A', 'B', 'C', 'D']
+// console.log(uniqueSorterElements([1, 2, 2, 3, 3])); // [1,2,3]
+
+// -------------Unique In Order----------
+
+// 1st option
+// function uniqueInOrder(iterable) {
+//   return [...iterable].filter((item, ind, arr) => item !== arr[ind - 1]);
+// }
+
+// 2nd option
+// function uniqueInOrder(iterable) {
+//   return [...iterable].reduce((acc, item, ind, arr) => {
+//     if (arr[ind - 1] !== item) {
+//       acc.push(item);
+//     }
+//     return acc;
+//   }, []);
+// }
+
+// console.log(uniqueInOrder('AAAABBBCCDAABBB')); // ['A', 'B', 'C', 'D', 'A', 'B']
+// console.log(uniqueInOrder([1, 2, 2, 3, 3])); // [1,2,3]
