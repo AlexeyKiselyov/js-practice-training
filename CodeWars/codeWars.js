@@ -2459,3 +2459,38 @@ j = x / (y - 1) + x
 
 // console.log(uniqueInOrder('AAAABBBCCDAABBB')); // ['A', 'B', 'C', 'D', 'A', 'B']
 // console.log(uniqueInOrder([1, 2, 2, 3, 3])); // [1,2,3]
+
+// ---------Decode the Morse code--------------
+
+// const MORSE_CODE = {
+//   '....': 'H',
+//   '.': 'E',
+//   '-.--': 'Y',
+//   '.---': 'J',
+//   '..-': 'U',
+//   '-..': 'D',
+// };
+
+// 1st option
+// function decodeMorse(morseCode) {
+//   const worldsArr = morseCode.trim().split('   ');
+
+//   const result = worldsArr.map(item => {
+//     const lettersArr = item.split(' ');
+//     return lettersArr.reduce((acc, code) => acc + MORSE_CODE[code], '');
+//   });
+
+//   return result.join(' ');
+// }
+
+// 2nd option
+// function decodeMorse(morseCode) {
+//   return morseCode
+//     .trim()
+//     .split(/  | /)
+//     .map(code => MORSE_CODE[code] || ' ')
+//     .join('');
+// }
+
+// console.log(decodeMorse('.... . -.--   .--- ..- -.. .')); // 'HEY JUDE'
+// console.log(decodeMorse('   .... . -.--   ')); // 'HEY'
