@@ -2494,3 +2494,29 @@ j = x / (y - 1) + x
 
 // console.log(decodeMorse('.... . -.--   .--- ..- -.. .')); // 'HEY JUDE'
 // console.log(decodeMorse('   .... . -.--   ')); // 'HEY'
+
+// -----------Playing with digits---------
+
+// 1st option
+// function digPow(n, p) {
+//   let powDigit = String(n)
+//     .split('')
+//     .reduce((acc, numb, ind) => acc + Math.pow(+numb, ind + p), 0);
+
+//   return powDigit % n ? -1 : powDigit / n;
+// }
+
+// 2nd option
+// function digPow(n, p) {
+//   let powDigit = String(n)
+//     .split('')
+//     .reduce((acc, numb, ind) => acc + Math.pow(+numb, ind + p), 0);
+
+//   const dividedNumb = powDigit / n;
+
+//   return Number.isInteger(dividedNumb) ? dividedNumb : -1;
+// }
+
+// console.log(digPow(89, 1)); // 1
+// console.log(digPow(92, 1)); // -1
+// console.log(digPow(46288, 3)); // 51
