@@ -2520,3 +2520,49 @@ j = x / (y - 1) + x
 // console.log(digPow(89, 1)); // 1
 // console.log(digPow(92, 1)); // -1
 // console.log(digPow(46288, 3)); // 51
+
+// ----------Simple Pig Latin----------
+
+// 1st option
+// function pigIt(str) {
+//   return str.replace(/(\w)(\w*)(\s|$)/g, '$2$1ay$3');
+// }
+
+// 2nd option
+// function pigIt(str) {
+//   return str.replace(/\w+/g, w => {
+//     return w.slice(1) + w[0] + 'ay';
+//   });
+// }
+
+// 3rd option
+// function pigIt(str) {
+//   return str
+//     .split(' ')
+//     .map(item => {
+//       if (item.match(/\w+/gi)) {
+//         return `${item.substr(1)}${item[0]}ay`;
+//       }
+//       return item;
+//     })
+//     .join(' ');
+// }
+
+// 4th option
+// function pigIt(str) {
+//   const regExp = /\w+/gi;
+
+//   return str
+//     .split(' ')
+//     .map(item => {
+//       if (!item.match(regExp)) return item;
+//       const itemArr = item.split('');
+//       const firstChar = itemArr.shift();
+//       itemArr.push(firstChar, 'a', 'y');
+//       return itemArr.join('');
+//     })
+//     .join(' ');
+// }
+
+// console.log(pigIt('Pig latin is cool')); // igPay atinlay siay oolcay
+// console.log(pigIt('Hello world O !')); // elloHay orldway !
