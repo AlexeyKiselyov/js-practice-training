@@ -2566,3 +2566,39 @@ j = x / (y - 1) + x
 
 // console.log(pigIt('Pig latin is cool')); // igPay atinlay siay oolcay
 // console.log(pigIt('Hello world O !')); // elloHay orldway !
+
+// --------Find the unique number----------
+
+// 1st option
+// function findUniq(arr) {
+//   return arr.find(n => arr.indexOf(n) === arr.lastIndexOf(n));
+// }
+
+// 2nd option
+// function findUniq(arr) {
+//   arr.sort((a, b) => a - b);
+//   return arr[0] == arr[1] ? arr.pop() : arr[0];
+// }
+
+// 3rd option
+// function findUniq(arr) {
+//   const sortedObj = arr.reduce((acc, item) => {
+//     if (!acc[item]) {
+//       acc[item] = 1;
+//     } else {
+//       acc[item] += 1;
+//     }
+//     return acc;
+//   }, {});
+
+//   const uniqNumb = Object.keys(sortedObj).find(item => sortedObj[item] === 1);
+
+//   return +uniqNumb;
+// }
+
+// console.log(findUniq([1, 1, 1, 2, 1, 1])); //2
+// console.log(findUniq([0, 0, 0.55, 0, 0])); //0.55
+
+// console.log(findUniq([1, 0, 0])); //1
+// console.log(findUniq([0, 1, 0])); //1
+// console.log(findUniq([0, 0, 1])); //1
