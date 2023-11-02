@@ -2602,3 +2602,54 @@ j = x / (y - 1) + x
 // console.log(findUniq([1, 0, 0])); //1
 // console.log(findUniq([0, 1, 0])); //1
 // console.log(findUniq([0, 0, 1])); //1
+
+// -----Moving Zeros To The End--------
+
+// // first option
+// function moveZeros(arr) {
+//   const filteredArr = arr.filter(item => item !== 0);
+//   const zerosQuantity = arr.length - filteredArr.length;
+//   const arrOfZeros = Array.from({ length: zerosQuantity }, () => 0);
+
+//   return [...filteredArr, ...arrOfZeros];
+// }
+
+// // second option
+// function moveZeros(arr) {
+//   return [...arr.filter(item => item !== 0), ...arr.filter(item => item === 0)];
+// }
+
+// console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, 'a'])); // [false,1,1,2,1,3,"a",0,0]);
+
+// ----------Human Readable Time----------
+
+// // first option
+// function addLeadingZero(value) {
+//   return String(value).padStart(2, '0');
+// }
+
+// function humanReadable(seconds) {
+//   const minute = 60;
+//   const hour = minute * 60;
+//   const day = hour * 24;
+
+//   const hours = addLeadingZero(Math.floor(seconds / hour));
+//   const minutes = addLeadingZero(Math.floor(((seconds % day) % hour) / minute));
+//   const sec = addLeadingZero(Math.floor(((seconds % day) % hour) % minute));
+
+//   return `${hours}:${minutes}:${sec}`;
+// }
+
+// // second option
+// function humanReadable(seconds) {
+//   const pad = numb => (numb < 10 ? '0' + numb : numb);
+//   return (
+//     pad(parseInt(seconds / (60 * 60))) +
+//     ':' +
+//     pad(parseInt((seconds / 60) % 60)) +
+//     ':' +
+//     pad(seconds % 60)
+//   );
+// }
+
+// console.log(humanReadable(359999)); //99:59:59
