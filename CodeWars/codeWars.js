@@ -2653,3 +2653,44 @@ j = x / (y - 1) + x
 // }
 
 // console.log(humanReadable(359999)); //99:59:59
+
+// --------Directions Reduction---------
+
+// 1st option
+// function dirReduc(arr) {
+//   let result = [];
+
+//   arr.forEach(item => {
+//     if (
+//       (result[result.length - 1] === 'NORTH' && item === 'SOUTH') ||
+//       (result[result.length - 1] === 'SOUTH' && item === 'NORTH') ||
+//       (result[result.length - 1] === 'EAST' && item === 'WEST') ||
+//       (result[result.length - 1] === 'WEST' && item === 'EAST')
+//     ) {
+//       result.pop();
+//     } else {
+//       result.push(item);
+//     }
+//   });
+
+//   return result;
+// }
+
+// 2nd option
+// function dirReduc(arr) {
+//   const opposite = {
+//     NORTH: 'SOUTH',
+//     EAST: 'WEST',
+//     SOUTH: 'NORTH',
+//     WEST: 'EAST',
+//   };
+
+//   return arr.reduce((dirs, dir) => {
+//     if (dirs[dirs.length - 1] === opposite[dir]) dirs.pop();
+//     else dirs.push(dir);
+//     return dirs;
+//   }, []);
+// }
+
+// console.log(dirReduc(['NORTH', 'SOUTH', 'EAST', 'WEST'])); //[]
+// console.log(dirReduc(['NORTH', 'EAST', 'WEST', 'SOUTH', 'WEST', 'WEST'])); //["WEST", "WEST"]
