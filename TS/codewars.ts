@@ -126,3 +126,36 @@
 // console.log(four(plus(nine()))); // must return 13
 // console.log(eight(minus(three()))); // must return 5
 // console.log(six(dividedBy(two()))); // must return 3
+
+// ------------The Hashtag Generator---------
+
+// first option
+// function generateHashtag(str: string): string | boolean {
+//   const createOneWord = str
+//     .split(' ')
+//     .filter(word => word)
+//     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//     .join('');
+
+//   const result = '#' + createOneWord;
+
+//   return !createOneWord || result.length > 140 ? false : result;
+// }
+
+// second option
+let generateHashtag: (str: string) => string | boolean;
+
+generateHashtag = str => {
+  const result = str
+    .split(' ')
+    .reduce(
+      (tag, word) => tag + word.charAt(0).toUpperCase() + word.substring(1),
+      '#'
+    );
+
+  return result.length === 1 || result.length > 140 ? false : result;
+};
+
+// console.log(generateHashtag(' Hello there thanks for trying my Kata')); //"#HelloThereThanksForTryingMyKata"
+// console.log(generateHashtag('    hello     World   ')); //"#HelloWorld"
+// console.log(generateHashtag('')); //false
