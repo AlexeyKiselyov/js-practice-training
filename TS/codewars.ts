@@ -143,19 +143,53 @@
 // }
 
 // second option
-let generateHashtag: (str: string) => string | boolean;
+// let generateHashtag: (str: string) => string | boolean;
 
-generateHashtag = str => {
-  const result = str
-    .split(' ')
-    .reduce(
-      (tag, word) => tag + word.charAt(0).toUpperCase() + word.substring(1),
-      '#'
-    );
+// generateHashtag = str => {
+//   const result = str
+//     .split(' ')
+//     .reduce(
+//       (tag, word) => tag + word.charAt(0).toUpperCase() + word.substring(1),
+//       '#'
+//     );
 
-  return result.length === 1 || result.length > 140 ? false : result;
-};
+//   return result.length === 1 || result.length > 140 ? false : result;
+// };
 
 // console.log(generateHashtag(' Hello there thanks for trying my Kata')); //"#HelloThereThanksForTryingMyKata"
 // console.log(generateHashtag('    hello     World   ')); //"#HelloWorld"
 // console.log(generateHashtag('')); //false
+
+// ----------Sort the odd-----------
+
+// 1st option
+// function sortArray(array: number[]): (number | undefined)[] {
+//   const sortedOddNumbs = array.filter(numb => numb % 2).sort((a, b) => a - b);
+//   return array.map(numb => (numb % 2 !== 0 ? sortedOddNumbs.shift() : numb));
+// }
+
+// 2nd option
+// function sortArray(array: number[]): (number | undefined)[] {
+//   const arrOfOddNumbs: number[] = [];
+//   const arrWithoutOddNumbs = array.map(numb => {
+//     if (numb % 2 !== 0) {
+//       arrOfOddNumbs.push(numb);
+//       return '-';
+//     } else {
+//       return numb;
+//     }
+//   });
+//   const arrOfSortedOddNumbs = arrOfOddNumbs.sort();
+//   const result = arrWithoutOddNumbs.map(item => {
+//     if (typeof item === 'string') {
+//       return arrOfSortedOddNumbs.shift();
+//     }
+//     return item;
+//   });
+
+//   return result;
+// }
+
+// console.log(sortArray([7, 1])); //[1, 7]
+// console.log(sortArray([5, 8, 6, 3, 4])); //[3, 8, 6, 5, 4]
+// console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])); //[1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
