@@ -193,3 +193,56 @@
 // console.log(sortArray([7, 1])); //[1, 7]
 // console.log(sortArray([5, 8, 6, 3, 4])); //[3, 8, 6, 5, 4]
 // console.log(sortArray([9, 8, 7, 6, 5, 4, 3, 2, 1, 0])); //[1, 8, 3, 6, 5, 4, 7, 2, 9, 0]
+
+// ---------------Pete, the baker-----------
+
+// 1st option
+// const cakes = (
+//   recipe: { [x: string]: number },
+//   available: { [x: string]: number }
+// ): number =>
+//   Math.min(
+//     ...Object.keys(recipe).map(key =>
+//       Math.floor(available[key] / recipe[key] || 0)
+//     )
+//   );
+
+// second option
+// function cakes(
+//   recipe: { [x: string]: number },
+//   available: { [x: string]: number }
+// ): number {
+//   let noMoreIngreds = false;
+//   let counter = 0;
+//   let ingreds = { ...available };
+
+//   while (!noMoreIngreds) {
+//     Object.keys(recipe).forEach(key => {
+//       if (ingreds[key]) {
+//         ingreds[key] -= recipe[key];
+//       } else {
+//         noMoreIngreds = true;
+//       }
+//     });
+//     if (noMoreIngreds) break;
+//     const checkInreds = Object.values(ingreds).some(ingred => ingred < 0);
+//     checkInreds ? (noMoreIngreds = true) : counter++;
+//   }
+
+//   return counter;
+// }
+
+// // must return 2
+// console.log(
+//   cakes(
+//     { flour: 500, sugar: 200, eggs: 1 },
+//     { flour: 1200, sugar: 1200, eggs: 5, milk: 200 }
+//   )
+// );
+// // must return 0
+// console.log(
+//   cakes(
+//     { apples: 3, flour: 300, sugar: 150, milk: 100, oil: 100 },
+//     { sugar: 500, flour: 2000, milk: 2000 }
+//   )
+// );

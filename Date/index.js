@@ -42,3 +42,25 @@ console.log(`Время: ${hours}:${minutes}:${seconds}`);
 // function addLeadingZero(value) {
 //   return String(value).padStart(2, '0');
 // }
+
+const now = new Date().toISOString();
+
+console.log(now);
+
+const now1 = new Date().toISOString();
+
+console.log(now1);
+
+const diff = now1 < now;
+
+console.log(diff);
+
+console.log(new Date());
+
+console.log(new Date('2050-01-01'));
+console.log(new Date() - new Date('2050-01-01'));
+
+const date1 = new Date('2050-01-01').toISOString();
+const date2 = new Date('2050-01-01').toISOString();
+
+console.log(date1 === date2);
