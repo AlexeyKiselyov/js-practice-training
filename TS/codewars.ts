@@ -246,3 +246,52 @@
 //     { sugar: 500, flour: 2000, milk: 2000 }
 //   )
 // );
+
+// -------------First non-repeating character----------
+// 1st option
+// function firstNonRepeatingLetter(s: string): string | '' {
+//   const strToLowerCase = s.toLowerCase();
+//   for (let i = 0; i < strToLowerCase.length; i++) {
+//     if (
+//       strToLowerCase.indexOf(strToLowerCase[i]) ===
+//       strToLowerCase.lastIndexOf(strToLowerCase[i])
+//     ) {
+//       return s[i];
+//     }
+//   }
+//   return '';
+// }
+
+// 2d option
+// function firstNonRepeatingLetter(s: string): string | '' {
+//   let arrOfSortesChars: Array<any> = [];
+//   const strToLowerCase = s.toLowerCase();
+//   const strToLowerCaseArr = strToLowerCase.split('');
+//   const charQuantityObj = strToLowerCaseArr.reduce(
+//     (acc: { [x: string]: number }, char) => {
+//       if (!acc[char]) {
+//         acc[char] = 1;
+//       } else {
+//         acc[char] += 1;
+//       }
+//       return acc;
+//     },
+//     {}
+//   );
+//   const arrOfOneTimeChars = Object.keys(charQuantityObj).filter(
+//     key => charQuantityObj[key] === 1
+//   );
+//   arrOfOneTimeChars.forEach(item => {
+//     const indexOfOneTimeCharInS = strToLowerCaseArr.indexOf(item);
+//     arrOfSortesChars.push({ char: item, ind: indexOfOneTimeCharInS });
+//   });
+
+//   if (arrOfSortesChars.length === 0) return '';
+//   const nessChar = arrOfSortesChars.sort((a, b) => a.ind - b.ind)[0].char;
+//   const nessCharInd = strToLowerCase.indexOf(nessChar);
+//   return s[nessCharInd];
+// }
+
+// console.log(firstNonRepeatingLetter('a')); // 'a'
+// console.log(firstNonRepeatingLetter('stress')); //'t'
+// console.log(firstNonRepeatingLetter('moonmen')); //'e'
