@@ -295,3 +295,45 @@
 // console.log(firstNonRepeatingLetter('a')); // 'a'
 // console.log(firstNonRepeatingLetter('stress')); //'t'
 // console.log(firstNonRepeatingLetter('moonmen')); //'e'
+
+// ------Weight for weight--------
+
+// 1st option
+// function orderWeight(strng: string): string {
+//   const sum = (str: string): number =>
+//     str.split('').reduce((sum, el) => sum + +el, 0);
+//   function comp(a: string, b: string): number {
+//     let sumA = sum(a);
+//     let sumB = sum(b);
+//     return sumA === sumB ? a.localeCompare(b) : sumA - sumB;
+//   }
+//   return strng.split(' ').sort(comp).join(' ');
+// }
+
+// 2nd option
+// function orderWeight(strng: string): string {
+//   function customSort(x: string): [number, string] {
+//     const sumOfDigits = x
+//       .split('')
+//       .reduce((sum, digit) => sum + parseInt(digit), 0);
+//     return [sumOfDigits, x];
+//   }
+
+//   const weights: string[] = strng.split(' ');
+//   const sortedWeights: string[] = weights.sort((a, b) => {
+//     const keyA = customSort(a);
+//     const keyB = customSort(b);
+
+//     if (keyA[0] === keyB[0]) {
+//       // If weights are equal, compare as strings
+//       return keyA[1].localeCompare(keyB[1]);
+//     } else {
+//       return keyA[0] - keyB[0];
+//     }
+//   });
+
+//   return sortedWeights.join(' ');
+// }
+
+// console.log(orderWeight('56 65 74 100 99 68 86 180 90')); //"100 180 90 56 65 74 68 86 99"
+// console.log(orderWeight('2000 10003 1234000 44444444 9999 11 11 22 123')); //"11 11 2000 10003 22 123 1234000 44444444 9999"
